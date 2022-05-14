@@ -257,10 +257,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
@@ -483,8 +483,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138034580}
-  m_LocalRotation: {x: -0, y: 0.92387956, z: -0, w: 0.38268343}
-  m_LocalPosition: {x: -34.618, y: -8.1739, z: 6.5269}
+  m_LocalRotation: {x: -0, y: 0.9999894, z: -0, w: -0.004623279}
+  m_LocalPosition: {x: -6.78, y: -8.1739, z: 20.49}
   m_LocalScale: {x: 6.452, y: 6.452, z: 6.452}
   m_Children:
   - {fileID: 1822203329}
@@ -507,7 +507,7 @@ Transform:
   - {fileID: 206708662}
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180.53, z: 0}
 --- !u!1 &189802245
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,10 +560,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
@@ -821,7 +821,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206708661}
   m_LocalRotation: {x: -0, y: -0.7119392, z: -0, w: 0.7022412}
-  m_LocalPosition: {x: -0.85, y: 0.949, z: 6.072}
+  m_LocalPosition: {x: -0.85, y: 1.436, z: 6.072}
   m_LocalScale: {x: 0.10633459, y: 0.10633459, z: 0.10633459}
   m_Children: []
   m_Father: {fileID: 138034581}
@@ -840,10 +840,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
@@ -1100,7 +1100,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221385700}
   m_LocalRotation: {x: -0, y: -0.66436553, z: -0, w: 0.74740785}
-  m_LocalPosition: {x: -0.29, y: 0.949, z: 5.719}
+  m_LocalPosition: {x: -0.29, y: 1.242, z: 5.719}
   m_LocalScale: {x: 0.12305252, y: 0.12305251, z: 0.12305252}
   m_Children: []
   m_Father: {fileID: 138034581}
@@ -1119,10 +1119,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
@@ -1354,7 +1354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268173768}
   m_LocalRotation: {x: -0, y: -0.7478768, z: -0, w: 0.6638377}
-  m_LocalPosition: {x: -0.38584453, y: 0.94900006, z: 6.063971}
+  m_LocalPosition: {x: -0.38584453, y: 1.336, z: 6.063971}
   m_LocalScale: {x: 0.15032095, y: 0.15032095, z: 0.15032095}
   m_Children: []
   m_Father: {fileID: 138034581}
@@ -1373,10 +1373,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
@@ -1609,7 +1609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452946295}
   m_LocalRotation: {x: -0, y: -0.66436553, z: -0, w: 0.74740785}
-  m_LocalPosition: {x: -0.799, y: 0.94900006, z: 5.668}
+  m_LocalPosition: {x: -0.799, y: 1.421, z: 5.668}
   m_LocalScale: {x: 0.10633461, y: 0.10633459, z: 0.10633461}
   m_Children: []
   m_Father: {fileID: 138034581}
@@ -1628,10 +1628,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
@@ -3336,10 +3336,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
@@ -3602,7 +3602,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680811984}
   m_LocalRotation: {x: -0, y: -0.66436553, z: -0, w: 0.74740785}
-  m_LocalPosition: {x: -0.7579999, y: 0.949, z: 5.8410025}
+  m_LocalPosition: {x: -0.7579999, y: 1.185, z: 5.8410025}
   m_LocalScale: {x: 0.12305252, y: 0.12305251, z: 0.12305252}
   m_Children: []
   m_Father: {fileID: 138034581}
@@ -3621,10 +3621,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
@@ -4021,7 +4021,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837709512}
   m_LocalRotation: {x: -0, y: -0.66436553, z: -0, w: 0.74740785}
-  m_LocalPosition: {x: -0.134, y: 0.94900006, z: 5.742}
+  m_LocalPosition: {x: -0.134, y: 1.217, z: 5.742}
   m_LocalScale: {x: 0.10633461, y: 0.10633459, z: 0.10633461}
   m_Children: []
   m_Father: {fileID: 138034581}
@@ -4040,10 +4040,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
@@ -4319,10 +4319,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
@@ -4554,7 +4554,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944518521}
   m_LocalRotation: {x: -0, y: -0.66436553, z: -0, w: 0.74740785}
-  m_LocalPosition: {x: -1.093, y: 0.94900006, z: 6.097}
+  m_LocalPosition: {x: -1.093, y: 1.492, z: 6.097}
   m_LocalScale: {x: 0.12305252, y: 0.12305251, z: 0.12305252}
   m_Children: []
   m_Father: {fileID: 138034581}
@@ -4573,10 +4573,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
@@ -4809,7 +4809,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173176009}
   m_LocalRotation: {x: -0, y: -0.66436553, z: -0, w: 0.74740785}
-  m_LocalPosition: {x: -0.47064734, y: 0.94900006, z: 5.787725}
+  m_LocalPosition: {x: -0.47064734, y: 1.267, z: 5.787725}
   m_LocalScale: {x: 0.111244194, y: 0.11124419, z: 0.111244194}
   m_Children: []
   m_Father: {fileID: 138034581}
@@ -4828,10 +4828,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
@@ -5089,7 +5089,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203098251}
   m_LocalRotation: {x: -0, y: -0.7478768, z: -0, w: 0.6638377}
-  m_LocalPosition: {x: -0.33212858, y: 0.949, z: 5.908412}
+  m_LocalPosition: {x: -0.33212858, y: 1.032, z: 5.908412}
   m_LocalScale: {x: 0.12305252, y: 0.12305251, z: 0.12305252}
   m_Children: []
   m_Father: {fileID: 138034581}
@@ -5108,10 +5108,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
@@ -5445,7 +5445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.5363622
+      value: -2.72
       objectReference: {fileID: 0}
     - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5777,10 +5777,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
@@ -6012,7 +6012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810365178}
   m_LocalRotation: {x: -0, y: -0.66436553, z: -0, w: 0.74740785}
-  m_LocalPosition: {x: -0.632, y: 0.94900006, z: 5.678}
+  m_LocalPosition: {x: -0.632, y: 1.467, z: 5.678}
   m_LocalScale: {x: 0.11074726, y: 0.110747255, z: 0.11074726}
   m_Children: []
   m_Father: {fileID: 138034581}
@@ -6031,10 +6031,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
@@ -6285,10 +6285,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
@@ -6539,10 +6539,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
@@ -6764,7 +6764,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1969546615
 Transform:
   m_ObjectHideFlags: 0
@@ -6773,7 +6773,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969546614}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0049994, y: 1.499, z: 5.738003}
+  m_LocalPosition: {x: -1.0049994, y: 1.213, z: 5.738003}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 138034581}
@@ -6792,10 +6792,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
+  instantPull: 0
   grabType: 0
-  archMultiplier: 0.6
-  gravitationVelocity: 1
+  archMultiplier: 0.639
+  gravitationVelocity: 0.5
   rotate: 1
   rotationSpeed: 5
   ignoreHighlights: 0
