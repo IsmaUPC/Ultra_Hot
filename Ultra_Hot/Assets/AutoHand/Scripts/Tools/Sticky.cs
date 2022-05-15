@@ -17,6 +17,8 @@ namespace Autohand{
         [Header("Event")]
         public UnityEvent OnStick;
 
+        public Transform spawn;
+        public GameObject player;
         Rigidbody body;
         List<Stickable> stickers;
         List<Joint> joints;
@@ -40,6 +42,8 @@ namespace Autohand{
                 return;
             if(sticker.body.velocity.sqrMagnitude*sticker.stickSpeedMultiplyer < requiredStickSpeed)
                 return;
+
+            player.GetComponent<Transform>().position = spawn.position;
 
             var joint = gameObject.AddComponent<FixedJoint>();
             joint.connectedBody = sticker.body;
