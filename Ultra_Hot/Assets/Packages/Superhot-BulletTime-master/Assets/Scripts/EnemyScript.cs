@@ -41,7 +41,7 @@ public class EnemyScript : MonoBehaviour
         if (weaponHolder.GetComponentInChildren<WeaponScript>() != null)
         {
             WeaponScript w = weaponHolder.GetComponentInChildren<WeaponScript>();
-            w.Release();
+            //w.Release();
 
         }
     }
@@ -52,7 +52,7 @@ public class EnemyScript : MonoBehaviour
             return;
 
         if (weaponHolder.GetComponentInChildren<WeaponScript>() != null)
-            weaponHolder.GetComponentInChildren<WeaponScript>().Shoot(GetComponentInChildren<ParticleSystem>().transform.position, transform.rotation, true);
+            weaponHolder.GetComponentInChildren<WeaponScript>().Shoot();
     }
 
     IEnumerator RandomAnimation()
