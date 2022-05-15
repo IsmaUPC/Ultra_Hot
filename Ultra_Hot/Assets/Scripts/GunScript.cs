@@ -43,6 +43,9 @@ public class GunScript : MonoBehaviour
 
         bulletAmount--;
 
+        StopCoroutine(BulletTimeScript.instance.ActionE(.03f));
+        StartCoroutine(BulletTimeScript.instance.ActionE(.03f));
+
         Instantiate(bulletPrefab, barrelTip.position, transform.rotation);
 
         if (GetComponentInChildren<ParticleSystem>() != null)

@@ -74,7 +74,7 @@ public class BulletTimeScript : MonoBehaviour
         Time.timeScale = Mathf.Lerp(Time.timeScale, time, lerpTime);
     }
 
-    IEnumerator ActionE(float time)
+    public IEnumerator ActionE(float time)
     {
         action = true;
         yield return new WaitForSecondsRealtime(.06f);
