@@ -123,6 +123,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &145629676 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9136378276058449578, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+  m_PrefabInstance: {fileID: 700839558}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &293314204 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9136378277261632249, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+  m_PrefabInstance: {fileID: 700839558}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &368642226 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1858147060561370, guid: f61520d526e2573438225f84a0220847, type: 3}
@@ -148,7 +158,7 @@ MonoBehaviour:
   singleHandOnly: 0
   allowHeldSwapping: 1
   instantGrab: 0
-  ignoreWeight: 0
+  ignoreWeight: 1
   maintainGrabOffset: 0
   parentOnGrab: 1
   throwPower: 1
@@ -824,3 +834,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f61520d526e2573438225f84a0220847, type: 3}
+--- !u!1 &1615358195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7942002210973373748, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+  m_PrefabInstance: {fileID: 700839558}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1615358196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615358195}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b667a9b6411b9d548872c472603192ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handL: {fileID: 293314204}
+  handR: {fileID: 145629676}
+  timeScale: 1

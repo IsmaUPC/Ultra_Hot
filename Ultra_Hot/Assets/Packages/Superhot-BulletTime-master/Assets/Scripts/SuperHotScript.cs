@@ -41,42 +41,42 @@ public class SuperHotScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-        }
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        //}
 
-        if (canShoot)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                StopCoroutine(ActionE(.03f));
-                StartCoroutine(ActionE(.03f));
-                if (weapon != null)
-                    weapon.Shoot(SpawnPos(), Camera.main.transform.rotation, false);
-            }
-        }
+        //if (canShoot)
+        //{
+        //    if (Input.GetMouseButtonDown(0))
+        //    {
+        //        StopCoroutine(ActionE(.03f));
+        //        StartCoroutine(ActionE(.03f));
+        //        if (weapon != null)
+        //            weapon.Shoot(SpawnPos(), Camera.main.transform.rotation, false);
+        //    }
+        //}
 
-        if (Input.GetMouseButtonDown(1))
-        {
-            StopCoroutine(ActionE(.4f));
-            StartCoroutine(ActionE(.4f));
+        //if (Input.GetMouseButtonDown(1))
+        //{
+        //    StopCoroutine(ActionE(.4f));
+        //    StartCoroutine(ActionE(.4f));
 
-            if(weapon != null)
-            {
-                weapon.Throw();
-                weapon = null;
-            }
-        }
+        //    if(weapon != null)
+        //    {
+        //        weapon.Throw();
+        //        weapon = null;
+        //    }
+        //}
 
-        RaycastHit hit;
-        if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit,10, weaponLayer))
-        {
-            if (Input.GetMouseButtonDown(0) && weapon == null)
-            {
-                hit.transform.GetComponent<WeaponScript>().Pickup();
-            }
-        }
+        //RaycastHit hit;
+        //if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit,10, weaponLayer))
+        //{
+        //    if (Input.GetMouseButtonDown(0) && weapon == null)
+        //    {
+        //        hit.transform.GetComponent<WeaponScript>().Pickup();
+        //    }
+        //}
 
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
