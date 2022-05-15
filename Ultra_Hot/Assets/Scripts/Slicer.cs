@@ -18,7 +18,7 @@ public class Slicer : MonoBehaviour
         {
             isTouched = false;
 
-            Collider[] objectsToBeSliced = Physics.OverlapBox(transform.position, new Vector3(0.5f, 0.7f, 0.1f), transform.rotation);
+            Collider[] objectsToBeSliced = Physics.OverlapBox(transform.position, new Vector3(0.1f, 0.7f, 0.1f), transform.rotation);
             
             foreach (Collider objectToBeSliced in objectsToBeSliced)
             {
@@ -31,12 +31,8 @@ public class Slicer : MonoBehaviour
                     GameObject upperHullGameobject = slicedObject.CreateUpperHull(objectToBeSliced.gameObject, materialAfterSlice);
                     GameObject lowerHullGameobject = slicedObject.CreateLowerHull(objectToBeSliced.gameObject, materialAfterSlice);
 
-
-
                     upperHullGameobject.transform.position = objectToBeSliced.transform.position;
                     lowerHullGameobject.transform.position = objectToBeSliced.transform.position;
-
-
 
                     MakeItPhysical(upperHullGameobject);
                     MakeItPhysical(lowerHullGameobject);
@@ -49,14 +45,13 @@ public class Slicer : MonoBehaviour
 
     private void MakeItPhysical(GameObject obj)
     {
-
         obj.AddComponent<MeshCollider>().convex = true;
         obj.AddComponent<Rigidbody>().interpolation = RigidbodyInterpolation.Interpolate;
 
+        obj.GetComponent<Rigidbody>().useGravity = false;
         obj.GetComponent<Rigidbody>().AddExplosionForce(100, obj.transform.position, 10);
 
         obj.tag = tagCut;
-
     }
 
     private SlicedHull SliceObject(GameObject obj, Material crossSectionMaterial = null)
