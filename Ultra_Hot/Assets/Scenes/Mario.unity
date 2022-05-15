@@ -333,7 +333,7 @@ Transform:
   m_Children:
   - {fileID: 167617706}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1578840507
 GameObject:
@@ -867,8 +867,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1017511075, guid: 8df5a97ec735d9d41b7acd26d4f006c8, type: 3}
+      propertyPath: grabType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017511075, guid: 8df5a97ec735d9d41b7acd26d4f006c8, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017511075, guid: 8df5a97ec735d9d41b7acd26d4f006c8, type: 3}
+      propertyPath: instantPull
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017511075, guid: 8df5a97ec735d9d41b7acd26d4f006c8, type: 3}
+      propertyPath: archMultiplier
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 1017511076, guid: 8df5a97ec735d9d41b7acd26d4f006c8, type: 3}
       propertyPath: m_Enabled
@@ -878,6 +890,10 @@ PrefabInstance:
       propertyPath: ignoreWeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1285982663, guid: 8df5a97ec735d9d41b7acd26d4f006c8, type: 3}
+      propertyPath: materialAfterSlice
+      value: 
+      objectReference: {fileID: 2100000, guid: 7fb3f24b736b20248a66a4b132f786a5, type: 2}
     - target: {fileID: 1285982665, guid: 8df5a97ec735d9d41b7acd26d4f006c8, type: 3}
       propertyPath: m_Enabled
       value: 0
