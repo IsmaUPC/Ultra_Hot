@@ -578,7 +578,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh106474
+  m_Name: pb_Mesh28252
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1235,9 +1235,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 10072456660365259, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: onGrab.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 10072456660365260, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
       propertyPath: m_Name
       value: New_Pistol
+      objectReference: {fileID: 0}
+    - target: {fileID: 10072456660365263, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: bulletAmount
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 821933818690794870, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
       propertyPath: m_RootOrder
@@ -1289,7 +1297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7122921692628775120, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.7
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
