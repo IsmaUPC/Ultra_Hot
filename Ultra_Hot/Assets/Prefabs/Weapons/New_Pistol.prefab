@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 10072456660365256}
   - component: {fileID: 10072456660365257}
   - component: {fileID: 10072456660365262}
-  - component: {fileID: 10072456660365263}
+  - component: {fileID: 2790968462285829674}
   - component: {fileID: 10072456660365259}
   - component: {fileID: 10072456660365258}
   m_Layer: 0
@@ -80,7 +80,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &10072456660365263
+--- !u!114 &2790968462285829674
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,10 +92,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cec25e3c1d22af64e8127064eb9ebbd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 1
   bulletAmount: 6
   barrelTip: {fileID: 7122921692628775120}
-  bulletPrefab: {fileID: 8914353279888130421, guid: 6e746ae9237f68243a2eb541a3b83455, type: 3}
+  bulletPrefab: {fileID: 8914353279888130421, guid: 03e840776a4003145b758c40dbafd97d, type: 3}
 --- !u!114 &10072456660365259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,19 +136,7 @@ MonoBehaviour:
   showEvents: 1
   onGrab:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 10072456660365263}
-        m_TargetAssemblyTypeName: WeaponScript, Assembly-CSharp
-        m_MethodName: Shoot
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -157,8 +144,8 @@ MonoBehaviour:
   onSqueeze:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 10072456660365263}
-        m_TargetAssemblyTypeName: WeaponScript, Assembly-CSharp
+      - m_Target: {fileID: 2790968462285829674}
+        m_TargetAssemblyTypeName: GunScript, Assembly-CSharp
         m_MethodName: Shoot
         m_Mode: 1
         m_Arguments:

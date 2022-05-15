@@ -10,9 +10,16 @@ public class SuperHotScript : MonoBehaviour
     public static SuperHotScript instance;
 
     public float charge;
+    public bool canShoot = true;
     public bool action;
     public GameObject bullet;
     public Transform bulletSpawner;
+
+    [Header("Weapon")]
+    public WeaponScript weapon;
+    public Transform weaponHolder;
+    public LayerMask weaponLayer;
+
 
     [Space]
     [Header("UI")]
@@ -34,6 +41,43 @@ public class SuperHotScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        }
+
+        if (canShoot)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                StopCoroutine(ActionE(.03f));
+                StartCoroutine(ActionE(.03f));
+                if (weapon != null)
+                    weapon.Shoot(SpawnPos(), Camera.main.transform.rotation, false);
+            }
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            StopCoroutine(ActionE(.4f));
+            StartCoroutine(ActionE(.4f));
+
+            if(weapon != null)
+            {
+                weapon.Throw();
+                weapon = null;
+            }
+        }
+
+        RaycastHit hit;
+        if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit,10, weaponLayer))
+        {
+            if (Input.GetMouseButtonDown(0) && weapon == null)
+            {
+                hit.transform.GetComponent<WeaponScript>().Pickup();
+            }
+        }
+
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
@@ -46,11 +90,22 @@ public class SuperHotScript : MonoBehaviour
         Time.timeScale = Mathf.Lerp(Time.timeScale, time, lerpTime);
     }
 
-    public IEnumerator ActionE(float time)
+    IEnumerator ActionE(float time)
     {
         action = true;
         yield return new WaitForSecondsRealtime(.06f);
         action = false;
+    }
+
+    public void ReloadUI(float time)
+    {
+        indicator.transform.DORotate(new Vector3(0, 0, 90), time, RotateMode.LocalAxisAdd).SetEase(Ease.Linear).OnComplete(() => indicator.transform.DOPunchScale(Vector3.one / 3, .2f, 10, 1).SetUpdate(true));
+    }
+
+
+    Vector3 SpawnPos()
+    {
+        return Camera.main.transform.position + (Camera.main.transform.forward * .5f) + (Camera.main.transform.up * -.02f);
     }
 
 

@@ -479,17 +479,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!114 &345805574 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 10072456660365263, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
-  m_PrefabInstance: {fileID: 7122921692719006885}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cec25e3c1d22af64e8127064eb9ebbd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,7 +578,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh45840
+  m_Name: pb_Mesh47602
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -880,11 +869,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7510370701940658439, guid: 2b98b784042c42640a3edbe4a63f9ac1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.77
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7510370701940658439, guid: 2b98b784042c42640a3edbe4a63f9ac1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7510370701940658439, guid: 2b98b784042c42640a3edbe4a63f9ac1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1110,7 +1099,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh106428
+  m_Name: pb_Mesh47568
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1268,35 +1257,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1882272031 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7942002210973373748, guid: a5226a72c9553294abfe172a458b5805, type: 3}
-  m_PrefabInstance: {fileID: 7942002210539120495}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1882272032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1882272031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27da9129c3cb2cf48a12ff8fde8b332a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  charge: 0
-  action: 0
-  bullet: {fileID: 8914353279888130421, guid: 6e746ae9237f68243a2eb541a3b83455, type: 3}
-  bulletSpawner: {fileID: 0}
-  weapon: {fileID: 345805574}
-  weaponHolder: {fileID: 0}
-  weaponLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  indicator: {fileID: 0}
-  hitParticlePrefab: {fileID: 2462045763441574653, guid: bc20e11fe125f0c4985a160e93e1a272, type: 3}
-  bulletPrefab: {fileID: 8914353279888130421, guid: 6e746ae9237f68243a2eb541a3b83455, type: 3}
 --- !u!1 &2070536124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2876,6 +2836,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2790968462285829674, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: barrelTip
+      value: 
+      objectReference: {fileID: 7122921692719006886}
+    - target: {fileID: 2790968462285829674, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: bulletAmount
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2790968462285829674, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 8914353279888130421, guid: 03e840776a4003145b758c40dbafd97d, type: 3}
     - target: {fileID: 7122921692628775120, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.25
@@ -2886,6 +2858,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+--- !u!4 &7122921692719006886 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7122921692628775120, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+  m_PrefabInstance: {fileID: 7122921692719006885}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7942002210539120495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2893,6 +2870,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6339297082631933371, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 8914353279888130421, guid: 03e840776a4003145b758c40dbafd97d, type: 3}
     - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
       propertyPath: m_RootOrder
       value: 2
