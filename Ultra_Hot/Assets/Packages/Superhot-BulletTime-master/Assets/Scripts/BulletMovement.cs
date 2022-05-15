@@ -26,8 +26,7 @@ public class BulletMovement : MonoBehaviour
         {
             BodyPartScript bp = collision.gameObject.GetComponent<BodyPartScript>();
 
-            //if (!bp.enemy.dead)
-                Instantiate(SuperHotScript.instance.hitParticlePrefab, transform.position, transform.rotation);
+            Instantiate(SuperHotScript.instance.hitParticlePrefab, transform.position, transform.rotation);
 
             bp.HidePartAndReplace();
             bp.enemy.Ragdoll();

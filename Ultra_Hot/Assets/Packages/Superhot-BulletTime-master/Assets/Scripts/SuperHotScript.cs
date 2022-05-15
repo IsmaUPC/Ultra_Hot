@@ -14,12 +14,6 @@ public class SuperHotScript : MonoBehaviour
     public GameObject bullet;
     public Transform bulletSpawner;
 
-    [Header("Weapon")]
-    public WeaponScript weapon;
-    public Transform weaponHolder;
-    public LayerMask weaponLayer;
-
-
     [Space]
     [Header("UI")]
     public Image indicator;

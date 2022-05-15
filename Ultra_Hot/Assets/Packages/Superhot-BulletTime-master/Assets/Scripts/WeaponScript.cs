@@ -43,9 +43,6 @@ public class WeaponScript : MonoBehaviour
 
     public void Shoot()
     {
-        //StopCoroutine(SuperHotScript.instance.ActionE(.4f));
-        //StartCoroutine(SuperHotScript.instance.ActionE(.4f));
-
         if (bulletAmount <= 0)
             return;
 
@@ -58,12 +55,5 @@ public class WeaponScript : MonoBehaviour
 
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.2f, .01f, 10, 90, false, true).SetUpdate(true);
-    }
-
-    public IEnumerator ActionE(float time)
-    {
-        //action = true;
-        yield return new WaitForSecondsRealtime(.06f);
-        //action = false;
     }
 }
