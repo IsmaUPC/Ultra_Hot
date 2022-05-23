@@ -7,6 +7,8 @@ public class Slicer : MonoBehaviour
     //public LayerMask sliceMask;
     [TagSelector]
     public string tagCut = "";
+    public Rigidbody handL;
+    public Rigidbody handR;
 
     public float CutTimer = 2.0f;
     public bool isTouched;
@@ -50,6 +52,10 @@ public class Slicer : MonoBehaviour
 
         obj.GetComponent<Rigidbody>().useGravity = false;
         obj.GetComponent<Rigidbody>().AddExplosionForce(100, obj.transform.position, 10);
+
+        obj.AddComponent<BulletTime>().handL = handL;
+        obj.GetComponent<BulletTime>().handR = handR;
+
 
         obj.tag = tagCut;
     }
