@@ -36,13 +36,13 @@ public class GunScript : MonoBehaviour
 
         //StopCoroutine(BulletTimeScript.instance.ActionE(.03f));
         //StartCoroutine(BulletTimeScript.instance.ActionE(.03f));
-
+       
         Instantiate(bulletPrefab, barrelTip.position, transform.rotation);
 
         if (GetComponentInChildren<ParticleSystem>() != null)
             GetComponentInChildren<ParticleSystem>().Play();
 
-        gameObject.GetComponent<Animation>().Play();
+        gameObject.GetComponent<Animator>().SetTrigger("Shoot");
         gameObject.GetComponent<AudioSource>().Play();
 
         Camera.main.transform.DOComplete();

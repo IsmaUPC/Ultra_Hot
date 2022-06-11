@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 249168788}
   - component: {fileID: 249168795}
   - component: {fileID: 7608843627416982816}
-  - component: {fileID: 9016053160750252113}
+  - component: {fileID: 8912255676724216943}
   m_Layer: 0
   m_Name: New_Pistol
   m_TagString: Untagged
@@ -433,7 +433,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &9016053160750252113
+--- !u!95 &8912255676724216943
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -443,7 +443,7 @@ Animator:
   m_GameObject: {fileID: 10072456660365260}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 16ed255dd324b2647b15ef0ca91971d5, type: 2}
+  m_Controller: {fileID: 9100000, guid: c0af2c1ac74657642be5a75ea0c52205, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
