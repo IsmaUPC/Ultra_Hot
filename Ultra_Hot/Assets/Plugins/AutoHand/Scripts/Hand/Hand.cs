@@ -211,12 +211,12 @@ namespace Autohand {
                 if(holdingObj && !holdingObj.maintainGrabOffset && !IsGrabbing()) {
                     var deltaDist = Vector3.Distance(follow.position, lastFrameFollowPos);
                     var deltaRot = Quaternion.Angle(follow.rotation, lastFrameFollowRot);
-                    grabPositionOffset = Vector3.MoveTowards(grabPositionOffset, Vector3.zero, (deltaDist) * smoothReturnSpeed * Time.deltaTime * 60f);
-                    grabRotationOffset = Quaternion.RotateTowards(grabRotationOffset, Quaternion.identity, (deltaRot) * smoothReturnSpeed * Time.deltaTime * 60f);
+                    grabPositionOffset = Vector3.MoveTowards(grabPositionOffset, Vector3.zero, (deltaDist) * smoothReturnSpeed * Time.unscaledDeltaTime * 60f);
+                    grabRotationOffset = Quaternion.RotateTowards(grabRotationOffset, Quaternion.identity, (deltaRot) * smoothReturnSpeed * Time.unscaledDeltaTime * 60f);
 
                     if(!holdingObj.useGentleGrab) {
-                        grabPositionOffset = Vector3.MoveTowards(grabPositionOffset, Vector3.zero, Time.deltaTime / GetGrabTime());
-                        grabRotationOffset = Quaternion.RotateTowards(grabRotationOffset, Quaternion.identity, (90f * Time.deltaTime) / GetGrabTime());
+                        grabPositionOffset = Vector3.MoveTowards(grabPositionOffset, Vector3.zero, Time.unscaledDeltaTime / GetGrabTime());
+                        grabRotationOffset = Quaternion.RotateTowards(grabRotationOffset, Quaternion.identity, (90f * Time.unscaledDeltaTime) / GetGrabTime());
                     }
                 }
 
@@ -923,10 +923,10 @@ namespace Autohand {
                 openHandPose = GetHandPose();
 
                 if(grabType == GrabType.HandToGrabbable || (grabType == GrabType.GrabbableToHand && (holdingObj.HeldCount() > 0 || !holdingObj.parentOnGrab))) {
-                    for(float i = 0; i < adjustedGrabTime; i += Time.deltaTime) {
+                    for(float i = 0; i < adjustedGrabTime; i += Time.unscaledDeltaTime) {
                         if(holdingObj != null) {
-                            i += holdingObj.GetVelocity().magnitude * Time.deltaTime * 10f;
-                            i += followVel.magnitude * Time.deltaTime * 10f;
+                            i += holdingObj.GetVelocity().magnitude * Time.unscaledDeltaTime * 10f;
+                            i += followVel.magnitude * Time.unscaledDeltaTime * 10f;
                             if(i < adjustedGrabTime) {
                                 var point = Mathf.Clamp01(i / adjustedGrabTime);
                                 var handOpenTime = 0.5f;
@@ -960,7 +960,7 @@ namespace Autohand {
                     bool useGravity = holdingObj.body.useGravity;
                     holdingObj.body.useGravity = false;
 
-                    for(float i = 0; i < adjustedGrabTime; i += Time.deltaTime) {
+                    for(float i = 0; i < adjustedGrabTime; i += Time.unscaledDeltaTime) {
                         if(holdingObj != null) {
                             var point = Mathf.Clamp01(i / adjustedGrabTime);
                             var handOpenTime = 0.5f;
@@ -982,7 +982,7 @@ namespace Autohand {
                             holdingObj.body.rotation = holdingObj.transform.rotation;
                             holdingObj.body.velocity = Vector3.zero;
                             holdingObj.body.angularVelocity = Vector3.zero;
-                            i += followVel.magnitude * Time.deltaTime * 2f;
+                            i += followVel.magnitude * Time.unscaledDeltaTime * 2f;
 
                             yield return new WaitForEndOfFrame();
 
@@ -1083,7 +1083,7 @@ namespace Autohand {
             while(timePassed < totalTime) {
                 SetHandPose(HandPoseData.LerpPose(fromPose, toPose, Mathf.Pow(timePassed / totalTime, 0.5f)));
                 yield return new WaitForEndOfFrame();
-                timePassed += Time.deltaTime;
+                timePassed += Time.unscaledDeltaTime;
             }
             SetHandPose(HandPoseData.LerpPose(fromPose, toPose, 1));
             handAnimateRoutine = null;

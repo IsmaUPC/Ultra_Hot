@@ -7,11 +7,14 @@ public class BulletTime : MonoBehaviour
     public float speed;
     public Rigidbody handL;
     public Rigidbody handR;
+    private float minVel = 0.3f;
 
     private void Update()
     {
-        speed = handL.velocity.magnitude + handR.velocity.magnitude * 20 + 0.3f;
+        speed = handL.velocity.magnitude + handR.velocity.magnitude * 20 + minVel;
         Time.timeScale = Mathf.InverseLerp(0,8,speed);
-        Time.fixedDeltaTime = Time.timeScale * .02f;
+
+        // 0.02f because fixedDeltaTime defaults to this value
+        Time.fixedDeltaTime = Time.timeScale * 0.02f; 
     }
 }
