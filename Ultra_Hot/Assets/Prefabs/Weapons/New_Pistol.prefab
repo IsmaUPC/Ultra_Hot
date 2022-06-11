@@ -119,7 +119,7 @@ MonoBehaviour:
   ignoreWeight: 0
   maintainGrabOffset: 0
   parentOnGrab: 1
-  throwPower: 1
+  throwPower: 2
   jointBreakForce: 3500
   showAdvancedSettings: 0
   handType: 0
