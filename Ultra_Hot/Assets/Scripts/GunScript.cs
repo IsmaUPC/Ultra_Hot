@@ -57,7 +57,7 @@ public class GunScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") && collision.relativeVelocity.magnitude < 15)
+        if (collision.gameObject.CompareTag("Enemy") && transform.parent != null && collision.relativeVelocity.magnitude < 15)
         {
             BodyPartScript bp = collision.gameObject.GetComponent<BodyPartScript>();
 
