@@ -19,12 +19,10 @@ public class Slicer : MonoBehaviour
         if (isTouched == true)
         {
             isTouched = false;
-            Debug.Log("Holaaaaaaaaaa");
             Collider[] objectsToBeSliced = Physics.OverlapBox(transform.position, new Vector3(0.1f, 0.7f, 0.1f), transform.rotation,layerCut);
 
             foreach (Collider objectToBeSliced in objectsToBeSliced)
             {
-                Debug.Log("GOOOOOOOOO");
                 CanCut = false;
                 Invoke("Countdown", CutTimer);
                 SlicedHull slicedObject = SliceObject(objectToBeSliced.gameObject, materialAfterSlice);

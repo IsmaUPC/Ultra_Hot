@@ -16,6 +16,7 @@ public class EnemyScript : MonoBehaviour
     private float distance;
     private float stoppedTime;
     private bool goPlayer;
+    private Rigidbody rb;
 
     void Start()
     {
@@ -28,13 +29,15 @@ public class EnemyScript : MonoBehaviour
         distance = Random.Range(0.5f, 5f);
         stoppedTime = 0;
         goPlayer = false;
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
     void Update()
     {
         if (!dead)
         {
-            transform.LookAt(new Vector3(Camera.main.transform.position.x, 2, Camera.main.transform.position.z));
+            //transform.LookAt(new Vector3(Camera.main.transform.position.x, 2, Camera.main.transform.position.z));
+            rb.rotation = Quaternion.LookRotation((Camera.main.transform.position - transform.position).normalized, Vector3.up);
 
             if (movement)
             {
