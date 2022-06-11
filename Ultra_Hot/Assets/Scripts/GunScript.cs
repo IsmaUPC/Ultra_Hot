@@ -15,6 +15,8 @@ public class GunScript : MonoBehaviour
     public Transform barrelTip;
     public GameObject bulletPrefab;
 
+    public Rigidbody handR;
+    public Rigidbody handL;
 
     // Start is called before the first frame update
     private void Start()
@@ -37,7 +39,9 @@ public class GunScript : MonoBehaviour
         //StopCoroutine(BulletTimeScript.instance.ActionE(.03f));
         //StartCoroutine(BulletTimeScript.instance.ActionE(.03f));
        
-        Instantiate(bulletPrefab, barrelTip.position, transform.rotation);
+        GameObject bullet = Instantiate(bulletPrefab, barrelTip.position, transform.rotation);
+        bullet.GetComponent<BulletScript>().handR = handR;
+        bullet.GetComponent<BulletScript>().handL = handL;
 
         if (GetComponentInChildren<ParticleSystem>() != null)
             GetComponentInChildren<ParticleSystem>().Play();
