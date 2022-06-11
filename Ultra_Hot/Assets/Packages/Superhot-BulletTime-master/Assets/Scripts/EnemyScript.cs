@@ -36,9 +36,10 @@ public class EnemyScript : MonoBehaviour
     {
         if (!dead)
         {
-            //transform.LookAt(new Vector3(Camera.main.transform.position.x, 2, Camera.main.transform.position.z));
-            rb.rotation = Quaternion.LookRotation((Camera.main.transform.position - transform.position).normalized, Vector3.up);
-
+            Vector3 newForward = (Camera.main.transform.position - transform.position).normalized;
+            newForward = Quaternion.AngleAxis(-8.7f, Vector3.up) * newForward;
+            rb.rotation = Quaternion.LookRotation(newForward, Vector3.up);
+           
             if (movement)
             {
                 if (stoppedTime <= 0)
