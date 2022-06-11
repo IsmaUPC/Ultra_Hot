@@ -37,7 +37,7 @@ public class BodyPartScript : MonoBehaviour
 
         rb.AddExplosionForce(15, transform.position, 5);
 
-        this.enabled = false;
+        enabled = false;
         replaced = true;
     }
 }

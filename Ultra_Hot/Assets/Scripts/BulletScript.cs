@@ -6,6 +6,7 @@ public class BulletScript : MonoBehaviour
 {
     public float speed;
     Rigidbody rb;
+    public GameObject hitParticlePrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,7 @@ public class BulletScript : MonoBehaviour
             BodyPartScript bp = collision.gameObject.GetComponent<BodyPartScript>();
 
             //if (!bp.enemy.dead)
-            Instantiate(SuperHotScript.instance.hitParticlePrefab, transform.position, transform.rotation);
+            Instantiate(hitParticlePrefab, transform.position, transform.rotation);
 
             bp.HidePartAndReplace();
             bp.enemy.Ragdoll();

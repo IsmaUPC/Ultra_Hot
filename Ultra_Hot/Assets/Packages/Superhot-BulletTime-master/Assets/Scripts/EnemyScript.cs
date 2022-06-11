@@ -13,18 +13,12 @@ public class EnemyScript : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         StartCoroutine(RandomAnimation());
-
-        if (weaponHolder.GetComponentInChildren<WeaponScript>() != null)
-            weaponHolder.GetComponentInChildren<WeaponScript>().active = false;
-
     }
 
     void Update()
     {
         if (!dead)
-            transform.LookAt(new Vector3(Camera.main.transform.position.x, 0, Camera.main.transform.position.z));
-
-
+            transform.LookAt(new Vector3(Camera.main.transform.position.x, 2, Camera.main.transform.position.z));
     }
 
     public void Ragdoll()
@@ -38,11 +32,10 @@ public class EnemyScript : MonoBehaviour
         }
         dead = true;
 
-        if (weaponHolder.GetComponentInChildren<WeaponScript>() != null)
+        if (weaponHolder.GetComponentInChildren<GunScript>() != null)
         {
-            WeaponScript w = weaponHolder.GetComponentInChildren<WeaponScript>();
+            GunScript w = weaponHolder.GetComponentInChildren<GunScript>();
             w.Release();
-
         }
     }
 
@@ -51,8 +44,8 @@ public class EnemyScript : MonoBehaviour
         if (dead)
             return;
 
-        if (weaponHolder.GetComponentInChildren<WeaponScript>() != null)
-            weaponHolder.GetComponentInChildren<WeaponScript>().Shoot(GetComponentInChildren<ParticleSystem>().transform.position, transform.rotation, true);
+        if (weaponHolder.GetComponentInChildren<GunScript>() != null)
+            weaponHolder.GetComponentInChildren<GunScript>().Shoot(true);
     }
 
     IEnumerator RandomAnimation()
@@ -60,6 +53,5 @@ public class EnemyScript : MonoBehaviour
         anim.enabled = false;
         yield return new WaitForSecondsRealtime(Random.Range(.1f, .5f));
         anim.enabled = true;
-
     }
 }

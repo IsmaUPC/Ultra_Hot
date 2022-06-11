@@ -22,25 +22,17 @@ public class GunScript : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
 
-        ChangeSettings();
-    }
-
-    private void ChangeSettings()
-    {
         if (transform.parent != null)
-            return;
-
-        //rb.isKinematic = (BulletTimeScript.instance.weapon == this) ? true : false;
-        //rb.interpolation = (BulletTimeScript.instance.weapon == this) ? RigidbodyInterpolation.None : RigidbodyInterpolation.Interpolate;
-        //coll.isTrigger = (BulletTimeScript.instance.weapon == this);
+            rb.isKinematic = true;
     }
 
-    public void Shoot()
+    public void Shoot(bool isEnemy)
     {
         if (bulletAmount <= 0)
             return;
 
-        bulletAmount--;
+        if (!isEnemy)
+            bulletAmount--;
 
         //StopCoroutine(BulletTimeScript.instance.ActionE(.03f));
         //StartCoroutine(BulletTimeScript.instance.ActionE(.03f));
@@ -52,5 +44,28 @@ public class GunScript : MonoBehaviour
 
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.2f, .01f, 10, 90, false, true).SetUpdate(true);
+    }
+
+    public void Release()
+    {
+        transform.parent = null;
+        rb.isKinematic = false;
+
+        rb.AddForce((Camera.main.transform.position - transform.position) * 2, ForceMode.Impulse);
+        rb.AddForce(Vector3.up * 2, ForceMode.Impulse);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy") && collision.relativeVelocity.magnitude < 15)
+        {
+            BodyPartScript bp = collision.gameObject.GetComponent<BodyPartScript>();
+
+            if (!bp.enemy.dead)
+                Instantiate(SuperHotScript.instance.hitParticlePrefab, transform.position, transform.rotation);
+
+            bp.HidePartAndReplace();
+            bp.enemy.Ragdoll();
+        }
     }
 }
