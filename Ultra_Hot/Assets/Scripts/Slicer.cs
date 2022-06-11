@@ -4,9 +4,9 @@ using EzySlice;
 public class Slicer : MonoBehaviour
 {
     public Material materialAfterSlice;
-    //public LayerMask sliceMask;
+    public LayerMask layerCut;
     [TagSelector]
-    public string tagCut = "";
+    //public string tagCut = "";
     public Rigidbody handL;
     public Rigidbody handR;
 
@@ -20,12 +20,13 @@ public class Slicer : MonoBehaviour
         {
             isTouched = false;
 
-            Collider[] objectsToBeSliced = Physics.OverlapBox(transform.position, new Vector3(0.1f, 0.7f, 0.1f), transform.rotation);
+            Collider[] objectsToBeSliced = Physics.OverlapBox(transform.position, new Vector3(0.1f, 0.7f, 0.1f), transform.rotation,layerCut);
             
             foreach (Collider objectToBeSliced in objectsToBeSliced)
             {
-                if (CanCut && objectToBeSliced.CompareTag(tagCut))
-                {
+                
+                    Debug.Log("Layer OK");
+
                     CanCut = false;
                     Invoke("Countdown", CutTimer);
                     SlicedHull slicedObject = SliceObject(objectToBeSliced.gameObject, materialAfterSlice);
@@ -40,7 +41,7 @@ public class Slicer : MonoBehaviour
                     MakeItPhysical(lowerHullGameobject);
 
                     Destroy(objectToBeSliced.gameObject);
-                }
+                
             }
         }
     }
@@ -56,8 +57,9 @@ public class Slicer : MonoBehaviour
         obj.AddComponent<BulletTime>().handL = handL;
         obj.GetComponent<BulletTime>().handR = handR;
 
-
-        obj.tag = tagCut;
+        
+        obj.layer = 13;
+        Debug.LogWarning(obj.layer);
     }
 
     private SlicedHull SliceObject(GameObject obj, Material crossSectionMaterial = null)

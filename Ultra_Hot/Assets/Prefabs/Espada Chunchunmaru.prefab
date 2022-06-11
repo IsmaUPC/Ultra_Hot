@@ -185,8 +185,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8a4f6e53f8f6742931c0ca1a8ba611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialAfterSlice: {fileID: 2100000, guid: 529c7edb85b1ae94ea63c2d3e303104d, type: 2}
-  tagCut: Sliceable
+  materialAfterSlice: {fileID: 2100000, guid: 7fb3f24b736b20248a66a4b132f786a5, type: 2}
+  layerCut:
+    serializedVersion: 2
+    m_Bits: 8192
+  handL: {fileID: 0}
+  handR: {fileID: 0}
   CutTimer: 0.4
   isTouched: 0
 --- !u!54 &1017511078
@@ -245,9 +249,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  instantPull: 1
-  grabType: 0
-  archMultiplier: 0.6
+  instantPull: 0
+  grabType: 1
+  archMultiplier: 0.4
   gravitationVelocity: 1
   rotate: 1
   rotationSpeed: 1
@@ -341,7 +345,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1858147060561370, guid: f61520d526e2573438225f84a0220847, type: 3}
       propertyPath: m_Name
-      value: Espada Chunchunmaru
+      value: Prefab_Sword_Cyber_Magma
       objectReference: {fileID: 0}
     - target: {fileID: 1858147060561370, guid: f61520d526e2573438225f84a0220847, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -365,39 +369,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4621747238906404, guid: f61520d526e2573438225f84a0220847, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.108
       objectReference: {fileID: 0}
     - target: {fileID: 4621747238906404, guid: f61520d526e2573438225f84a0220847, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.771
+      value: 1.164126
       objectReference: {fileID: 0}
     - target: {fileID: 4621747238906404, guid: f61520d526e2573438225f84a0220847, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -3.56
       objectReference: {fileID: 0}
     - target: {fileID: 4621747238906404, guid: f61520d526e2573438225f84a0220847, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.6640865
       objectReference: {fileID: 0}
     - target: {fileID: 4621747238906404, guid: f61520d526e2573438225f84a0220847, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.24287675
       objectReference: {fileID: 0}
     - target: {fileID: 4621747238906404, guid: f61520d526e2573438225f84a0220847, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.6640865
       objectReference: {fileID: 0}
     - target: {fileID: 4621747238906404, guid: f61520d526e2573438225f84a0220847, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.24287675
       objectReference: {fileID: 0}
     - target: {fileID: 4621747238906404, guid: f61520d526e2573438225f84a0220847, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -40.178
       objectReference: {fileID: 0}
     - target: {fileID: 4621747238906404, guid: f61520d526e2573438225f84a0220847, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 4621747238906404, guid: f61520d526e2573438225f84a0220847, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
