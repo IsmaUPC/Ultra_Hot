@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 10072456660365259}
   - component: {fileID: 249168788}
   - component: {fileID: 249168795}
-  - component: {fileID: 7255089534297255952}
   - component: {fileID: 7608843627416982816}
+  - component: {fileID: 9016053160750252113}
   m_Layer: 0
   m_Name: New_Pistol
   m_TagString: Untagged
@@ -337,21 +337,6 @@ MonoBehaviour:
   StopSelecting:
     m_PersistentCalls:
       m_Calls: []
---- !u!111 &7255089534297255952
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 10072456660365260}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 9bea3fba2fc1c5e41b8e24b62a9ff0a7, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!82 &7608843627416982816
 AudioSource:
   m_ObjectHideFlags: 0
@@ -364,7 +349,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300001, guid: 1dd706bb85d8aef4e83a6229dbd62c36, type: 2}
   m_audioClip: {fileID: 8300000, guid: 484f560c9b935dc47838a7acaa62791d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.485
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -448,6 +433,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &9016053160750252113
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10072456660365260}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 16ed255dd324b2647b15ef0ca91971d5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &535579284082696441
 GameObject:
   m_ObjectHideFlags: 0

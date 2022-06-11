@@ -6,7 +6,7 @@ public class Slicer : MonoBehaviour
     public Material materialAfterSlice;
     public LayerMask layerCut;
     [TagSelector]
-    //public string tagCut = "";
+
     public Rigidbody handL;
     public Rigidbody handR;
 
@@ -19,29 +19,27 @@ public class Slicer : MonoBehaviour
         if (isTouched == true)
         {
             isTouched = false;
-
+            Debug.Log("Holaaaaaaaaaa");
             Collider[] objectsToBeSliced = Physics.OverlapBox(transform.position, new Vector3(0.1f, 0.7f, 0.1f), transform.rotation,layerCut);
-            
+
             foreach (Collider objectToBeSliced in objectsToBeSliced)
             {
-                
-                    Debug.Log("Layer OK");
+                Debug.Log("GOOOOOOOOO");
+                CanCut = false;
+                Invoke("Countdown", CutTimer);
+                SlicedHull slicedObject = SliceObject(objectToBeSliced.gameObject, materialAfterSlice);
 
-                    CanCut = false;
-                    Invoke("Countdown", CutTimer);
-                    SlicedHull slicedObject = SliceObject(objectToBeSliced.gameObject, materialAfterSlice);
+                GameObject upperHullGameobject = slicedObject.CreateUpperHull(objectToBeSliced.gameObject, materialAfterSlice);
+                GameObject lowerHullGameobject = slicedObject.CreateLowerHull(objectToBeSliced.gameObject, materialAfterSlice);
 
-                    GameObject upperHullGameobject = slicedObject.CreateUpperHull(objectToBeSliced.gameObject, materialAfterSlice);
-                    GameObject lowerHullGameobject = slicedObject.CreateLowerHull(objectToBeSliced.gameObject, materialAfterSlice);
+                upperHullGameobject.transform.position = objectToBeSliced.transform.position;
+                lowerHullGameobject.transform.position = objectToBeSliced.transform.position;
 
-                    upperHullGameobject.transform.position = objectToBeSliced.transform.position;
-                    lowerHullGameobject.transform.position = objectToBeSliced.transform.position;
+                MakeItPhysical(upperHullGameobject);
+                MakeItPhysical(lowerHullGameobject);
 
-                    MakeItPhysical(upperHullGameobject);
-                    MakeItPhysical(lowerHullGameobject);
+                Destroy(objectToBeSliced.gameObject);
 
-                    Destroy(objectToBeSliced.gameObject);
-                
             }
         }
     }
