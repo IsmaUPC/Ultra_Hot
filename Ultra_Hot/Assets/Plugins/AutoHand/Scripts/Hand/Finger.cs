@@ -42,9 +42,8 @@ namespace Autohand{
         float lastHitBend;
         Collider[] results = new Collider[2];
 
-
-
-        void Update() {
+        private void Update()
+        {
             SlowBend();
         }
 
@@ -139,7 +138,7 @@ namespace Autohand{
         /// <param name="bend">0 is no bend / 1 is full bend</param>
         public void SetFingerBend(float bend) {
             this.bend = bend;
-            for(int i = 0; i < fingerJoints.Length; i++) {
+            for (int i = 0; i < fingerJoints.Length; i++) {
                 fingerJoints[i].localPosition = Vector3.Lerp(minGripPosPose[i], maxGripPosPose[i], bend);
                 fingerJoints[i].localRotation = Quaternion.Lerp(minGripRotPose[i], maxGripRotPose[i], bend);
             }
@@ -149,7 +148,7 @@ namespace Autohand{
          /// <param name="bend">0 is no bend / 1 is full bend</param>
         public void SetCurrentFingerBend(float bend) {
             currBendOffset = bend;
-            for(int i = 0; i < fingerJoints.Length; i++) {
+            for (int i = 0; i < fingerJoints.Length; i++) {
                 fingerJoints[i].localPosition = Vector3.Lerp(minGripPosPose[i], maxGripPosPose[i], bend);
                 fingerJoints[i].localRotation = Quaternion.Lerp(minGripRotPose[i], maxGripRotPose[i], bend);
             }
@@ -158,10 +157,9 @@ namespace Autohand{
 
         //This function smooths the finger bend so you can change the grip over a frame and wont be a jump
         void SlowBend(){
-
             var offsetValue = bendOffset + bend;
             if(currBendOffset != offsetValue)
-                currBendOffset = Mathf.MoveTowards(currBendOffset, offsetValue, 6*fingerSmoothSpeed * Time.deltaTime);
+                currBendOffset = Mathf.MoveTowards(currBendOffset, offsetValue, 6*fingerSmoothSpeed * Time.unscaledDeltaTime);
         }
     
 

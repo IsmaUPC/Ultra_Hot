@@ -18,13 +18,7 @@ public class BulletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CalculateSpeed();
         transform.position += transform.forward * speed * Time.deltaTime;
-    }
-
-    void CalculateSpeed()
-    {
-        speed = handL.velocity.magnitude + handR.velocity.magnitude * multSpeed;
     }
 
     private void OnCollisionEnter(Collision collision)
