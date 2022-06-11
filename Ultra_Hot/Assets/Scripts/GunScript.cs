@@ -42,6 +42,8 @@ public class GunScript : MonoBehaviour
         if (GetComponentInChildren<ParticleSystem>() != null)
             GetComponentInChildren<ParticleSystem>().Play();
 
+        gameObject.GetComponent<Animation>().Play();
+
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.2f, .01f, 10, 90, false, true).SetUpdate(true);
     }
