@@ -28,7 +28,6 @@ public class BulletScript : MonoBehaviour
         {
             BodyPartScript bp = collision.gameObject.GetComponent<BodyPartScript>();
 
-            //if (!bp.enemy.dead)
             Instantiate(hitParticlePrefab, transform.position, transform.rotation);
 
             bp.HidePartAndReplace();
