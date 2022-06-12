@@ -9,6 +9,8 @@ public class GunScript : MonoBehaviour
     private Rigidbody rb;
     private Collider coll;
 
+    public bool GodMode = false;
+
     [Space]
     [Header("Weapon Settings")]
     public int bulletAmount = 6;
@@ -27,6 +29,12 @@ public class GunScript : MonoBehaviour
             rb.isKinematic = true;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+            GodMode = !GodMode;
+    }
+
     public void Shoot(bool isEnemy)
     {
         if (bulletAmount <= 0)
@@ -34,8 +42,11 @@ public class GunScript : MonoBehaviour
 
         if (!isEnemy)
             bulletAmount--;
-       
+        else
+            transform.LookAt(new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y - 0.7f, Camera.main.transform.position.z));
+
         GameObject bullet = Instantiate(bulletPrefab, barrelTip.position, transform.rotation);
+        bullet.GetComponent<BulletScript>().GodMode = GodMode;
 
         if (GetComponentInChildren<ParticleSystem>() != null)
             GetComponentInChildren<ParticleSystem>().Play();

@@ -8472,6 +8472,7 @@ MonoBehaviour:
   speed: 0
   handL: {fileID: 1391160894}
   handR: {fileID: 66953194}
+  GodMode: 0
 --- !u!1 &1064007413
 GameObject:
   m_ObjectHideFlags: 0
@@ -9179,7 +9180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 185253149553140611, guid: a5226a72c9553294abfe172a458b5805, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 551467914439164643, guid: a5226a72c9553294abfe172a458b5805, type: 3}
       propertyPath: m_LocalRotation.w

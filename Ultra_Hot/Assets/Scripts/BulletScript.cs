@@ -9,6 +9,8 @@ public class BulletScript : MonoBehaviour
     public int multSpeed = 20;
     public GameObject hitParticlePrefab;
 
+    public bool GodMode = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +37,7 @@ public class BulletScript : MonoBehaviour
             bp.enemy.Ragdoll();
         }
 
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !GodMode)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }

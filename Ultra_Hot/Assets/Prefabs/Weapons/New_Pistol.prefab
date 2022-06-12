@@ -99,8 +99,7 @@ MonoBehaviour:
   bulletAmount: 6
   barrelTip: {fileID: 7122921692628775120}
   bulletPrefab: {fileID: 8914353279888130421, guid: 03e840776a4003145b758c40dbafd97d, type: 3}
-  handR: {fileID: 0}
-  handL: {fileID: 0}
+  hitParticlePrefab: {fileID: 2462045763441574653, guid: bc20e11fe125f0c4985a160e93e1a272, type: 3}
 --- !u!114 &10072456660365259
 MonoBehaviour:
   m_ObjectHideFlags: 0
