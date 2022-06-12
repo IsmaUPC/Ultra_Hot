@@ -6,6 +6,8 @@ public class Rotate : MonoBehaviour
 {
     // Start is called before the first frame update
     public float rotateSpeed = 10;
+    public bool rot = true;
+
     void Start()
     {
         
@@ -14,6 +16,12 @@ public class Rotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.up * Time.deltaTime * rotateSpeed, Space.World);
+        if(rot)
+            transform.Rotate(Vector3.up * Time.deltaTime * rotateSpeed, Space.World);
+    }
+
+    public void StopRotation()
+    {
+        rot = false;
     }
 }
