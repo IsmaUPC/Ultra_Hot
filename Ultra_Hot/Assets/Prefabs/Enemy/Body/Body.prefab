@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3596660541125727637}
   - component: {fileID: 6099256486015662997}
   m_Layer: 13
-  m_Name: Cube
+  m_Name: MazeLow_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

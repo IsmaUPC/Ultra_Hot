@@ -15,9 +15,12 @@ public class SliceListener : MonoBehaviour
         {
             BodyPartScript bp = other.gameObject.GetComponent<BodyPartScript>();
 
-            Instantiate(hitParticlePrefab, transform.position, transform.rotation);
+            if (bp.bodyPartPrefab != null)
+            {
+                Instantiate(hitParticlePrefab, transform.position, transform.rotation);
 
-            bp.HidePartAndReplace();
+                bp.HidePartAndReplace();
+            }
             bp.enemy.Ragdoll();
         }
 

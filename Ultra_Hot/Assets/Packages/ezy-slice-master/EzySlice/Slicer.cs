@@ -95,6 +95,8 @@ namespace EzySlice {
                 return null;
             }
 
+            /*
+             * 
             int submeshCount = mesh.subMeshCount;
 
             // to make things straightforward, exit without slicing if the materials and mesh
@@ -104,6 +106,8 @@ namespace EzySlice {
 
                 return null;
             }
+            *
+            */
 
             // we need to find the index of the material for the cross section.
             // default to the end of the array

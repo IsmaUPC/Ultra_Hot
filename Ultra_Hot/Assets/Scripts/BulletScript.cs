@@ -28,9 +28,12 @@ public class BulletScript : MonoBehaviour
         {
             BodyPartScript bp = collision.gameObject.GetComponent<BodyPartScript>();
 
-            Instantiate(hitParticlePrefab, transform.position, transform.rotation);
+            if (bp.bodyPartPrefab != null)
+            {
+                Instantiate(hitParticlePrefab, transform.position, transform.rotation);
 
-            bp.HidePartAndReplace();
+                bp.HidePartAndReplace();
+            }
             bp.enemy.Ragdoll();
         }
 
