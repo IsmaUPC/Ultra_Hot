@@ -9,7 +9,7 @@ namespace Autohand.Demo
     {
         public void StartGame()
         {
-            SceneManager.LoadScene(SceneManager.GetSceneByBuildIndex(1).ToString());
+            SceneManager.LoadScene(1);
         }
     }
 }
