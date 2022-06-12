@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 4392671673004984310}
   - component: {fileID: 4392671673004984309}
   - component: {fileID: 4392671673004984308}
-  - component: {fileID: 4392671673004984307}
   - component: {fileID: 18737}
+  - component: {fileID: 4392671673004984307}
   - component: {fileID: 1417005060}
   - component: {fileID: 1417005061}
   m_Layer: 0
@@ -204,20 +204,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   lockHandOnGrab: 0
---- !u!114 &4392671673004984307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4392671673004984305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a929b8a9aed45794ca106c9d0498b3b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesLevel: {fileID: 0}
-  force: 1
 --- !u!114 &18737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,6 +266,20 @@ MonoBehaviour:
   StopSelecting:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4392671673004984307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4392671673004984305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a929b8a9aed45794ca106c9d0498b3b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesLevel: {fileID: 0}
+  force: 1
 --- !u!114 &1417005060
 MonoBehaviour:
   m_ObjectHideFlags: 0

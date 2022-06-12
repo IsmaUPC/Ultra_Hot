@@ -13,7 +13,7 @@ namespace Autohand
         public int currentLevel = 0;
 
         private EnemyScript[] enemies;
-        private int count = 0;
+        public int count = 0;
 
         void Start()
         {
@@ -23,7 +23,6 @@ namespace Autohand
         // Update is called once per frame
         void Update()
         {
-            count = 0;
             foreach (var item in enemies)
             {
                 if (item.dead)
@@ -34,12 +33,10 @@ namespace Autohand
                 currentLevel++;
                 enemies = levels[currentLevel].GetComponentsInChildren<EnemyScript>();
 
-                foreach (EnemyScript cEnemy in enemies)
-                    cEnemy.SetWayPoints(currentLevel);
-
                 dices[currentLevel].SetActive(true);
                 tp.ActiveTelepor();
             }
+            count = 0;
         }
     }
 }

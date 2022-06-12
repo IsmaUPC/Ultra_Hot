@@ -8,8 +8,6 @@ public class BulletScript : MonoBehaviour
     public float speed;
     public int multSpeed = 20;
     public GameObject hitParticlePrefab;
-    public Rigidbody handR;
-    public Rigidbody handL;
 
     // Start is called before the first frame update
     void Start()

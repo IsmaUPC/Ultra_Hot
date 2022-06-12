@@ -18,13 +18,13 @@ public class EnemyScript : MonoBehaviour
     public bool movement;
     public bool rMovement;
     public Transform weaponHolder;
+    public List<Transform> waypoints;
 
     private float distance;
     private float stoppedTime;
     private bool goPlayer;
     private Rigidbody rb;
-    public Transform[] waypoints;
-    private int wayPointer;
+    private int wayPointer = 0;
 
     void Start()
     {
@@ -71,8 +71,7 @@ public class EnemyScript : MonoBehaviour
                         stoppedTime -= Time.deltaTime;
                 }
                 else
-                {
-                }
+                    WayPoints();
             }
             else
             {
@@ -142,8 +141,9 @@ public class EnemyScript : MonoBehaviour
     {
         if (agent.remainingDistance <= 0.5f)
         {
-            if (wayPointer < waypoints.Length)
-                agent.SetDestination(waypoints[wayPointer++].position);
+            wayPointer++;
+            if (wayPointer < waypoints.Count)
+                agent.SetDestination(waypoints[wayPointer].position);
             else
                 movement = false;
         }
@@ -162,9 +162,11 @@ public class EnemyScript : MonoBehaviour
         return navHit.position;
     }
 
-    public void SetWayPoints(int lvl)
-    {
-        waypoints = GameObject.Find("Waypoints Enemies").transform.GetChild(lvl).FindChildRecursive(name).GetComponentsInChildren<Transform>();
-        wayPointer = 1;
-    }
+    //public void SetWayPoints(int lvl)
+    //{
+    //    Debug.Log("Before Length:" + waypoints.Length.ToString());
+    //    waypoints = GameObject.Find("Waypoints Enemies").transform.GetChild(lvl).FindChildRecursive(name).GetComponentsInChildren<Transform>();
+    //    Debug.Log("After Length:" + waypoints.Length.ToString());
+    //    wayPointer = 0;
+    //}
 }
