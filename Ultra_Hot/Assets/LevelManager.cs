@@ -33,6 +33,10 @@ namespace Autohand
             {
                 currentLevel++;
                 enemies = levels[currentLevel].GetComponentsInChildren<EnemyScript>();
+
+                foreach (EnemyScript cEnemy in enemies)
+                    cEnemy.SetWayPoints(currentLevel);
+
                 dices[currentLevel].SetActive(true);
                 tp.ActiveTelepor();
             }

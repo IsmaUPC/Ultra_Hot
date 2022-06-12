@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+namespace Autohand
+{
+
+}
 [SelectionBase]
 public class EnemyScript : MonoBehaviour
 {
@@ -26,9 +30,6 @@ public class EnemyScript : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         StartCoroutine(RandomAnimation());
-
-        waypoints = GameObject.Find("Waypoints Enemies").transform.GetChild(0).FindChildRecursive(name).GetComponentsInChildren<Transform>();
-        wayPointer = 1;
 
         agent = GetComponent<NavMeshAgent>();
         if (rMovement)
@@ -159,5 +160,11 @@ public class EnemyScript : MonoBehaviour
         NavMesh.SamplePosition(randDirection, out navHit, dist, -1);
 
         return navHit.position;
+    }
+
+    public void SetWayPoints(int lvl)
+    {
+        waypoints = GameObject.Find("Waypoints Enemies").transform.GetChild(lvl).FindChildRecursive(name).GetComponentsInChildren<Transform>();
+        wayPointer = 1;
     }
 }
