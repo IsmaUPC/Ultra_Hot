@@ -7,7 +7,7 @@ public class BulletTime : MonoBehaviour
     public float speed;
     public Rigidbody handL;
     public Rigidbody handR;
-    private float minVel = 0.3f;
+    private float minVel = 0.1f;
 
     private void Update()
     {

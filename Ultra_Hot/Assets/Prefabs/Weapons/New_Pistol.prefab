@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 249168795}
   - component: {fileID: 7608843627416982816}
   - component: {fileID: 8912255676724216943}
+  - component: {fileID: 4020849099621205182}
   m_Layer: 0
   m_Name: New_Pistol
   m_TagString: Untagged
@@ -98,6 +99,8 @@ MonoBehaviour:
   bulletAmount: 6
   barrelTip: {fileID: 7122921692628775120}
   bulletPrefab: {fileID: 8914353279888130421, guid: 03e840776a4003145b758c40dbafd97d, type: 3}
+  handR: {fileID: 0}
+  handL: {fileID: 0}
 --- !u!114 &10072456660365259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  body: {fileID: 0}
+  body: {fileID: 10072456660365262}
   hightlightMaterial: {fileID: 0}
   isGrabbable: 1
   CopySettings: {fileID: 0}
@@ -452,6 +455,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4020849099621205182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10072456660365260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb92c183ed4ecc498eff3bdc065d86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &535579284082696441
 GameObject:
   m_ObjectHideFlags: 0

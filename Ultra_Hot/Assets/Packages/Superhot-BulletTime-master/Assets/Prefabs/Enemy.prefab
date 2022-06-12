@@ -235,7 +235,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000006290281, y: 0.00000033855443, z: 0.39749086}
+  m_ConnectedAnchor: {x: 0.00000006290281, y: -0.00000061512, z: 0.39749086}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -491,7 +491,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000074785214, y: 0.00000023007397, z: 0.25175813}
+  m_ConnectedAnchor: {x: 0.0000010011719, y: 0.00000023007397, z: 0.25175813}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -647,6 +647,7 @@ GameObject:
   - component: {fileID: 7510370701940658437}
   - component: {fileID: 2052156877604754364}
   - component: {fileID: 860531991}
+  - component: {fileID: 5001178366762436901}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -747,6 +748,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &5001178366762436901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7510370701940658436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb92c183ed4ecc498eff3bdc065d86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &7510370701996506365
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,7 +817,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3021bb4175fe5b0408baa91e3566485e, type: 2}
+  - {fileID: 2100000, guid: 3ed39a1acacb2254693e27ead2240b8d, type: 2}
   - {fileID: 2100000, guid: 7fb3f24b736b20248a66a4b132f786a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1156,7 +1175,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3021bb4175fe5b0408baa91e3566485e, type: 2}
+  - {fileID: 2100000, guid: 3ed39a1acacb2254693e27ead2240b8d, type: 2}
   - {fileID: 2100000, guid: 7fb3f24b736b20248a66a4b132f786a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1299,7 +1318,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3021bb4175fe5b0408baa91e3566485e, type: 2}
+  - {fileID: 2100000, guid: 3ed39a1acacb2254693e27ead2240b8d, type: 2}
   - {fileID: 2100000, guid: 7fb3f24b736b20248a66a4b132f786a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1500,7 +1519,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.16318993, y: 0.00000024914743, z: 0.22039495}
+  m_ConnectedAnchor: {x: 0.16318993, y: -0.00000070452694, z: 0.22039472}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -1761,7 +1780,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3021bb4175fe5b0408baa91e3566485e, type: 2}
+  - {fileID: 2100000, guid: 3ed39a1acacb2254693e27ead2240b8d, type: 2}
   - {fileID: 2100000, guid: 7fb3f24b736b20248a66a4b132f786a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1906,7 +1925,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3021bb4175fe5b0408baa91e3566485e, type: 2}
+  - {fileID: 2100000, guid: 3ed39a1acacb2254693e27ead2240b8d, type: 2}
   - {fileID: 2100000, guid: 7fb3f24b736b20248a66a4b132f786a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -2045,7 +2064,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0000011208468, y: -0.00000024914743, z: 0.25175792}
+  m_ConnectedAnchor: {x: 0.00000086799275, y: -0.00000024914743, z: 0.25175792}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2202,7 +2221,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.000000030618402, y: 0.21156114, z: -0.00000017274101}
+  m_ConnectedAnchor: {x: 0.000000030618423, y: 0.21156138, z: -0.00000017274105}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -2304,7 +2323,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3021bb4175fe5b0408baa91e3566485e, type: 2}
+  - {fileID: 2100000, guid: 3ed39a1acacb2254693e27ead2240b8d, type: 2}
   - {fileID: 2100000, guid: 7fb3f24b736b20248a66a4b132f786a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -2873,7 +2892,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.16318984, y: 0.00000024914743, z: 0.22039495}
+  m_ConnectedAnchor: {x: -0.16318984, y: 0.00000024914743, z: 0.22039472}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
