@@ -349,6 +349,10 @@ PrefabInstance:
       value: Espada Chunchunmaru
       objectReference: {fileID: 0}
     - target: {fileID: 1858147060561370, guid: f61520d526e2573438225f84a0220847, type: 3}
+      propertyPath: m_TagString
+      value: sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 1858147060561370, guid: f61520d526e2573438225f84a0220847, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
