@@ -9,49 +9,76 @@ public class EnemyScript : MonoBehaviour
     Animator anim;
     NavMeshAgent agent;
 
+    //public Manager manager;
     public bool dead;
     public bool movement;
+    public bool rMovement;
     public Transform weaponHolder;
 
     private float distance;
     private float stoppedTime;
     private bool goPlayer;
     private Rigidbody rb;
+    public Transform[] waypoints;
+    private int wayPointer;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         StartCoroutine(RandomAnimation());
 
+        waypoints = GameObject.Find("Waypoints Enemies").transform.GetChild(0).FindChildRecursive(name).GetComponentsInChildren<Transform>();
+        wayPointer = 1;
+
         agent = GetComponent<NavMeshAgent>();
-        if(movement)
+        if (rMovement)
+        {
+            movement = true;
             agent.SetDestination(Camera.main.transform.position);
+        }
+        else if (movement)
+            agent.SetDestination(waypoints[wayPointer].position);
+
         distance = Random.Range(0.5f, 5f);
         stoppedTime = 0;
         goPlayer = false;
         rb = gameObject.GetComponent<Rigidbody>();
+
     }
 
     void Update()
     {
         if (!dead)
         {
-            Vector3 newForward = (Camera.main.transform.position - transform.position).normalized;
-            newForward.y = 0;
-            newForward = Quaternion.AngleAxis(-8.7f, Vector3.up) * newForward;
-            rb.rotation = Quaternion.LookRotation(newForward, Vector3.up);
-           
             if (movement)
             {
-                if (stoppedTime <= 0)
+                Vector3 newForward = (waypoints[wayPointer].position - transform.position).normalized;
+                newForward.y = 0;
+                newForward = Quaternion.AngleAxis(-8.7f, Vector3.up) * newForward;
+                rb.rotation = Quaternion.LookRotation(newForward, Vector3.up);
+
+                if (rMovement)
                 {
-                    if (agent.remainingDistance <= 0.5f && goPlayer == true)
-                        goPlayer = false;
-                    if (agent.remainingDistance <= distance && goPlayer == false)
-                        MovementIteration();
+                    if (stoppedTime <= 0)
+                    {
+                        if (agent.remainingDistance <= 0.5f && goPlayer == true)
+                            goPlayer = false;
+                        if (agent.remainingDistance <= distance && goPlayer == false)
+                            MovementIteration();
+                    }
+                    else
+                        stoppedTime -= Time.deltaTime;
                 }
                 else
-                    stoppedTime -= Time.deltaTime;
+                {
+                }
+            }
+            else
+            {
+                Vector3 newForward = (Camera.main.transform.position - transform.position).normalized;
+                newForward.y = 0;
+                newForward = Quaternion.AngleAxis(-8.7f, Vector3.up) * newForward;
+                rb.rotation = Quaternion.LookRotation(newForward, Vector3.up);
             }
         }
     }
@@ -76,7 +103,7 @@ public class EnemyScript : MonoBehaviour
 
     public void Shoot()
     {
-        if (dead)
+        if (dead || movement)
             return;
 
         if (weaponHolder.GetComponentInChildren<GunScript>() != null)
@@ -107,6 +134,17 @@ public class EnemyScript : MonoBehaviour
                 break;
             default:
                 break;
+        }
+    }
+
+    void WayPoints()
+    {
+        if (agent.remainingDistance <= 0.5f)
+        {
+            if (wayPointer < waypoints.Length)
+                agent.SetDestination(waypoints[wayPointer++].position);
+            else
+                movement = false;
         }
     }
 
