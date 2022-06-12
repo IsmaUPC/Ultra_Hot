@@ -236,6 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slicer: {fileID: 1285982663}
   rb: {fileID: 1017511078}
+  hitParticlePrefab: {fileID: 2462045763441574653, guid: bc20e11fe125f0c4985a160e93e1a272, type: 3}
 --- !u!114 &1017511075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,7 +346,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1858147060561370, guid: f61520d526e2573438225f84a0220847, type: 3}
       propertyPath: m_Name
-      value: Prefab_Sword_Cyber_Magma
+      value: Espada Chunchunmaru
       objectReference: {fileID: 0}
     - target: {fileID: 1858147060561370, guid: f61520d526e2573438225f84a0220847, type: 3}
       propertyPath: m_StaticEditorFlags

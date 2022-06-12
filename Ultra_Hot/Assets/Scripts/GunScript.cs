@@ -18,6 +18,8 @@ public class GunScript : MonoBehaviour
     public Rigidbody handR;
     public Rigidbody handL;
 
+    public GameObject hitParticlePrefab;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -35,9 +37,6 @@ public class GunScript : MonoBehaviour
 
         if (!isEnemy)
             bulletAmount--;
-
-        //StopCoroutine(BulletTimeScript.instance.ActionE(.03f));
-        //StartCoroutine(BulletTimeScript.instance.ActionE(.03f));
        
         GameObject bullet = Instantiate(bulletPrefab, barrelTip.position, transform.rotation);
         bullet.GetComponent<BulletScript>().handR = handR;
@@ -68,8 +67,7 @@ public class GunScript : MonoBehaviour
         {
             BodyPartScript bp = collision.gameObject.GetComponent<BodyPartScript>();
 
-            if (!bp.enemy.dead)
-                Instantiate(SuperHotScript.instance.hitParticlePrefab, transform.position, transform.rotation);
+            Instantiate(hitParticlePrefab, transform.position, transform.rotation);
 
             bp.HidePartAndReplace();
             bp.enemy.Ragdoll();
