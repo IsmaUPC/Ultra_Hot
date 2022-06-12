@@ -28,6 +28,10 @@ namespace Autohand
                 if (item.dead)
                     count++;
             }
+            if (count == enemies.Length && currentLevel > levels.Count)
+            {
+                dices[currentLevel].SetActive(true);
+            }
             if (count == enemies.Length && currentLevel < levels.Count)
             {
                 currentLevel++;
