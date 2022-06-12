@@ -30,19 +30,19 @@ namespace Autohand {
                 ActiveTelepor();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha0))
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 SelectedTeleport(0);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 SelectedTeleport(1);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 SelectedTeleport(2);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha3))
+            if (Input.GetKeyDown(KeyCode.Alpha4))
             {
                 SelectedTeleport(3);
             }
@@ -55,7 +55,7 @@ namespace Autohand {
             playerBody.SetPosition(teleports[index].position, teleports[index].rotation);
 
         }
-        void ActiveTelepor()
+        public void ActiveTelepor()
         {
             if (index+1 < gameObject.transform.childCount)
             {
@@ -66,9 +66,6 @@ namespace Autohand {
 
             }
         }
-
-
-
     }
 }
 

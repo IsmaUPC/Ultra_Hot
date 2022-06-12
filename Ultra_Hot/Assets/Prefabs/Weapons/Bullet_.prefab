@@ -1269,7 +1269,7 @@ GameObject:
   - component: {fileID: 6197046747679209548}
   m_Layer: 0
   m_Name: Bullet_
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1489,4 +1489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  multSpeed: 20
   hitParticlePrefab: {fileID: 2462045763441574653, guid: bc20e11fe125f0c4985a160e93e1a272, type: 3}
+  handR: {fileID: 0}
+  handL: {fileID: 0}
