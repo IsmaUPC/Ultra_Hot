@@ -2707,6 +2707,14 @@ PrefabInstance:
       propertyPath: enemiesLevel
       value: 
       objectReference: {fileID: 74400150}
+    - target: {fileID: 4392671673004984311, guid: 47470f4847a93aa43b98be35833fa1ac, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0d02c1aaa837eb458bd2bc098bd2c29, type: 2}
+    - target: {fileID: 4392671673004984312, guid: 47470f4847a93aa43b98be35833fa1ac, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 6461297695846733525, guid: 7f7b76862b03caa4ca0ad09eb0a97c44, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47470f4847a93aa43b98be35833fa1ac, type: 3}
 --- !u!1001 &1057365315
@@ -2764,6 +2772,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PostProcessing
       objectReference: {fileID: 0}
+    - target: {fileID: 6189284624076137171, guid: 29eb59f3c6c9b59429a2324896aa58dc, type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: 9cd99543c35b5524699224c889449406, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29eb59f3c6c9b59429a2324896aa58dc, type: 3}
 --- !u!1 &1061226064 stripped
