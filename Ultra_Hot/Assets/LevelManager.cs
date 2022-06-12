@@ -31,6 +31,10 @@ namespace Autohand
             if (count == enemies.Length && currentLevel < levels.Count)
             {
                 currentLevel++;
+                foreach (var item in enemies)
+                {
+                    item.gameObject.SetActive(false);
+                }
                 enemies = levels[currentLevel].GetComponentsInChildren<EnemyScript>();
 
                 dices[currentLevel].SetActive(true);
