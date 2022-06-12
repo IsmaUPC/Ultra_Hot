@@ -37,6 +37,7 @@ public class EnemyScript : MonoBehaviour
         if (!dead)
         {
             Vector3 newForward = (Camera.main.transform.position - transform.position).normalized;
+            newForward.y = 0;
             newForward = Quaternion.AngleAxis(-8.7f, Vector3.up) * newForward;
             rb.rotation = Quaternion.LookRotation(newForward, Vector3.up);
            
