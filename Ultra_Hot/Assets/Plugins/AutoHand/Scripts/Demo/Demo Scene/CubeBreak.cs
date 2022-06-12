@@ -2,6 +2,8 @@ using UnityEngine;
 
 namespace Autohand.Demo{
     public class CubeBreak : MonoBehaviour{
+        [SerializeField] private GameObject enemiesLevel;
+
         public float force = 10f;
         Vector3[] offsets = { new Vector3(0.25f, 0.25f, 0.25f), new Vector3(-0.25f, 0.25f, 0.25f), new Vector3(0.25f, 0.25f, -0.25f), new Vector3(-0.25f, 0.25f, -0.25f),
                             new Vector3(0.25f, -0.25f, 0.25f), new Vector3(-0.25f, -0.25f, 0.25f), new Vector3(0.25f, -0.25f, -0.25f), new Vector3(-0.25f, -0.25f, -0.25f),};
@@ -20,6 +22,7 @@ namespace Autohand.Demo{
                 smallerCopy.transform.parent = null;
                 smallerCopy.transform.localScale = transform.localScale/2f;
                 smallerCopy.layer = LayerMask.NameToLayer(Hand.grabbableLayerNameDefault);
+                Destroy(smallerCopy.GetComponent<CubeBreak>());
                 var body = smallerCopy.GetComponent<Rigidbody>();
                 body.ResetCenterOfMass();
                 body.ResetInertiaTensor();
@@ -31,6 +34,8 @@ namespace Autohand.Demo{
                 if(smallerCopy.transform.localScale.x < 0.03f)
                     smallerCopy.GetComponent<Grabbable>().singleHandOnly = true;
             }
+            enemiesLevel.SetActive(true);
+
             Destroy(gameObject);
         }
 
