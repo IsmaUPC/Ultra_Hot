@@ -9948,6 +9948,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084378256}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1084859677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 185253149553140611, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+  m_PrefabInstance: {fileID: 1161457810}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1098260964
 GameObject:
   m_ObjectHideFlags: 0
@@ -10627,6 +10632,10 @@ PrefabInstance:
       propertyPath: m_UseRelativeTransform
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8086603477119862099, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: tp
+      value: 
+      objectReference: {fileID: 1084859677}
     - target: {fileID: 8730492131554684031, guid: a5226a72c9553294abfe172a458b5805, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9997326
