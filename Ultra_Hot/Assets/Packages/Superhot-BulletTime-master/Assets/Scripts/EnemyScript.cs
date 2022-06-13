@@ -44,7 +44,6 @@ public class EnemyScript : MonoBehaviour
         stoppedTime = 0;
         goPlayer = false;
         rb = gameObject.GetComponent<Rigidbody>();
-
     }
 
     void Update()
@@ -97,6 +96,7 @@ public class EnemyScript : MonoBehaviour
 
         if (weaponHolder.GetComponentInChildren<GunScript>() != null)
         {
+            
             GunScript w = weaponHolder.GetComponentInChildren<GunScript>();
             w.Release();
         }
@@ -163,11 +163,4 @@ public class EnemyScript : MonoBehaviour
         return navHit.position;
     }
 
-    //public void SetWayPoints(int lvl)
-    //{
-    //    Debug.Log("Before Length:" + waypoints.Length.ToString());
-    //    waypoints = GameObject.Find("Waypoints Enemies").transform.GetChild(lvl).FindChildRecursive(name).GetComponentsInChildren<Transform>();
-    //    Debug.Log("After Length:" + waypoints.Length.ToString());
-    //    wayPointer = 0;
-    //}
 }
