@@ -37,7 +37,7 @@ namespace Autohand.Demo{
                 smallerCopy.transform.parent = null;
                 smallerCopy.transform.localScale = transform.localScale/2f;
                 smallerCopy.layer = LayerMask.NameToLayer(Hand.grabbableLayerNameDefault);
-                smallerCopy.GetComponent<Rigidbody>().useGravity = false;
+                smallerCopy.GetComponent<Rigidbody>().useGravity = true;
                 Destroy(smallerCopy.GetComponent<CubeBreak>());
                 var body = smallerCopy.GetComponent<Rigidbody>();
                 body.ResetCenterOfMass();
