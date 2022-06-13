@@ -17,7 +17,7 @@ public class GunScript : MonoBehaviour
     public int bulletAmount = 6;
     public Transform barrelTip;
     public GameObject bulletPrefab;
-    public bool butNo;
+    public bool butNo = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -25,7 +25,6 @@ public class GunScript : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
         bulletTime = GameObject.FindGameObjectWithTag("Player").GetComponent<BulletTime>();
-        butNo = false;
 
         if (transform.parent != null)
             rb.isKinematic = true;
