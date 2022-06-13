@@ -190,8 +190,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128557}
   m_LocalRotation: {x: -0, y: -0.39389098, z: -0, w: 0.91915715}
-  m_LocalPosition: {x: 20.76, y: 5.459, z: 42.13}
-  m_LocalScale: {x: 2.1877973, y: 1.7616559, z: 0.9417131}
+  m_LocalPosition: {x: 20.76, y: 5.2339997, z: 42.13}
+  m_LocalScale: {x: 2.1877973, y: 1.2415093, z: 0.9417131}
   m_Children: []
   m_Father: {fileID: 483645324}
   m_RootOrder: 7
@@ -1753,7 +1753,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219821448}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80c9c18883d99a141b4e731eadaccdaa, type: 3}
   m_Name: 
@@ -1768,7 +1768,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219821448}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd494754914aa424f8dbb7bdfbafefe2, type: 3}
   m_Name: 
@@ -1789,10 +1789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesLevel: {fileID: 2133030561}
   force: 1
-  rotateSpeed: 10
-  speedLevi: 1
-  distance: 0.1
-  up: 1
+  lastCube: 0
 --- !u!114 &219821454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1828,9 +1825,21 @@ MonoBehaviour:
   StartSelecting:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 219821453}
-        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
-        m_MethodName: StopRotLev
+      - m_Target: {fileID: 219821452}
+        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
+        m_MethodName: StopRotation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 219821451}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: StopLevitation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2459,11 +2468,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 821933818690794870, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.630953
+      value: 17.631
       objectReference: {fileID: 0}
     - target: {fileID: 821933818690794870, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.9968
+      value: 7.518
       objectReference: {fileID: 0}
     - target: {fileID: 821933818690794870, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4896,7 +4905,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633128214}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80c9c18883d99a141b4e731eadaccdaa, type: 3}
   m_Name: 
@@ -4911,7 +4920,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633128214}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd494754914aa424f8dbb7bdfbafefe2, type: 3}
   m_Name: 
@@ -4932,10 +4941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesLevel: {fileID: 1706836078}
   force: 1
-  rotateSpeed: 10
-  speedLevi: 1
-  distance: 0.1
-  up: 1
+  lastCube: 0
 --- !u!114 &633128220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4971,9 +4977,21 @@ MonoBehaviour:
   StartSelecting:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 633128219}
-        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
-        m_MethodName: StopRotLev
+      - m_Target: {fileID: 633128218}
+        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
+        m_MethodName: StopRotation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 633128217}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: StopLevitation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5592,7 +5610,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 669728759}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.29, y: 6.162, z: 42.214}
+  m_LocalPosition: {x: 20.99, y: 5.806, z: 42.113}
   m_LocalScale: {x: 0.27688643, y: 0.27688643, z: 0.27688643}
   m_Children: []
   m_Father: {fileID: 709212}
@@ -5732,7 +5750,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 669728759}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80c9c18883d99a141b4e731eadaccdaa, type: 3}
   m_Name: 
@@ -5747,7 +5765,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 669728759}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd494754914aa424f8dbb7bdfbafefe2, type: 3}
   m_Name: 
@@ -5768,10 +5786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesLevel: {fileID: 1783153787}
   force: 1
-  rotateSpeed: 10
-  speedLevi: 1
-  distance: 0.1
-  up: 1
+  lastCube: 0
 --- !u!114 &669728765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5807,9 +5822,21 @@ MonoBehaviour:
   StartSelecting:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 669728764}
-        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
-        m_MethodName: StopRotLev
+      - m_Target: {fileID: 669728763}
+        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
+        m_MethodName: StopRotation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 669728762}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: StopLevitation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7883,7 +7910,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885310454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.917, y: 42.18, z: 6.67}
+  m_LocalPosition: {x: 4.917, y: 41.43, z: 6.67}
   m_LocalScale: {x: 6.517483, y: 6.517483, z: 6.517483}
   m_Children: []
   m_Father: {fileID: 709212}
@@ -8023,7 +8050,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885310454}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80c9c18883d99a141b4e731eadaccdaa, type: 3}
   m_Name: 
@@ -8038,7 +8065,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885310454}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd494754914aa424f8dbb7bdfbafefe2, type: 3}
   m_Name: 
@@ -8059,10 +8086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesLevel: {fileID: 0}
   force: 1
-  rotateSpeed: 10
-  speedLevi: 1
-  distance: 0.1
-  up: 1
+  lastCube: 1
 --- !u!114 &885310460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8098,9 +8122,21 @@ MonoBehaviour:
   StartSelecting:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 885310459}
-        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
-        m_MethodName: StopRotLev
+      - m_Target: {fileID: 885310458}
+        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
+        m_MethodName: StopRotation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 885310457}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: StopLevitation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8940,7 +8976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1117663098850099718, guid: 8df5a97ec735d9d41b7acd26d4f006c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.907
+      value: 2.029
       objectReference: {fileID: 0}
     - target: {fileID: 1117663098850099718, guid: 8df5a97ec735d9d41b7acd26d4f006c8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11984,7 +12020,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378515069}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80c9c18883d99a141b4e731eadaccdaa, type: 3}
   m_Name: 
@@ -11999,7 +12035,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378515069}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd494754914aa424f8dbb7bdfbafefe2, type: 3}
   m_Name: 
@@ -12020,10 +12056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesLevel: {fileID: 315065649}
   force: 1
-  rotateSpeed: 10
-  speedLevi: 1
-  distance: 0.1
-  up: 1
+  lastCube: 0
 --- !u!114 &1378515075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12059,9 +12092,21 @@ MonoBehaviour:
   StartSelecting:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1378515074}
-        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
-        m_MethodName: StopRotLev
+      - m_Target: {fileID: 1378515073}
+        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
+        m_MethodName: StopRotation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1378515072}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: StopLevitation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15868,7 +15913,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744819755}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80c9c18883d99a141b4e731eadaccdaa, type: 3}
   m_Name: 
@@ -15883,7 +15928,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744819755}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd494754914aa424f8dbb7bdfbafefe2, type: 3}
   m_Name: 
@@ -15904,10 +15949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesLevel: {fileID: 1709110635}
   force: 1
-  rotateSpeed: 10
-  speedLevi: 1
-  distance: 0.1
-  up: 1
+  lastCube: 0
 --- !u!114 &1744819761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15943,9 +15985,21 @@ MonoBehaviour:
   StartSelecting:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1744819760}
-        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
-        m_MethodName: StopRotLev
+      - m_Target: {fileID: 1744819759}
+        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
+        m_MethodName: StopRotation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1744819758}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: StopLevitation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16176,7 +16230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762709066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.79, y: 36.31, z: 20.007}
+  m_LocalPosition: {x: 4.848, y: 36.31, z: 20.007}
   m_LocalScale: {x: 0.27688643, y: 0.27688643, z: 0.27688643}
   m_Children: []
   m_Father: {fileID: 709212}
@@ -16329,7 +16383,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762709066}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80c9c18883d99a141b4e731eadaccdaa, type: 3}
   m_Name: 
@@ -16344,7 +16398,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762709066}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd494754914aa424f8dbb7bdfbafefe2, type: 3}
   m_Name: 
@@ -16365,10 +16419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesLevel: {fileID: 719143331}
   force: 1
-  rotateSpeed: 10
-  speedLevi: 1
-  distance: 0.1
-  up: 1
+  lastCube: 0
 --- !u!114 &1762709073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16404,9 +16455,21 @@ MonoBehaviour:
   StartSelecting:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1762709072}
-        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
-        m_MethodName: StopRotLev
+      - m_Target: {fileID: 1762709071}
+        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
+        m_MethodName: StopRotation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1762709070}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: StopLevitation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16759,7 +16822,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773266399}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80c9c18883d99a141b4e731eadaccdaa, type: 3}
   m_Name: 
@@ -16774,7 +16837,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773266399}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd494754914aa424f8dbb7bdfbafefe2, type: 3}
   m_Name: 
@@ -16795,10 +16858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesLevel: {fileID: 507378929}
   force: 1
-  rotateSpeed: 10
-  speedLevi: 1
-  distance: 0.1
-  up: 1
+  lastCube: 0
 --- !u!114 &1773266405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16834,9 +16894,21 @@ MonoBehaviour:
   StartSelecting:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1773266404}
-        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
-        m_MethodName: StopRotLev
+      - m_Target: {fileID: 1773266403}
+        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
+        m_MethodName: StopRotation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1773266402}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: StopLevitation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18231,7 +18303,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845081890}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80c9c18883d99a141b4e731eadaccdaa, type: 3}
   m_Name: 
@@ -18246,7 +18318,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845081890}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd494754914aa424f8dbb7bdfbafefe2, type: 3}
   m_Name: 
@@ -18267,10 +18339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesLevel: {fileID: 74400150}
   force: 1
-  rotateSpeed: 10
-  speedLevi: 1
-  distance: 0.1
-  up: 1
+  lastCube: 0
 --- !u!114 &1845081897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18306,9 +18375,21 @@ MonoBehaviour:
   StartSelecting:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1845081896}
-        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
-        m_MethodName: StopRotLev
+      - m_Target: {fileID: 1845081895}
+        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
+        m_MethodName: StopRotation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1845081894}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: StopLevitation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19237,7 +19318,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886086817}
-  m_LocalRotation: {x: 0.07040317, y: 0.032909546, z: -0.0023317041, w: 0.99697286}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.139, y: 21.378, z: 41.967}
   m_LocalScale: {x: 0.27688643, y: 0.27688643, z: 0.27688643}
   m_Children: []
@@ -19378,7 +19459,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886086817}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80c9c18883d99a141b4e731eadaccdaa, type: 3}
   m_Name: 
@@ -19393,7 +19474,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886086817}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd494754914aa424f8dbb7bdfbafefe2, type: 3}
   m_Name: 
@@ -19414,10 +19495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesLevel: {fileID: 100927532}
   force: 1
-  rotateSpeed: 10
-  speedLevi: 1
-  distance: 0.1
-  up: 1
+  lastCube: 0
 --- !u!114 &1886086823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19453,9 +19531,21 @@ MonoBehaviour:
   StartSelecting:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1886086822}
-        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
-        m_MethodName: StopRotLev
+      - m_Target: {fileID: 1886086821}
+        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
+        m_MethodName: StopRotation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1886086820}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: StopLevitation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20772,8 +20862,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008761288}
   m_LocalRotation: {x: 0.51168287, y: 0.48803762, z: -0.48803753, w: 0.5116829}
-  m_LocalPosition: {x: 20.123, y: 5.354, z: 40.342}
-  m_LocalScale: {x: 1.2927362, y: 0.51721, z: 1.2020446}
+  m_LocalPosition: {x: 20.123, y: 5.16, z: 40.342}
+  m_LocalScale: {x: 1.2927362, y: 0.51721, z: 0.8471289}
   m_Children: []
   m_Father: {fileID: 483645324}
   m_RootOrder: 4

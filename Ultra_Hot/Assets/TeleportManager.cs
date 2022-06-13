@@ -46,6 +46,26 @@ namespace Autohand {
             {
                 SelectedTeleport(3);
             }
+            if (Input.GetKeyDown(KeyCode.Alpha5))
+            {
+                SelectedTeleport(4);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha6))
+            {
+                SelectedTeleport(5);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha7))
+            {
+                SelectedTeleport(6);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha8))
+            {
+                SelectedTeleport(7);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha9))
+            {
+                SelectedTeleport(8);
+            }
         }
         void SelectedTeleport(int newIndex)
         {
