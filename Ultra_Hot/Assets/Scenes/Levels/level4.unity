@@ -1548,6 +1548,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7510370701940658439, guid: 2b98b784042c42640a3edbe4a63f9ac1, type: 3}
   m_PrefabInstance: {fileID: 149446726}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &163424306 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7214476175092716823, guid: d09cf996469b118479e15c2f579be11f, type: 3}
+  m_PrefabInstance: {fileID: 1919286006}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &199674228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4363,7 +4368,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &517851586
 GameObject:
@@ -9769,6 +9774,11 @@ Transform:
   m_Father: {fileID: 315761071}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1007299151 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7214476174298525675, guid: d09cf996469b118479e15c2f579be11f, type: 3}
+  m_PrefabInstance: {fileID: 1919286006}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1019180932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11196,7 +11206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11974,6 +11984,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264555649}
   m_Mesh: {fileID: 4300006, guid: f6e31b7e693f4ca43a9b57f502a33d0f, type: 3}
+--- !u!4 &1267479923 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7214476174385812655, guid: d09cf996469b118479e15c2f579be11f, type: 3}
+  m_PrefabInstance: {fileID: 1919286006}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1283167406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13323,6 +13338,11 @@ PrefabInstance:
       objectReference: {fileID: 66953194}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+--- !u!4 &1426264032 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7214476173718415188, guid: d09cf996469b118479e15c2f579be11f, type: 3}
+  m_PrefabInstance: {fileID: 1919286006}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1437427433
 GameObject:
   m_ObjectHideFlags: 0
@@ -21125,6 +21145,46 @@ PrefabInstance:
       propertyPath: playerBody
       value: 
       objectReference: {fileID: 873562821}
+    - target: {fileID: 6383345573452502068, guid: d09cf996469b118479e15c2f579be11f, type: 3}
+      propertyPath: teleports.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383345573452502068, guid: d09cf996469b118479e15c2f579be11f, type: 3}
+      propertyPath: teleports.Array.data[0]
+      value: 
+      objectReference: {fileID: 1267479923}
+    - target: {fileID: 6383345573452502068, guid: d09cf996469b118479e15c2f579be11f, type: 3}
+      propertyPath: teleports.Array.data[1]
+      value: 
+      objectReference: {fileID: 1426264032}
+    - target: {fileID: 6383345573452502068, guid: d09cf996469b118479e15c2f579be11f, type: 3}
+      propertyPath: teleports.Array.data[2]
+      value: 
+      objectReference: {fileID: 163424306}
+    - target: {fileID: 6383345573452502068, guid: d09cf996469b118479e15c2f579be11f, type: 3}
+      propertyPath: teleports.Array.data[3]
+      value: 
+      objectReference: {fileID: 1007299151}
+    - target: {fileID: 6383345573452502068, guid: d09cf996469b118479e15c2f579be11f, type: 3}
+      propertyPath: teleports.Array.data[4]
+      value: 
+      objectReference: {fileID: 818843372}
+    - target: {fileID: 6383345573452502068, guid: d09cf996469b118479e15c2f579be11f, type: 3}
+      propertyPath: teleports.Array.data[5]
+      value: 
+      objectReference: {fileID: 427462908}
+    - target: {fileID: 6383345573452502068, guid: d09cf996469b118479e15c2f579be11f, type: 3}
+      propertyPath: teleports.Array.data[6]
+      value: 
+      objectReference: {fileID: 1697562640}
+    - target: {fileID: 6383345573452502068, guid: d09cf996469b118479e15c2f579be11f, type: 3}
+      propertyPath: teleports.Array.data[7]
+      value: 
+      objectReference: {fileID: 870876718}
+    - target: {fileID: 6383345573452502068, guid: d09cf996469b118479e15c2f579be11f, type: 3}
+      propertyPath: teleports.Array.data[8]
+      value: 
+      objectReference: {fileID: 1518952339}
     - target: {fileID: 7214476173718415188, guid: d09cf996469b118479e15c2f579be11f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.14
@@ -21175,7 +21235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7214476173957040757, guid: d09cf996469b118479e15c2f579be11f, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7214476173957040757, guid: d09cf996469b118479e15c2f579be11f, type: 3}
       propertyPath: m_LocalPosition.x

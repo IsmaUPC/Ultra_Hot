@@ -92,7 +92,7 @@ public class EnemyScript : MonoBehaviour
             bp.rb.interpolation = RigidbodyInterpolation.Interpolate;
         }
         dead = true;
-        agent.path = null;
+        agent.enabled = false;
 
         if (weaponHolder.GetComponentInChildren<GunScript>() != null)
         {

@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,19 +11,19 @@ namespace Autohand {
         public AutoHandPlayer playerBody;
         //public GameObject playerBody;
         private int index = 0;
+        private bool firstTp = true;
         private void Start()
         {
-            for (int i = 0; i < gameObject.transform.childCount; i++)
-            {
-                teleports.Add(gameObject.transform.GetChild(i));
-                //teleports[i] = gameObject.transform.GetChild(i);
-            }
-            playerBody.SetPosition(teleports[index].position,teleports[index].rotation);
-
         }
 
         private void Update()
         {
+            if(firstTp)
+            {
+                firstTp = false;
+                playerBody.SetPosition(teleports[index].position, teleports[index].rotation);
+            }
+
             if (Input.GetKeyDown(KeyCode.T))
             {
                 ActiveTelepor();
