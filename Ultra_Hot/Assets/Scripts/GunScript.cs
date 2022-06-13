@@ -38,7 +38,7 @@ public class GunScript : MonoBehaviour
         if (!isEnemy)
             bulletAmount--;
         else if (!butNo)
-            transform.LookAt(new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y - 0.6f, Camera.main.transform.position.z));
+            transform.LookAt(new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y - 0.4f, Camera.main.transform.position.z));
 
         GameObject bullet = Instantiate(bulletPrefab, barrelTip.position, transform.rotation);
         bullet.GetComponent<BulletScript>().GodMode = bulletTime.GodMode;

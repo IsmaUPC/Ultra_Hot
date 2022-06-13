@@ -45,6 +45,7 @@ namespace Autohand.Demo{
                 enemiesLevel.SetActive(true);
             }
             else{
+                Time.timeScale = 1;
                 SceneManager.LoadScene(0);
             }
 
