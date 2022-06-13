@@ -486,8 +486,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34989284}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 63, y: 18, z: 0}
-  m_LocalScale: {x: 6, y: 40, z: 120}
+  m_LocalPosition: {x: 63, y: 20, z: 0}
+  m_LocalScale: {x: 6, y: 46, z: 120}
   m_Children: []
   m_Father: {fileID: 2052101835}
   m_RootOrder: 3
@@ -2178,6 +2178,10 @@ PrefabInstance:
       propertyPath: handR
       value: 
       objectReference: {fileID: 66953194}
+    - target: {fileID: 4176809251554381189, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: bulletTime
+      value: 
+      objectReference: {fileID: 1061226067}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
 --- !u!1 &266862247
@@ -2885,8 +2889,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 350599407}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 18, z: -63}
-  m_LocalScale: {x: 120, y: 40, z: 6}
+  m_LocalPosition: {x: 0, y: 20, z: -63}
+  m_LocalScale: {x: 120, y: 46, z: 6}
   m_Children: []
   m_Father: {fileID: 2052101835}
   m_RootOrder: 5
@@ -4604,6 +4608,8 @@ GameObject:
   - component: {fileID: 594106221}
   - component: {fileID: 594106220}
   - component: {fileID: 594106222}
+  - component: {fileID: 594106224}
+  - component: {fileID: 594106223}
   m_Layer: 0
   m_Name: base_walls
   m_TagString: Untagged
@@ -4689,6 +4695,32 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300036, guid: f3b30dd54e9d0ce418d1a6ab44a8ecf7, type: 3}
+--- !u!65 &594106223
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594106218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4484062, y: 3.370908, z: 0.9880049}
+  m_Center: {x: -5.0375166, y: 1.2, z: 5.6439495}
+--- !u!65 &594106224
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594106218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4484062, y: 3.370908, z: 0.9880049}
+  m_Center: {x: -5.0375166, y: -4.5239916, z: 5.6439495}
 --- !u!1 &633128214
 GameObject:
   m_ObjectHideFlags: 0
@@ -6612,7 +6644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7510370701940658437, guid: 2b98b784042c42640a3edbe4a63f9ac1, type: 3}
       propertyPath: movement
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7510370701940658437, guid: 2b98b784042c42640a3edbe4a63f9ac1, type: 3}
       propertyPath: waypointFather
@@ -8553,6 +8585,7 @@ GameObject:
   - component: {fileID: 942387369}
   - component: {fileID: 942387368}
   - component: {fileID: 942387370}
+  - component: {fileID: 942387371}
   m_Layer: 0
   m_Name: corridor
   m_TagString: Untagged
@@ -8639,6 +8672,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300004, guid: f3b30dd54e9d0ce418d1a6ab44a8ecf7, type: 3}
+--- !u!65 &942387371
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942387366}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 38.19146, y: 0.088623025, z: 0.87757313}
+  m_Center: {x: 23.31377, y: 28.469799, z: 0.23000002}
 --- !u!1001 &956240651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9506,8 +9552,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026018776}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -63, y: 18, z: 0}
-  m_LocalScale: {x: 6, y: 40, z: 120}
+  m_LocalPosition: {x: -63, y: 20, z: 0}
+  m_LocalScale: {x: 6, y: 46, z: 120}
   m_Children: []
   m_Father: {fileID: 2052101835}
   m_RootOrder: 2
@@ -9646,7 +9692,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051874422}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -9770,6 +9816,7 @@ MonoBehaviour:
   speed: 0
   handL: {fileID: 1391160894}
   handR: {fileID: 66953194}
+  GodMode: 0
 --- !u!1 &1064007413
 GameObject:
   m_ObjectHideFlags: 0
@@ -10615,6 +10662,10 @@ PrefabInstance:
     - target: {fileID: 7942002210973373748, guid: a5226a72c9553294abfe172a458b5805, type: 3}
       propertyPath: m_Name
       value: XRPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942002210973373748, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7942002211305997991, guid: a5226a72c9553294abfe172a458b5805, type: 3}
       propertyPath: m_UpdateType
@@ -17231,8 +17282,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802811042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 18, z: 63}
-  m_LocalScale: {x: 120, y: 40, z: 6}
+  m_LocalPosition: {x: 0, y: 20, z: 63}
+  m_LocalScale: {x: 120, y: 46, z: 6}
   m_Children: []
   m_Father: {fileID: 2052101835}
   m_RootOrder: 4
@@ -17690,6 +17741,10 @@ PrefabInstance:
       propertyPath: handR
       value: 
       objectReference: {fileID: 66953194}
+    - target: {fileID: 4176809251554381189, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: bulletTime
+      value: 
+      objectReference: {fileID: 1061226067}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
 --- !u!1001 &1829934113
@@ -18456,7 +18511,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845576621}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 41, z: 0}
+  m_LocalPosition: {x: 0, y: 46, z: 0}
   m_LocalScale: {x: 120, y: 6, z: 120}
   m_Children: []
   m_Father: {fileID: 2052101835}

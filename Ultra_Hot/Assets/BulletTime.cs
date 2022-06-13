@@ -9,8 +9,13 @@ public class BulletTime : MonoBehaviour
     public Rigidbody handR;
     private float minVel = 0.1f;
 
+    public bool GodMode = false;
+
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.G))
+            GodMode = !GodMode;
+
         speed = handL.velocity.magnitude + handR.velocity.magnitude * 20 + minVel;
         Time.timeScale = Mathf.InverseLerp(0,8,speed);
 

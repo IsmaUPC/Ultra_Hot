@@ -9,7 +9,8 @@ public class GunScript : MonoBehaviour
     private Rigidbody rb;
     private Collider coll;
 
-    public bool GodMode = false;
+    private BulletTime bulletTime;
+    public GameObject hitParticlePrefab;
 
     [Space]
     [Header("Weapon Settings")]
@@ -17,22 +18,15 @@ public class GunScript : MonoBehaviour
     public Transform barrelTip;
     public GameObject bulletPrefab;
 
-    public GameObject hitParticlePrefab;
-
     // Start is called before the first frame update
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
+        bulletTime = GameObject.FindGameObjectWithTag("Player").GetComponent<BulletTime>();
 
         if (transform.parent != null)
             rb.isKinematic = true;
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
-            GodMode = !GodMode;
     }
 
     public void Shoot(bool isEnemy)
@@ -43,10 +37,10 @@ public class GunScript : MonoBehaviour
         if (!isEnemy)
             bulletAmount--;
         else
-            transform.LookAt(new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y - 0.7f, Camera.main.transform.position.z));
+            transform.LookAt(new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y - 0.6f, Camera.main.transform.position.z));
 
         GameObject bullet = Instantiate(bulletPrefab, barrelTip.position, transform.rotation);
-        bullet.GetComponent<BulletScript>().GodMode = GodMode;
+        bullet.GetComponent<BulletScript>().GodMode = bulletTime.GodMode;
 
         if (GetComponentInChildren<ParticleSystem>() != null)
             GetComponentInChildren<ParticleSystem>().Play();
