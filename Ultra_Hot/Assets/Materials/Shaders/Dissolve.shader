@@ -130,6 +130,7 @@ Shader "Custom/Dissolve"
             fixed4 frag (g2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
+                col.rgb = float3(1, 0.8, 0.6);
                 return col;
             }
             ENDCG

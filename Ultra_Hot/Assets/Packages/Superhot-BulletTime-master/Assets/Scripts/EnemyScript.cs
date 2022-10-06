@@ -26,6 +26,10 @@ public class EnemyScript : MonoBehaviour
     private Rigidbody rb;
     private int wayPointer = 0;
 
+
+    public float dissolveWeight = 0.0f;
+
+
     void Start()
     {
         anim = GetComponent<Animator>();
