@@ -84,21 +84,23 @@ Shader "Custom/Dissolve"
         float2 avgUV = (IN[0].uv + IN[1].uv + IN[2].uv) / 3;
         float3 avgNormal = (IN[0].normal + IN[1].normal + IN[2].normal) / 3;
 
+        float dissolve = tex2Dlod(_DissolveTexture, float4(avgUV, 0, 0)).r;
+        float t = saturate(_Weight * 2 - dissolve);
 
         float2 flowUV = TRANSFORM_TEX(mul(unity_ObjectToWorld, avgPos).xz, _FlowMap);
         float4 flowVector = remapFlowTexture(tex2Dlod(_FlowMap, float4(flowUV, 0, 0)));
 
         for (int i = 0; i < 3; ++i)
         {
-            float3 targetPos = IN[i].position + _Direction;
+            float3 targetPos = avgPos + _Direction;
             targetPos += flowVector.xyz * _Expand;
 
             float3 p = IN[i].position;
-            p = lerp(IN[i].position, targetPos, _Weight);
+            p = lerp(IN[i].position, targetPos, t);
 
             g2f v;
             v.worldPos = UnityObjectToClipPos(p);
-            //v.uv = MultiplyUV(UNITY_MATRIX_TEXTURE0, float2(1.0f, 1.0f));
+            v.uv = MultiplyUV(UNITY_MATRIX_TEXTURE0, float2(1.0f, 1.0f));
             v.uv = avgUV;
             v.color = float4(1, 1, 1, 1);
             v.normal = avgNormal;
