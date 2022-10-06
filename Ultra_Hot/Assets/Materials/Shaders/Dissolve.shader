@@ -77,85 +77,33 @@ Shader "Custom/Dissolve"
             );
     }
 
-    [maxvertexcount(6)]
+    [maxvertexcount(3)]
     void geom(triangle v2g IN[3], inout TriangleStream<g2f> triStream)
     {
         float3 avgPos = (IN[0].position + IN[1].position + IN[2].position) / 3;
         float2 avgUV = (IN[0].uv + IN[1].uv + IN[2].uv) / 3;
         float3 avgNormal = (IN[0].normal + IN[1].normal + IN[2].normal) / 3;
 
-        float dissolveValue = tex2Dlod(_DissolveTexture, float4(avgUV, 0, 0)).r;
-        float t = clamp(_Weight * 2 - dissolveValue, 0, 1);
-
 
         float2 flowUV = TRANSFORM_TEX(mul(unity_ObjectToWorld, avgPos).xz, _FlowMap);
         float4 flowVector = remapFlowTexture(tex2Dlod(_FlowMap, float4(flowUV, 0, 0)));
 
-        float3 pseudoRandomPos = (avgPos)+_Direction;
-        pseudoRandomPos += (flowVector.xyz * _Expand);
-
-        float3 p = lerp(avgPos, pseudoRandomPos, t);
-        float radius = lerp(_R, 0, t);
-
-
-        if (t > 0) {
-            float3 look = _WorldSpaceCameraPos - p;
-            look = normalize(look);
-
-            float3 right = UNITY_MATRIX_IT_MV[0].xyz;
-            float3 up = UNITY_MATRIX_IT_MV[1].xyz;
-
-            float halfS = 0.5f * radius;
-
-            float4 v[4];
-            v[0] = float4(p + halfS * right - halfS * up, 1.0f);
-            v[1] = float4(p + halfS * right + halfS * up, 1.0f);
-            v[2] = float4(p - halfS * right - halfS * up, 1.0f);
-            v[3] = float4(p - halfS * right + halfS * up, 1.0f);
-
-            g2f vert;
-            vert.worldPos = UnityObjectToClipPos(v[0]);
-            vert.uv = MultiplyUV(UNITY_MATRIX_TEXTURE0, float2(1.0f, 0.0f));
-            vert.color = float4(1, 1, 1, 1);
-            vert.normal = avgNormal;
-            triStream.Append(vert);
-
-            vert.worldPos = UnityObjectToClipPos(v[1]);
-            vert.uv = MultiplyUV(UNITY_MATRIX_TEXTURE0, float2(1.0f, 1.0f));
-            vert.color = float4(1, 1, 1, 1);
-            vert.normal = avgNormal;
-            triStream.Append(vert);
-
-            vert.worldPos = UnityObjectToClipPos(v[2]);
-            vert.uv = MultiplyUV(UNITY_MATRIX_TEXTURE0, float2(0.0f, 0.0f));
-            vert.color = float4(1, 1, 1, 1);
-            vert.normal = avgNormal;
-            triStream.Append(vert);
-
-            vert.worldPos = UnityObjectToClipPos(v[3]);
-            vert.uv = MultiplyUV(UNITY_MATRIX_TEXTURE0, float2(0.0f, 1.0f));
-            vert.color = float4(1, 1, 1, 1);
-            vert.normal = avgNormal;
-            triStream.Append(vert);
-
-        }
-
-
         for (int i = 0; i < 3; ++i)
         {
-            g2f o;
-            float3 targetPos = avgPos + _Direction;
+            float3 targetPos = IN[i].position + _Direction;
             targetPos += flowVector.xyz * _Expand;
-            
-            o.worldPos = UnityObjectToClipPos(IN[i].position);
-            o.uv = TRANSFORM_TEX(IN[i].uv, _MainTex);
-            o.color = fixed4(0, 0, 0, 0);
-            o.normal = IN[i].normal;
-            triStream.Append(o);
-        
-        }
 
-        triStream.RestartStrip();
+            float3 p = IN[i].position;
+            p = lerp(IN[i].position, targetPos, _Weight);
+
+            g2f v;
+            v.worldPos = UnityObjectToClipPos(p);
+            //v.uv = MultiplyUV(UNITY_MATRIX_TEXTURE0, float2(1.0f, 1.0f));
+            v.uv = avgUV;
+            v.color = float4(1, 1, 1, 1);
+            v.normal = avgNormal;
+            triStream.Append(v);
+        }
 
     }
 
