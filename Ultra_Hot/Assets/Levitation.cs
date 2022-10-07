@@ -8,16 +8,23 @@ namespace Autohand.Demo
     {
         // Start is called before the first frame update
         public float speedLevi = 1;
+        public float offset = 0f;
         float angle = 10;
         Vector3 localPos;
         float localPosY;
         public float distance = 0.4f;
-        public bool up = true;
+        public bool up = false;
 
         void Start()
         {
             localPos = transform.localPosition;
             localPosY = transform.localPosition.y;
+            Invoke("CheckOffsetTime", offset);
+        }
+
+        void CheckOffsetTime()
+        {
+            up = true;
         }
 
         // Update is called once per frame

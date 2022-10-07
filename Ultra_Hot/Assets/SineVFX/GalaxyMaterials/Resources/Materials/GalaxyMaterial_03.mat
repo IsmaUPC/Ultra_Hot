@@ -156,6 +156,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _554: 9.86
     - _A1: 0
@@ -320,3 +321,4 @@ Material:
     - _Vector0: {r: 2, g: 4, b: 0, a: 0}
     - _Vector2: {r: 0, g: 0, b: 0, a: 0}
     - _Vector4: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
