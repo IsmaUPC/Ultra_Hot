@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Ultra_Hot/Assets/Packages/Superhot-BulletTime-master/Logs/Packages-Update.log.meta
 guid: b88a16119167ede4ea9fede8b0b7e060
+========
+guid: c6909bef40b645e4db05c5ad65e23855
+>>>>>>>> b2a2b61186830746e06e1d0a694048cb965c2390:Ultra_Hot/Assets/Scenes/ShaderTesting.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

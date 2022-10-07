@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -8,7 +8,7 @@ namespace Autohand
 
 }
 [SelectionBase]
-public class EnemyScript : MonoBehaviour
+public class EnemyCompleteScript : MonoBehaviour
 {
     Animator anim;
     NavMeshAgent agent;
@@ -25,10 +25,6 @@ public class EnemyScript : MonoBehaviour
     private bool goPlayer;
     private Rigidbody rb;
     private int wayPointer = 0;
-
-
-    public float dissolveWeight = 0.0f;
-
 
     void Start()
     {
@@ -89,18 +85,14 @@ public class EnemyScript : MonoBehaviour
     public void Ragdoll()
     {
         anim.enabled = false;
-        BodyPartScript[] parts = GetComponentsInChildren<BodyPartScript>();
-        foreach (BodyPartScript bp in parts)
-        {
-            bp.rb.isKinematic = false;
-            bp.rb.interpolation = RigidbodyInterpolation.Interpolate;
-        }
+        rb.isKinematic = false;
+        rb.interpolation = RigidbodyInterpolation.Interpolate;
         dead = true;
         agent.enabled = false;
 
         if (weaponHolder.GetComponentInChildren<GunScript>() != null)
         {
-            
+
             GunScript w = weaponHolder.GetComponentInChildren<GunScript>();
             w.Release();
         }
