@@ -711,6 +711,8 @@ MonoBehaviour:
   movement: 1
   rMovement: 0
   weaponHolder: {fileID: 7510370701654770688}
+  waypoints: []
+  dissolveWeight: 0
 --- !u!195 &2052156877604754364
 NavMeshAgent:
   m_ObjectHideFlags: 0

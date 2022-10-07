@@ -87,12 +87,12 @@ public class EnemyCompleteScript : MonoBehaviour
         anim.enabled = false;
         rb.isKinematic = false;
         rb.interpolation = RigidbodyInterpolation.Interpolate;
+
         dead = true;
         agent.enabled = false;
 
         if (weaponHolder.GetComponentInChildren<GunScript>() != null)
         {
-
             GunScript w = weaponHolder.GetComponentInChildren<GunScript>();
             w.Release();
         }
