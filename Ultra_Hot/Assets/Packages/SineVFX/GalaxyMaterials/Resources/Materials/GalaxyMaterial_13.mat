@@ -11,7 +11,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: 26e3fb68c360c334a8fbff798b01ade2, type: 3}
   m_ShaderKeywords: _KEYWORD0_ON _REFRECTIONCASECONDMODE_ON _RIMENABLED_ON _RIMNOISECAENABLED_ON
   m_LightmapFlags: 0
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -155,6 +155,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _554: 9.86
     - _A1: 0
@@ -162,7 +163,7 @@ Material:
     - _ChomaticAberration: 0
     - _CloudOpacityExp: 2
     - _CloudsEmissionPower: 10
-    - _CloudsOpacityExp: 1.5
+    - _CloudsOpacityExp: 3.91
     - _CloudsOpacityPower: 1
     - _CloudsRampOffsetExp: 1
     - _CloudsRampOffsetExp2: 1
@@ -180,17 +181,17 @@ Material:
     - _DarkCloudsEnabled: 0
     - _DarkCloudsLighten: 10
     - _DarkCloudsRotationSpeed: -0.06
-    - _DarkCloudsThicker: 1
+    - _DarkCloudsThicker: 1.75
     - _DetailNormalMapScale: 1
     - _DistortionAmount: 0.5
     - _DistortionExp: 1
     - _DistortionExp2: 1
     - _DstBlend: 0
-    - _Eta: -0.25
+    - _Eta: -0.84
     - _EtaAAEdgesFix: 0.25
     - _EtaEdgesFix: 0
     - _EtaFresnelExp: 2
-    - _EtaFresnelExp2: 1
+    - _EtaFresnelExp2: 3.71
     - _Exp: 4
     - _FinalPower: 1
     - _FixMaybe: 0
@@ -233,7 +234,7 @@ Material:
     - _Keyword0: 1
     - _Metallic: 0
     - _Mode: 0
-    - _NormalAmount: 0
+    - _NormalAmount: 0.457
     - _NormalSpherize: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -245,8 +246,8 @@ Material:
     - _RimAddOrMultiply: 0
     - _RimEmissionPower: 2
     - _RimEnabled: 1
-    - _RimExp: 4
-    - _RimExp2: 2
+    - _RimExp: 3.13
+    - _RimExp2: 8.01
     - _RimNoiseAmount: -0.75
     - _RimNoiseCAAmount: 0.1
     - _RimNoiseCAEnabled: 1
@@ -302,12 +303,12 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _CloudsRampColorTint: {r: 1, g: 1, b: 1, a: 1}
+    - _CloudsRampColorTint: {r: 0, g: 0, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 1, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FresnelGlowColor: {r: 1, g: 1, b: 1, a: 1}
-    - _RimColor: {r: 0.5411765, g: 0.88163406, b: 1, a: 1}
+    - _RimColor: {r: 0.06541474, g: 0.19214799, b: 0.23584908, a: 1}
     - _RimEmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimNoiseSpherizeCenter: {r: 0, g: 0, b: 0, a: 0}
     - _RimNoiseSpherizePosition: {r: 0, g: 0, b: 0, a: 0}
@@ -319,3 +320,4 @@ Material:
     - _Vector0: {r: 2, g: 4, b: 0, a: 0}
     - _Vector2: {r: 0, g: 0, b: 0, a: 0}
     - _Vector4: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
