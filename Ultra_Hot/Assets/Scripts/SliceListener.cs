@@ -13,15 +13,9 @@ public class SliceListener : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            BodyPartScript bp = other.gameObject.GetComponent<BodyPartScript>();
+            Instantiate(hitParticlePrefab, transform.position, transform.rotation);
 
-            if (bp.bodyPartPrefab != null)
-            {
-                Instantiate(hitParticlePrefab, transform.position, transform.rotation);
-
-                bp.HidePartAndReplace();
-            }
-            bp.enemy.Ragdoll();
+            other.gameObject.GetComponentInParent<EnemyCompleteScript>().Ragdoll();
         }
 
         slicer.isTouched = true;

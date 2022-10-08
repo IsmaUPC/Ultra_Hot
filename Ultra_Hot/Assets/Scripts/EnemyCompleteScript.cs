@@ -85,8 +85,13 @@ public class EnemyCompleteScript : MonoBehaviour
     public void Ragdoll()
     {
         anim.enabled = false;
-        rb.isKinematic = false;
-        rb.interpolation = RigidbodyInterpolation.Interpolate;
+
+        Rigidbody[] parts = GetComponentsInChildren<Rigidbody>();
+        foreach (Rigidbody bp in parts)
+        {
+            bp.isKinematic = false;
+            bp.interpolation = RigidbodyInterpolation.Interpolate;
+        }
 
         dead = true;
         agent.enabled = false;

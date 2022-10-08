@@ -63,15 +63,9 @@ public class GunScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy") && transform.parent != null && collision.relativeVelocity.magnitude < 15)
         {
-            BodyPartScript bp = collision.gameObject.GetComponent<BodyPartScript>();
+            Instantiate(hitParticlePrefab, transform.position, transform.rotation);
 
-            if (bp.bodyPartPrefab != null)
-            {
-                Instantiate(hitParticlePrefab, transform.position, transform.rotation);
-
-                bp.HidePartAndReplace();
-            }
-            bp.enemy.Ragdoll();
+            collision.gameObject.GetComponentInParent<EnemyCompleteScript>().Ragdoll();
         }
     }
 }
