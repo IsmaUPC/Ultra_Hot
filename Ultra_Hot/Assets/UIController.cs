@@ -20,6 +20,7 @@ public class UIController : MonoBehaviour
         {
             menu.transform.position = playerTransform.position + (playerTransform.forward* distMenu);
             menu.transform.LookAt(playerTransform);
+            menu.transform.forward= (-menu.transform.forward) ;
         }
 
     }
