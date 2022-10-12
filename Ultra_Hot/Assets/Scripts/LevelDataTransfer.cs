@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 public class LevelDataTransfer : MonoBehaviour
 {
     // Start is called before the first frame update
+    private int level;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+    }
     void Start()
     {
         
@@ -19,12 +25,16 @@ public class LevelDataTransfer : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Level")
         {
-            Debug.Log("HOLA 2");
-            SceneManager.LoadScene(other.gameObject.GetComponent<LevelData>().level);
+            level = other.gameObject.GetComponent<LevelData>().level;
+            SceneManager.LoadScene(1);
         }
+    }
+
+    public int GetLevel()
+    {
+        return level;
     }
 
 }

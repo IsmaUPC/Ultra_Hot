@@ -1938,9 +1938,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedLevi: 1
-  offset: 0
+  offsetTime: 0
   distance: 0.1
-  up: 1
+  randomOffsetTime: 0
 --- !u!114 &219821452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5249,9 +5249,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedLevi: 1
-  offset: 0
+  offsetTime: 0
   distance: 0.1
-  up: 1
+  randomOffsetTime: 0
 --- !u!114 &633128218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6191,9 +6191,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedLevi: 1
-  offset: 0
+  offsetTime: 0
   distance: 0.1
-  up: 1
+  randomOffsetTime: 0
 --- !u!114 &669728763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8512,9 +8512,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedLevi: 1
-  offset: 0
+  offsetTime: 0
   distance: 0.1
-  up: 1
+  randomOffsetTime: 0
 --- !u!114 &885310458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12851,9 +12851,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedLevi: 1
-  offset: 0
+  offsetTime: 0
   distance: 0.1
-  up: 1
+  randomOffsetTime: 0
 --- !u!114 &1378515073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17189,9 +17189,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedLevi: 1
-  offset: 0
+  offsetTime: 0
   distance: 0.1
-  up: 1
+  randomOffsetTime: 0
 --- !u!114 &1744819759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17679,9 +17679,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedLevi: 1
-  offset: 0
+  offsetTime: 0
   distance: 0.1
-  up: 1
+  randomOffsetTime: 0
 --- !u!114 &1762709071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18138,9 +18138,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedLevi: 1
-  offset: 0
+  offsetTime: 0
   distance: 0.1
-  up: 1
+  randomOffsetTime: 0
 --- !u!114 &1773266403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19471,7 +19471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1845081891
 Transform:
   m_ObjectHideFlags: 0
@@ -19639,9 +19639,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedLevi: 1
-  offset: 0
+  offsetTime: 0
   distance: 0.1
-  up: 1
+  randomOffsetTime: 0
 --- !u!114 &1845081895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20815,9 +20815,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedLevi: 1
-  offset: 0
+  offsetTime: 0
   distance: 0.1
-  up: 1
+  randomOffsetTime: 0
 --- !u!114 &1886086821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23181,9 +23181,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedLevi: 1
-  offset: 0
+  offsetTime: 0
   distance: 0.4
-  up: 1
+  randomOffsetTime: 0
 --- !u!1 &2117384277
 GameObject:
   m_ObjectHideFlags: 0

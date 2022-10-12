@@ -6,6 +6,7 @@ public class LevelData : MonoBehaviour
 {
     // Start is called before the first frame update
     public int level = 0;
+    private bool hasGrabbable = false;
     void Start()
     {
         
@@ -15,5 +16,19 @@ public class LevelData : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void OnGrabPrism()
+    {
+        hasGrabbable = true;
+    }
+    public void OnReleasePrism()
+    {
+        hasGrabbable = false;
+    }
+
+    public bool GetHasGrababble()
+    {
+        return hasGrabbable;
     }
 }

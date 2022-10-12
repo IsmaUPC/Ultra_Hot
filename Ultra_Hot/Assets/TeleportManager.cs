@@ -14,6 +14,8 @@ namespace Autohand {
         private bool firstTp = true;
         private void Start()
         {
+            GameObject[] objs = GameObject.FindGameObjectsWithTag("GameController");
+            index = objs[0].GetComponent<LevelDataTransfer>().GetLevel();
         }
 
         private void Update()
