@@ -53,8 +53,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.6, z: 0.325}
-  m_Center: {x: 0, y: 0.05, z: -0.02}
+  m_Size: {x: 0.12385341, y: 0.531468, z: 0.22753397}
+  m_Center: {x: -0.000000012417634, y: 0.035532117, z: -0.027615229}
 --- !u!65 &10072456660365257
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66,8 +66,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.3, z: 0.85}
-  m_Center: {x: 0, y: 0.2, z: 0.24500002}
+  m_Size: {x: 0.12328119, y: 0.22842208, z: 0.8073584}
+  m_Center: {x: 0, y: 0.18705507, z: 0.26175338}
 --- !u!54 &10072456660365262
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -96,10 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fabbe9fe708e5145b4a9d5253c1bd13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitParticlePrefab: {fileID: 2462045763441574653, guid: bc20e11fe125f0c4985a160e93e1a272, type: 3}
   bulletAmount: 6
   barrelTip: {fileID: 7122921692628775120}
   bulletPrefab: {fileID: 8914353279888130421, guid: 03e840776a4003145b758c40dbafd97d, type: 3}
-  hitParticlePrefab: {fileID: 2462045763441574653, guid: bc20e11fe125f0c4985a160e93e1a272, type: 3}
+  butNo: 0
 --- !u!114 &10072456660365259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +118,7 @@ MonoBehaviour:
   hightlightMaterial: {fileID: 0}
   isGrabbable: 1
   CopySettings: {fileID: 0}
-  singleHandOnly: 0
+  singleHandOnly: 1
   allowHeldSwapping: 1
   instantGrab: 0
   ignoreWeight: 0
@@ -125,14 +126,14 @@ MonoBehaviour:
   parentOnGrab: 1
   throwPower: 2
   jointBreakForce: 3500
-  showAdvancedSettings: 0
+  showAdvancedSettings: 1
   handType: 0
-  grabType: 0
+  grabType: 2
   useGentleGrab: 0
   makeChildrenGrabbable: 1
   pullApartBreakOnly: 1
   customGrabJoint: {fileID: 0}
-  ignoreReleaseTime: 0.5
+  ignoreReleaseTime: 0
   grabPriorityWeight: 1
   heldPositionOffset: {x: 0, y: 0, z: 0}
   heldRotationOffset: {x: 0, y: 0, z: 0}
@@ -153,6 +154,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: GunScript, Assembly-CSharp
         m_MethodName: Shoot
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 10072456660365259}
+        m_TargetAssemblyTypeName: Autohand.Grabbable, Assembly-CSharp-firstpass
+        m_MethodName: PlayHapticVibration
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1031,8 +1044,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7122921692628775121}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.22, z: 0.95}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: 0.24, z: 0.8}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 821933818690794870}
   m_RootOrder: 1
