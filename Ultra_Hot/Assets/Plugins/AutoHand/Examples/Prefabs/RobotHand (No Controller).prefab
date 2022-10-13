@@ -1669,7 +1669,7 @@ MonoBehaviour:
   - {fileID: 5460294669156321847}
   palmTransform: {fileID: 4455591788450219018}
   left: 0
-  reachDistance: 0.3
+  reachDistance: 0.15
   enableMovement: 1
   follow: {fileID: 0}
   maxFollowDistance: 0.5
