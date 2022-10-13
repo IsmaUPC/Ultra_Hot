@@ -145,7 +145,7 @@ MonoBehaviour:
   jointBreakForce: 3500
   showAdvancedSettings: 0
   handType: 0
-  grabType: 2
+  grabType: 0
   useGentleGrab: 0
   makeChildrenGrabbable: 1
   pullApartBreakOnly: 1
@@ -270,19 +270,7 @@ MonoBehaviour:
   showEvents: 1
   OnPull:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1590931785}
-        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
-        m_MethodName: StopLevitation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   StartTargeting:
     m_PersistentCalls:
       m_Calls: []
