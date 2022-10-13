@@ -89,18 +89,19 @@ public class EnemyScript : MonoBehaviour
     public void Ragdoll()
     {
         anim.enabled = false;
-        BodyPartScript[] parts = GetComponentsInChildren<BodyPartScript>();
-        foreach (BodyPartScript bp in parts)
+
+        Rigidbody[] parts = GetComponentsInChildren<Rigidbody>();
+        foreach (Rigidbody bp in parts)
         {
-            bp.rb.isKinematic = false;
-            bp.rb.interpolation = RigidbodyInterpolation.Interpolate;
+            bp.isKinematic = false;
+            bp.interpolation = RigidbodyInterpolation.Interpolate;
         }
+
         dead = true;
         agent.enabled = false;
 
         if (weaponHolder.GetComponentInChildren<GunScript>() != null)
         {
-            
             GunScript w = weaponHolder.GetComponentInChildren<GunScript>();
             w.Release();
         }

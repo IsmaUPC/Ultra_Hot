@@ -29,7 +29,7 @@ public class BulletScript : MonoBehaviour
         {
             Instantiate(hitParticlePrefab, transform.position, transform.rotation);
 
-            //collision.gameObject.GetComponentInParent<EnemyCompleteScript>().Ragdoll();
+            collision.gameObject.GetComponentInParent<EnemyCompleteScript>().Ragdoll();
         }
 
         Destroy(gameObject);
