@@ -15,6 +15,7 @@ namespace Autohand.Demo
         public float distance = 0.4f;
         private bool up = false;
         public bool randomOffsetTime = false;
+        public bool useGravity = false;
 
         void Start()
         {
@@ -45,6 +46,8 @@ namespace Autohand.Demo
         public void StopLevitation()
         {
             up = false;
+            if(useGravity)
+                GetComponent<Rigidbody>().useGravity = true;
         }
     }
 }
