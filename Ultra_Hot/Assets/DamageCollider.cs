@@ -5,16 +5,12 @@ namespace Autohand
 {
     public class DamageCollider : MonoBehaviour
     {
-        private TeleportManager teleportM;
-        private void Start()
-        {
-            teleportM = GameObject.Find("TeleportPointers").GetComponent<TeleportManager>();
-        }
+        public TransitionManager transitionManager;
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.CompareTag("Bullet"))
             {
-                
+                transitionManager.GoToScene(1);
             }
         }
     }

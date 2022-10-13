@@ -17,7 +17,7 @@ namespace Autohand
 
         void Start()
         {
-            GameObject[] objs = GameObject.FindGameObjectsWithTag("GameController");
+            GameObject[] objs = GameObject.FindGameObjectsWithTag("DataInfo");
             currentLevel = objs[0].GetComponent<LevelDataTransfer>().GetLevel();
 
             dices[currentLevel].SetActive(true);

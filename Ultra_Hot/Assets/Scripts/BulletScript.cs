@@ -1,3 +1,4 @@
+using Autohand;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,12 +29,7 @@ public class BulletScript : MonoBehaviour
         {
             Instantiate(hitParticlePrefab, transform.position, transform.rotation);
 
-            collision.gameObject.GetComponentInParent<EnemyCompleteScript>().Ragdoll();
-        }
-
-        if (collision.gameObject.CompareTag("Player") && !GodMode)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //collision.gameObject.GetComponentInParent<EnemyCompleteScript>().Ragdoll();
         }
 
         Destroy(gameObject);

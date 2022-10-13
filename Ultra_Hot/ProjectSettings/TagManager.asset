@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - sword
   - Level
+  - DataInfo
   layers:
   - Default
   - TransparentFX
