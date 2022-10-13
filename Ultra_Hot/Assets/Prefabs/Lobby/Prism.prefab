@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8371106694387717587}
   - component: {fileID: 6057609884828726422}
   - component: {fileID: 1590931785}
+  - component: {fileID: 4141643811100035059}
   m_Layer: 0
   m_Name: Prism
   m_TagString: Level
@@ -139,7 +140,7 @@ MonoBehaviour:
   instantGrab: 0
   ignoreWeight: 0
   maintainGrabOffset: 0
-  parentOnGrab: 0
+  parentOnGrab: 1
   throwPower: 1
   jointBreakForce: 3500
   showAdvancedSettings: 0
@@ -244,3 +245,41 @@ MonoBehaviour:
   offsetTime: 0
   distance: 0.02
   randomOffsetTime: 1
+--- !u!114 &4141643811100035059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8713705509377730692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 935aaf7da50abf94697c8d70a7a71efe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreMe: 0
+  instantPull: 0
+  grabType: 1
+  archMultiplier: 0.6
+  gravitationVelocity: 1
+  rotate: 1
+  rotationSpeed: 1
+  ignoreHighlights: 1
+  targetedMaterial: {fileID: 0}
+  selectedMaterial: {fileID: 0}
+  showEvents: 1
+  OnPull:
+    m_PersistentCalls:
+      m_Calls: []
+  StartTargeting:
+    m_PersistentCalls:
+      m_Calls: []
+  StopTargeting:
+    m_PersistentCalls:
+      m_Calls: []
+  StartSelecting:
+    m_PersistentCalls:
+      m_Calls: []
+  StopSelecting:
+    m_PersistentCalls:
+      m_Calls: []

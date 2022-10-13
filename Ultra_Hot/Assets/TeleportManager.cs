@@ -25,48 +25,6 @@ namespace Autohand {
                 firstTp = false;
                 playerBody.SetPosition(teleports[index].position, teleports[index].rotation);
             }
-
-            if (Input.GetKeyDown(KeyCode.T))
-            {
-                ActiveTelepor();
-            }
-
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                SelectedTeleport(0);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                SelectedTeleport(1);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                SelectedTeleport(2);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                SelectedTeleport(3);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha5))
-            {
-                SelectedTeleport(4);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha6))
-            {
-                SelectedTeleport(5);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha7))
-            {
-                SelectedTeleport(6);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha8))
-            {
-                SelectedTeleport(7);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha9))
-            {
-                SelectedTeleport(8);
-            }
         }
         void SelectedTeleport(int newIndex)
         {

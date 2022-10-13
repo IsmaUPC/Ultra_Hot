@@ -13,11 +13,13 @@ public class BulletTime : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G))
             GodMode = !GodMode;
+        if(!GodMode)
+        {
+            speed = handL.velocity.magnitude + handR.velocity.magnitude * 10 + minVel;
+            Time.timeScale = Mathf.InverseLerp(0, 8, speed);
 
-        speed = handL.velocity.magnitude + handR.velocity.magnitude * 10 + minVel;
-        Time.timeScale = Mathf.InverseLerp(0,8,speed);
-
-        // 0.02f because fixedDeltaTime defaults to this value
-        Time.fixedDeltaTime = Time.timeScale * 0.02f; 
+            // 0.02f because fixedDeltaTime defaults to this value
+            Time.fixedDeltaTime = Time.timeScale * 0.02f;
+        }        
     }
 }

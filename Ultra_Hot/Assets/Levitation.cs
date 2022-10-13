@@ -20,10 +20,10 @@ namespace Autohand.Demo
         {
             localPos = transform.localPosition;
             localPosY = transform.localPosition.y;
+
             if(randomOffsetTime)
-                Invoke("CheckOffsetTime", Random.Range(0,0.9f));
-            else
-                Invoke("CheckOffsetTime", offsetTime);
+                offsetTime = Random.Range(0,1.9f);            
+            Invoke("CheckOffsetTime", offsetTime);
         }
 
         void CheckOffsetTime()
