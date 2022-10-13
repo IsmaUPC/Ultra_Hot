@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Autohand
@@ -9,13 +10,17 @@ namespace Autohand
         public TeleportManager tp;
         public List<GameObject> levels;
         public List<GameObject> dices;
-        public int currentLevel = 0;
+        private int currentLevel = 0;
 
         private EnemyScript[] enemies;
-        public int count = 0;
+        private int count = 0;
 
         void Start()
         {
+            GameObject[] objs = GameObject.FindGameObjectsWithTag("DataInfo");
+            currentLevel = objs[0].GetComponent<LevelDataTransfer>().GetLevel();
+
+            dices[currentLevel].SetActive(true);
             enemies = levels[currentLevel].GetComponentsInChildren<EnemyScript>();
         }
 

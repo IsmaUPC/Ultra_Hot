@@ -8,18 +8,22 @@ namespace Autohand.Demo
     {
         // Start is called before the first frame update
         public float speedLevi = 1;
-        public float offset = 0f;
+        public float offsetTime = 0f;
         float angle = 10;
         Vector3 localPos;
         float localPosY;
         public float distance = 0.4f;
-        public bool up = false;
+        private bool up = false;
+        public bool randomOffsetTime = false;
 
         void Start()
         {
             localPos = transform.localPosition;
             localPosY = transform.localPosition.y;
-            Invoke("CheckOffsetTime", offset);
+            if(randomOffsetTime)
+                Invoke("CheckOffsetTime", Random.Range(0,0.9f));
+            else
+                Invoke("CheckOffsetTime", offsetTime);
         }
 
         void CheckOffsetTime()
