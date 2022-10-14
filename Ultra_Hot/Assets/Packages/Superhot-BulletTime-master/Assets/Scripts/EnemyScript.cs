@@ -47,6 +47,26 @@ public class EnemyScript : MonoBehaviour
         }
         else if (movement == Movement.Waypoints)
         {
+            if (waypoints.Count <= 0)
+            {
+                foreach (Transform points in transform.parent)
+                {
+                    if (points.CompareTag("Waypoints"))
+                    {
+                        foreach (Transform enemy in points.GetComponentInChildren<Transform>())
+                        {
+                            if (enemy.name == name)
+                            {
+                                waypoints.AddRange(enemy.GetComponentsInChildren<Transform>());
+                                waypoints.RemoveAt(0);
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+
             agent.SetDestination(waypoints[wayPointer].position);
             moving = true;
         }

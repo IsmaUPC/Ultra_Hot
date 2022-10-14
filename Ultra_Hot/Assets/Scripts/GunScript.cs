@@ -61,7 +61,7 @@ public class GunScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") && transform.parent != null && collision.relativeVelocity.magnitude < 15)
+        if (collision.gameObject.CompareTag("Enemy") && !transform.parent.CompareTag("Enemy") && collision.relativeVelocity.magnitude < 15)
         {
             Instantiate(hitParticlePrefab, transform.position, transform.rotation);
 
