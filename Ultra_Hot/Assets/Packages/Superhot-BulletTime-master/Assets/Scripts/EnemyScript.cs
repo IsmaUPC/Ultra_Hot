@@ -105,13 +105,6 @@ public class EnemyScript : MonoBehaviour
             bp.interpolation = RigidbodyInterpolation.Interpolate;
         }
 
-        Rigidbody[] parts = GetComponentsInChildren<Rigidbody>();
-        foreach (Rigidbody bp in parts)
-        {
-            bp.isKinematic = false;
-            bp.interpolation = RigidbodyInterpolation.Interpolate;
-        }
-
         dead = true;
         agent.enabled = false;
 
