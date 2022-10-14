@@ -10,6 +10,7 @@ TagManager:
   - sword
   - Level
   - DataInfo
+  - Waypoints
   layers:
   - Default
   - TransparentFX

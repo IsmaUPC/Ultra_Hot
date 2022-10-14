@@ -32,6 +32,21 @@ public class EnemyCompleteScript : MonoBehaviour
         StartCoroutine(RandomAnimation());
 
         agent = GetComponent<NavMeshAgent>();
+
+        Transform points = transform.parent.GetChild(transform.parent.childCount-1);
+        if (points.tag == "Waypoints")
+        {
+            foreach (Transform enemy in points.GetComponentInChildren<Transform>())
+            {
+                if (enemy.name == name)
+                {
+                    waypoints.AddRange(enemy.GetComponentsInChildren<Transform>());
+                    waypoints.RemoveAt(0);
+                    break;
+                }
+            }
+        }
+
         if (rMovement)
         {
             movement = true;

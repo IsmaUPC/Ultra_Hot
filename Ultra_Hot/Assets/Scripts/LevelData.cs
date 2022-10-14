@@ -7,9 +7,10 @@ public class LevelData : MonoBehaviour
     // Start is called before the first frame update
     public int level = 0;
     private bool hasGrabbable = false;
+    private Quaternion originalRotation;
     void Start()
     {
-        
+        originalRotation = transform.rotation;
     }
 
     // Update is called once per frame
@@ -25,6 +26,7 @@ public class LevelData : MonoBehaviour
     public void OnReleasePrism()
     {
         hasGrabbable = false;
+        //Quaternion.Lerp(transform.rotation, originalRotation, Time.deltaTime * 40);
     }
 
     public bool GetHasGrababble()

@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  enemy: {fileID: 7510370701940658437}
+  enemy: {fileID: 0}
   bodyPartRenderer: {fileID: 0}
   bodyPartPrefab: {fileID: 0}
   replaced: 0
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  enemy: {fileID: 7510370701940658437}
+  enemy: {fileID: 0}
   bodyPartRenderer: {fileID: 7510370702890111914}
   bodyPartPrefab: {fileID: 3441970818036421683, guid: 03cd3381438646d4e95d62f0555f5348, type: 3}
   replaced: 0
@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  enemy: {fileID: 7510370701940658437}
+  enemy: {fileID: 0}
   bodyPartRenderer: {fileID: 7510370703135628452}
   bodyPartPrefab: {fileID: 8801732548567301636, guid: 301147a17a25bec47bc200f3ab249664, type: 3}
   replaced: 0
@@ -644,7 +644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7510370701940658439}
   - component: {fileID: 7510370701940658438}
-  - component: {fileID: 7510370701940658437}
+  - component: {fileID: 3526808572391843400}
   - component: {fileID: 2052156877604754364}
   - component: {fileID: 860531991}
   - component: {fileID: 5001178366762436901}
@@ -695,7 +695,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7510370701940658437
+--- !u!114 &3526808572391843400
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -704,15 +704,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7510370701940658436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2185c8178eaeca42b782e7251070a86, type: 3}
+  m_Script: {fileID: 11500000, guid: 6bd0e330cd306834fb3c98e4d0d0b435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dead: 0
   movement: 1
   rMovement: 0
-  weaponHolder: {fileID: 7510370701654770688}
+  weaponHolder: {fileID: 2493839589864789261, guid: 4812886437bc5a3459493b7bc6dabb88, type: 3}
   waypoints: []
-  dissolveWeight: 0
 --- !u!195 &2052156877604754364
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1569,7 +1568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  enemy: {fileID: 7510370701940658437}
+  enemy: {fileID: 0}
   bodyPartRenderer: {fileID: 0}
   bodyPartPrefab: {fileID: 0}
   replaced: 0
@@ -1728,7 +1727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  enemy: {fileID: 7510370701940658437}
+  enemy: {fileID: 0}
   bodyPartRenderer: {fileID: 0}
   bodyPartPrefab: {fileID: 0}
   replaced: 0
@@ -2114,7 +2113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  enemy: {fileID: 7510370701940658437}
+  enemy: {fileID: 0}
   bodyPartRenderer: {fileID: 7510370701996506366}
   bodyPartPrefab: {fileID: 8801732548567301636, guid: 301147a17a25bec47bc200f3ab249664, type: 3}
   replaced: 0
@@ -2271,7 +2270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  enemy: {fileID: 7510370701940658437}
+  enemy: {fileID: 0}
   bodyPartRenderer: {fileID: 0}
   bodyPartPrefab: {fileID: 0}
   replaced: 0
@@ -2466,7 +2465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  enemy: {fileID: 7510370701940658437}
+  enemy: {fileID: 0}
   bodyPartRenderer: {fileID: 0}
   bodyPartPrefab: {fileID: 0}
   replaced: 0
@@ -2625,7 +2624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  enemy: {fileID: 7510370701940658437}
+  enemy: {fileID: 0}
   bodyPartRenderer: {fileID: 7510370702431457424}
   bodyPartPrefab: {fileID: 6877994808578447893, guid: b42f66d61f12eb7469be268bbd7836a5, type: 3}
   replaced: 0
@@ -2814,7 +2813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  enemy: {fileID: 7510370701940658437}
+  enemy: {fileID: 0}
   bodyPartRenderer: {fileID: 7510370702887774409}
   bodyPartPrefab: {fileID: 6877994808578447893, guid: b42f66d61f12eb7469be268bbd7836a5, type: 3}
   replaced: 0
@@ -2942,7 +2941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  enemy: {fileID: 7510370701940658437}
+  enemy: {fileID: 0}
   bodyPartRenderer: {fileID: 0}
   bodyPartPrefab: {fileID: 0}
   replaced: 0

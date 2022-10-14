@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelDataTransfer : MonoBehaviour
 {
     // Start is called before the first frame update
-    private int level = 0;
+    public int level = 0;
     public TransitionManager transitionManager;
 
     private void Awake()
