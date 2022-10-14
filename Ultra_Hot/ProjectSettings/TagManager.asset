@@ -11,6 +11,7 @@ TagManager:
   - Level
   - DataInfo
   - Waypoints
+  - Transition
   layers:
   - Default
   - TransparentFX

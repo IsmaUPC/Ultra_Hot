@@ -13,13 +13,25 @@ public class LevelDataTransfer : MonoBehaviour
     {
         DontDestroyOnLoad(transform.gameObject);
     }
+    private void Start()
+    {
+        transitionManager = GameObject.FindGameObjectsWithTag("Transition")[0].GetComponent<TransitionManager>();
+    }
+    private void Update()
+    {
+        if(transitionManager == null)
+            transitionManager = GameObject.FindGameObjectsWithTag("Transition")[0].GetComponent<TransitionManager>();
+    }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Level")
         {
             level = other.gameObject.GetComponent<LevelData>().level;
-            transitionManager.GoToScene(1);
+            if(level != -1)
+                transitionManager.GoToScene(1);
+            else 
+                transitionManager.GoToScene(0);
         }
     }
 
