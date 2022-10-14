@@ -26,7 +26,7 @@ public class TransitionManager : MonoBehaviour
             timer += Time.unscaledDeltaTime;
             yield return null;
         }
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadScene(1);
 
         //AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Additive);
         //operation.allowSceneActivation = false;

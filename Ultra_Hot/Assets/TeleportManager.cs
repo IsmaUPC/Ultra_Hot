@@ -11,13 +11,11 @@ namespace Autohand {
         public AutoHandPlayer playerBody;
         //public GameObject playerBody;
         private int index = 0;
-        private LevelDataTransfer levelData;
         private bool firstTp = true;
         private void Start()
         {
             GameObject[] objs = GameObject.FindGameObjectsWithTag("DataInfo");
-            levelData = objs[0].GetComponent<LevelDataTransfer>();
-            index = levelData.GetLevel();
+            index = objs[0].GetComponent<LevelDataTransfer>().GetLevel();
         }
 
         private void Update()
@@ -41,7 +39,6 @@ namespace Autohand {
             if (index+1 < gameObject.transform.childCount)
             {
                 index++;
-                levelData.level++;
                 //playerBody.transform.SetPositionAndRotation(teleports[index].position, teleports[index].rotation);
 
                 playerBody.SetPosition(teleports[index].position, teleports[index].rotation);

@@ -28,7 +28,7 @@ public class BulletCompleteScript : MonoBehaviour
         {
             Instantiate(hitParticlePrefab, transform.position, transform.rotation);
 
-            collision.gameObject.GetComponent<EnemyCompleteScript>().Ragdoll();
+            collision.gameObject.GetComponent<EnemyScript>().Ragdoll();
 
             //Before
             BodyPartScript bp = collision.gameObject.GetComponent<BodyPartScript>();

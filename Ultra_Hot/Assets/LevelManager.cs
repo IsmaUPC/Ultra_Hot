@@ -13,7 +13,7 @@ namespace Autohand
         private int currentLevel = 0;
         private LevelDataTransfer levelData;
 
-        private EnemyCompleteScript[] enemies;
+        private EnemyScript[] enemies;
         private int count = 0;
 
         void Start()
@@ -24,7 +24,7 @@ namespace Autohand
             currentLevel = levelData.GetLevel();
 
             dices[currentLevel].SetActive(true);
-            enemies = levels[currentLevel].GetComponentsInChildren<EnemyCompleteScript>();
+            enemies = levels[currentLevel].GetComponentsInChildren<EnemyScript>();
         }
 
         // Update is called once per frame
@@ -52,7 +52,7 @@ namespace Autohand
                 {
                     item.gameObject.SetActive(false);
                 }
-                enemies = levels[currentLevel].GetComponentsInChildren<EnemyCompleteScript>();
+                enemies = levels[currentLevel].GetComponentsInChildren<EnemyScript>();
 
                 dices[currentLevel].SetActive(true);
                 tp.ActiveTelepor();

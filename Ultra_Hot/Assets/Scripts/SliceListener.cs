@@ -15,7 +15,7 @@ public class SliceListener : MonoBehaviour
         {
             Instantiate(hitParticlePrefab, transform.position, transform.rotation);
 
-            other.gameObject.GetComponentInParent<EnemyCompleteScript>().Ragdoll();
+            other.gameObject.GetComponentInParent<EnemyScript>().Ragdoll();
         }
 
         slicer.isTouched = true;

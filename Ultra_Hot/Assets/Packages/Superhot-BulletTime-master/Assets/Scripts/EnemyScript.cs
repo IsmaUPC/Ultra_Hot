@@ -10,24 +10,28 @@ namespace Autohand
 [SelectionBase]
 public class EnemyScript : MonoBehaviour
 {
-    Animator anim;
-    NavMeshAgent agent;
+    private Animator anim;
+    private NavMeshAgent agent;
+    private Rigidbody rb;
 
-    //public Manager manager;
-    public bool dead;
-    public bool movement;
-    public bool rMovement;
+    [HideInInspector] public bool dead;
+    public enum Movement
+    {
+        None = 0,
+        Waypoints = 1,
+        IA = 2
+    }
+    public Movement movement;
     public Transform weaponHolder;
+
     public List<Transform> waypoints;
+    private bool moving = false;
+    private int wayPointer = 0;
 
     private float distance;
     private float stoppedTime;
-    private bool goPlayer;
-    private Rigidbody rb;
-    private int wayPointer = 0;
 
-
-    public float dissolveWeight = 0.0f;
+    [HideInInspector] public float dissolveWeight = 0.0f;
 
 
     void Start()
@@ -36,17 +40,19 @@ public class EnemyScript : MonoBehaviour
         StartCoroutine(RandomAnimation());
 
         agent = GetComponent<NavMeshAgent>();
-        if (rMovement)
+        if (movement == Movement.IA)
         {
-            movement = true;
             agent.SetDestination(Camera.main.transform.position);
+            moving = true;
         }
-        else if (movement)
+        else if (movement == Movement.Waypoints)
+        {
             agent.SetDestination(waypoints[wayPointer].position);
+            moving = true;
+        }
 
         distance = Random.Range(0.5f, 5f);
         stoppedTime = 0;
-        goPlayer = false;
         rb = gameObject.GetComponent<Rigidbody>();
     }
 
@@ -54,26 +60,28 @@ public class EnemyScript : MonoBehaviour
     {
         if (!dead)
         {
-            if (movement)
+            if (moving)
             {
                 Vector3 newForward = (waypoints[wayPointer].position - transform.position).normalized;
                 newForward.y = 0;
                 newForward = Quaternion.AngleAxis(-8.7f, Vector3.up) * newForward;
                 rb.rotation = Quaternion.LookRotation(newForward, Vector3.up);
 
-                if (rMovement)
+                /*
+                if (movement == Movement.IA)
                 {
                     if (stoppedTime <= 0)
                     {
-                        if (agent.remainingDistance <= 0.5f && goPlayer == true)
-                            goPlayer = false;
-                        if (agent.remainingDistance <= distance && goPlayer == false)
+                        if (agent.remainingDistance <= 0.5f && moving == true)
+                            moving = false;
+                        if (agent.remainingDistance <= distance && moving == false)
                             MovementIteration();
                     }
                     else
                         stoppedTime -= Time.deltaTime;
                 }
                 else
+                */
                     WayPoints();
             }
             else
@@ -97,6 +105,13 @@ public class EnemyScript : MonoBehaviour
             bp.interpolation = RigidbodyInterpolation.Interpolate;
         }
 
+        Rigidbody[] parts = GetComponentsInChildren<Rigidbody>();
+        foreach (Rigidbody bp in parts)
+        {
+            bp.isKinematic = false;
+            bp.interpolation = RigidbodyInterpolation.Interpolate;
+        }
+
         dead = true;
         agent.enabled = false;
 
@@ -109,7 +124,7 @@ public class EnemyScript : MonoBehaviour
 
     public void Shoot()
     {
-        if (dead || movement)
+        if (dead || moving == false)
             return;
 
         if (weaponHolder.GetComponentInChildren<GunScript>() != null)
@@ -132,7 +147,7 @@ public class EnemyScript : MonoBehaviour
                 break;
             case 2:
                 agent.SetDestination(Camera.main.transform.position);
-                goPlayer = true;
+                moving = true;
                 break;
             case 3:
                 agent.SetDestination(transform.position);
@@ -151,7 +166,7 @@ public class EnemyScript : MonoBehaviour
             if (wayPointer < waypoints.Count)
                 agent.SetDestination(waypoints[wayPointer].position);
             else
-                movement = false;
+                moving = false;
         }
     }
 
