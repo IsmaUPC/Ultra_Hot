@@ -14,7 +14,7 @@ public class EnemyScript : MonoBehaviour
     private NavMeshAgent agent;
     private Rigidbody rb;
 
-    [HideInInspector] public bool dead;
+    [HideInInspector] public bool dead = false;
     public enum Movement
     {
         None = 0,
