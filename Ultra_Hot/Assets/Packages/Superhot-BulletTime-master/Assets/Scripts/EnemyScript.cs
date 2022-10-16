@@ -125,6 +125,10 @@ public class EnemyScript : MonoBehaviour
             bp.interpolation = RigidbodyInterpolation.Interpolate;
         }
 
+        CharacterJoint[] joints = GetComponentsInChildren<CharacterJoint>();
+        foreach (CharacterJoint bp in joints)
+            bp.connectedBody = null;
+
         dead = true;
         agent.enabled = false;
 
@@ -195,5 +199,4 @@ public class EnemyScript : MonoBehaviour
 
         return navHit.position;
     }
-
 }
