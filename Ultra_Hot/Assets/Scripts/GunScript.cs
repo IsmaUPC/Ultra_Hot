@@ -22,9 +22,6 @@ public class GunScript : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
         bulletTime = GameObject.FindGameObjectWithTag("Player").GetComponent<BulletTime>();
-
-        if (transform.parent != null)
-            rb.isKinematic = true;
     }
 
     public void Shoot(bool isEnemy)
@@ -53,7 +50,6 @@ public class GunScript : MonoBehaviour
     public void Release()
     {
         transform.parent = null;
-        rb.isKinematic = false;
 
         rb.AddForce((Camera.main.transform.position - transform.position) * 2, ForceMode.Impulse);
         rb.AddForce(Vector3.up * 2, ForceMode.Impulse);
