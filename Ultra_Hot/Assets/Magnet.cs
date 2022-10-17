@@ -30,4 +30,11 @@ public class Magnet : MonoBehaviour
             prism = other.gameObject;
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == prism)
+        {
+            prism = null;
+        }
+    }
 }
