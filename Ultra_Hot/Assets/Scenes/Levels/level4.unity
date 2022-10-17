@@ -11595,6 +11595,10 @@ PrefabInstance:
       propertyPath: gripOffset
       value: 0.11
       objectReference: {fileID: 0}
+    - target: {fileID: 5936928246889820479, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: fadeDuration
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6707951067419483810, guid: a5226a72c9553294abfe172a458b5805, type: 3}
       propertyPath: m_TagString
       value: Player

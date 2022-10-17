@@ -30,8 +30,11 @@ public class LevelDataTransfer : MonoBehaviour
             level = other.gameObject.GetComponent<LevelData>().level;
             if(level != -1)
                 transitionManager.GoToScene(1);
-            else 
+            else
+            {
+                level = 0;
                 transitionManager.GoToScene(0);
+            }
         }
     }
 
