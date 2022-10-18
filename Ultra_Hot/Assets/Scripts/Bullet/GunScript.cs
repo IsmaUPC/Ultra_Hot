@@ -62,13 +62,18 @@ public class GunScript : MonoBehaviour
         transform.parent = null;
         rb.isKinematic = false;
 
-        rb.AddForce((Camera.main.transform.position - transform.position) * 2, ForceMode.Impulse);
-        rb.AddForce(Vector3.up * 2, ForceMode.Impulse);
+        rb.AddForce((Camera.main.transform.position - transform.position).normalized * 10, ForceMode.Impulse);
+        rb.AddForce(Vector3.up * 10, ForceMode.Impulse);
+    }
+
+    public void ParentNull()
+    {
+        transform.parent = null;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") && !transform.parent.CompareTag("Enemy") && collision.relativeVelocity.magnitude < 15)
+        if (collision.gameObject.CompareTag("Enemy") && transform.parent && !transform.parent.CompareTag("Enemy") && collision.relativeVelocity.magnitude > 10)
         {
             Instantiate(hitParticlePrefab, transform.position, transform.rotation);
 

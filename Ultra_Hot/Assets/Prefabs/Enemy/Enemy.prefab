@@ -5536,6 +5536,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8475471399410826244}
     m_Modifications:
+    - target: {fileID: 10072456660365259, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: parentOnGrab
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10072456660365259, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10072456660365259, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10072456660365259, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5162946396914057851}
+    - target: {fileID: 10072456660365259, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10072456660365259, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ParentNull
+      objectReference: {fileID: 0}
+    - target: {fileID: 10072456660365259, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GunScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 10072456660365259, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 10072456660365260, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
       propertyPath: m_Name
       value: New_Pistol
@@ -5603,3 +5635,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 821933818690794870, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
   m_PrefabInstance: {fileID: 9102189941731151870}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5162946396914057851 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4176809251554381189, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+  m_PrefabInstance: {fileID: 9102189941731151870}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fabbe9fe708e5145b4a9d5253c1bd13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

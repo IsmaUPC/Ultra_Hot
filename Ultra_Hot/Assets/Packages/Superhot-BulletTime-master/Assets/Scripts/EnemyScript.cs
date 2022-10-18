@@ -118,6 +118,12 @@ public class EnemyScript : MonoBehaviour
     {
         anim.enabled = false;
 
+        if (weaponHolder.GetComponentInChildren<GunScript>() != null)
+        {
+            GunScript w = weaponHolder.GetComponentInChildren<GunScript>();
+            w.Release();
+        }
+
         Rigidbody[] parts = GetComponentsInChildren<Rigidbody>();
         foreach (Rigidbody bp in parts)
         {
@@ -132,11 +138,6 @@ public class EnemyScript : MonoBehaviour
         dead = true;
         agent.enabled = false;
 
-        if (weaponHolder.GetComponentInChildren<GunScript>() != null)
-        {
-            GunScript w = weaponHolder.GetComponentInChildren<GunScript>();
-            w.Release();
-        }
     }
 
     public void Shoot()
