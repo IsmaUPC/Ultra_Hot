@@ -534,10 +534,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textures:
   - {fileID: 2800000, guid: ec46f6c37f7efc24ab4c3a27c3472802, type: 3}
-  - {fileID: 2800000, guid: b83cdbc9d8a14ee499d5b8c97890c56e, type: 3}
+  - {fileID: 2800000, guid: c4bcde432c706d7438489bec55a15f33, type: 3}
   scales:
   - {x: 7.164002, y: 5.004, z: 1}
-  - {x: 13.45, y: 1.09, z: 1}
+  - {x: 10.44, y: 3.22, z: 1}
   zNear:
   - 4
   - 10

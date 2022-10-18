@@ -20,6 +20,11 @@ public class BulletTime : MonoBehaviour
 
             // 0.02f because fixedDeltaTime defaults to this value
             Time.fixedDeltaTime = Time.timeScale * 0.02f;
-        }        
+        }
+        else
+        {
+            Time.timeScale = 1;
+            Time.fixedDeltaTime = 0.02f;
+        }
     }
 }

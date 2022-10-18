@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public class GunScript : MonoBehaviour
 {
@@ -21,7 +22,13 @@ public class GunScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
-        bulletTime = GameObject.FindGameObjectWithTag("Player").GetComponent<BulletTime>();
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject gameObject in gameObjects)
+            if(gameObject.GetComponent<BulletTime>() != null)
+            {
+                bulletTime = gameObject.GetComponent<BulletTime>();
+                break;
+            }
 
         if (transform.parent.CompareTag("Enemy"))
             rb.isKinematic = true;
