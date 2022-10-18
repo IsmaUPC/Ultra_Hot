@@ -36,14 +36,11 @@ public class Portal : MonoBehaviour
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Static"))
         {
             enemy.SetActive(true);
-            //enemy.transform.position = this.transform.position + (this.transform.forward * 0.5f);
-            //enemy.transform.LookAt(this.transform);
-            //enemy.transform.forward = (-enemy.transform.forward);
 
             if (count <= lifetime)
             {
                 count += Time.deltaTime;
-                Debug.Log(count);
+                //Debug.Log(count);
             }
             else
             {
@@ -51,7 +48,7 @@ public class Portal : MonoBehaviour
                 anim.Play("Exiting");
             }
         }
-}
+    }
 
 
 }
