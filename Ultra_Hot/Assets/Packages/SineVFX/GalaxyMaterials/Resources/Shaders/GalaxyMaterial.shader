@@ -62,11 +62,17 @@ Shader "SineVFX/GalaxyMaterials/GalaxyMaterial"
 		_DarkCloudsEdgesGlowClamp("Dark Clouds Edges Glow Clamp", Range( 1 , 4)) = 2
 		[HideInInspector] _texcoord( "", 2D ) = "white" {}
 		[HideInInspector] __dirty( "", Int ) = 1
+
+		_DissolveTex("Dissolve Texture", 2D) = "white" {}
+		_DissolveAmount("Dissolve Amount", Range(0, 1)) = 0.5
+		_DissolveScale("Dissolve Scale", Float) = 1
+		_DissolveLine("Dissolve Line", Range(0,0.2)) = 0.1
+		[HDR]_DissolveLineColor("Dissolve Line Color", Color) = (1,1,1,1)
 	}
 
 	SubShader
 	{
-		Tags{ "RenderType" = "Opaque"  "Queue" = "Geometry+0" "IgnoreProjector" = "True" "IsEmissive" = "true"  }
+		Tags{ "RenderType" = "Transparent"  "Queue" = "Geometry+0" "IgnoreProjector" = "True" "IsEmissive" = "true"  }
 		Cull Back
 		Blend SrcAlpha OneMinusSrcAlpha
 		
@@ -149,6 +155,11 @@ Shader "SineVFX/GalaxyMaterials/GalaxyMaterial"
 		uniform float _DarkCloudsThicker;
 		uniform float _DarkCloudsLighten;
 
+		uniform float _DissolveAmount;
+		uniform sampler2D _DissolveTex;
+		uniform float _DissolveScale;
+		uniform float _DissolveLine;
+		uniform float4 _DissolveLineColor;
 
 		float3 RotateAroundAxis( float3 center, float3 original, float3 u, float angle )
 		{
@@ -319,6 +330,11 @@ Shader "SineVFX/GalaxyMaterials/GalaxyMaterial"
 				float4 staticSwitch868 = lerpResult871;
 			#endif
 			o.Emission = ( ( _FinalPower * staticSwitch868 ) + ( staticSwitch1009 * ( 1.0 - lerpResult841 ) ) ).rgb;
+
+			half4 noise = tex2D(_DissolveTex, i.uv_texcoord * _DissolveScale);
+			clip(noise.r - _DissolveAmount);
+			o.Emission += step(noise.r, _DissolveAmount + _DissolveLine) * _DissolveLineColor;
+
 			o.Alpha = 1;
 		}
 
@@ -377,6 +393,8 @@ Shader "SineVFX/GalaxyMaterials/GalaxyMaterial"
 				TRANSFER_SHADOW_CASTER_NORMALOFFSET( o )
 				return o;
 			}
+
+
 			half4 frag( v2f IN
 			#if !defined( CAN_SKIP_VPOS )
 			, UNITY_VPOS_TYPE vpos : VPOS
@@ -397,6 +415,11 @@ Shader "SineVFX/GalaxyMaterials/GalaxyMaterial"
 				SurfaceOutput o;
 				UNITY_INITIALIZE_OUTPUT( SurfaceOutput, o )
 				surf( surfIN, o );
+
+				//half4 noise = tex2D(_DissolveTex, surfIN.uv_texcoord * _DissolveScale);
+				//clip(noise.r - _DissolveAmount);
+				//o.Emission = step(noise.r, _DissolveAmount + _DissolveLine) * _DissolveLineColor;
+
 				#if defined( CAN_SKIP_VPOS )
 				float2 vpos = IN.pos;
 				#endif

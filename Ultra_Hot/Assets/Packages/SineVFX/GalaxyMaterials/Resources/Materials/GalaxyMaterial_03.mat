@@ -52,7 +52,19 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _DissolveTex:
+        m_Texture: {fileID: 2800000, guid: 164294e5a3476b14abd1da120646beef, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlowMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -184,6 +196,10 @@ Material:
     - _DarkCloudsRotationSpeed: -0.06
     - _DarkCloudsThicker: 1
     - _DetailNormalMapScale: 1
+    - _Dissolve: 8.06
+    - _DissolveAmount: 0
+    - _DissolveLine: 0.0105
+    - _DissolveScale: 0.93
     - _DistortionAmount: 0.5
     - _DistortionExp: 1
     - _DistortionExp2: 1
@@ -194,6 +210,7 @@ Material:
     - _EtaFresnelExp: 3
     - _EtaFresnelExp2: 1
     - _Exp: 4
+    - _Expand: 2.32
     - _FinalPower: 1
     - _FixMaybe: 0
     - _Float0: -1
@@ -239,6 +256,7 @@ Material:
     - _NormalSpherize: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _R: 0.1
     - _RefractionCA: 0
     - _RefractionExp: 1
     - _RefractionExp2: 1
@@ -301,12 +319,15 @@ Material:
     - _TestPower: 7.5
     - _ToggleSwitch0: 0
     - _UVSec: 0
+    - _Weight: 0.181
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
     - _CloudsRampColorTint: {r: 1, g: 0.33822802, b: 0.33822802, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 1, g: 0, b: 0, a: 1}
+    - _Direction: {r: 0.18, g: 0, b: 0, a: 0}
+    - _DissolveLineColor: {r: 0, g: 341.78006, b: 341.78006, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FresnelGlowColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
