@@ -2193,6 +2193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3102992378488790963}
+  - component: {fileID: 6237400306667419257}
   m_Layer: 0
   m_Name: Meshes
   m_TagString: Untagged
@@ -2233,6 +2234,25 @@ Transform:
   m_Father: {fileID: 8384000237400189566}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6237400306667419257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5284918263227979648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb92c183ed4ecc498eff3bdc065d86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+  inheritChildrens: 1
 --- !u!1 &5332949513371480040
 GameObject:
   m_ObjectHideFlags: 0
@@ -5412,7 +5432,6 @@ GameObject:
   - component: {fileID: -6731416440244692216}
   - component: {fileID: 2400427909223191894}
   - component: {fileID: 1025858621422065831}
-  - component: {fileID: 6334174470842830396}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -5510,24 +5529,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &6334174470842830396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9156419918520332484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fb92c183ed4ecc498eff3bdc065d86b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: 5
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1001 &9102189941731151870
 PrefabInstance:
   m_ObjectHideFlags: 0
