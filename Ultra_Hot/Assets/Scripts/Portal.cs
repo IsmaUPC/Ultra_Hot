@@ -10,6 +10,7 @@ public class Portal : MonoBehaviour
     bool scaling = false;
     bool endedScaling = false;
     float x, y, z;
+    public GameObject enemy;
 
     [SerializeField] float xSpeed = 0.5f;
     [SerializeField] float ySpeed = 0.5f;
@@ -34,6 +35,11 @@ public class Portal : MonoBehaviour
     {
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Static"))
         {
+            enemy.SetActive(true);
+            //enemy.transform.position = this.transform.position + (this.transform.forward * 0.5f);
+            //enemy.transform.LookAt(this.transform);
+            //enemy.transform.forward = (-enemy.transform.forward);
+
             if (count <= lifetime)
             {
                 count += Time.deltaTime;
@@ -45,7 +51,7 @@ public class Portal : MonoBehaviour
                 anim.Play("Exiting");
             }
         }
-    }
+}
 
 
 }
