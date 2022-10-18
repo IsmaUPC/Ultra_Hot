@@ -88,6 +88,7 @@ public class Outlines : MonoBehaviour
     private Material outlineFillMaterial;
 
     private bool needsUpdate;
+    public bool inheritChildrens = true;
 
     void Awake()
     {
@@ -111,17 +112,20 @@ public class Outlines : MonoBehaviour
 
     void OnEnable()
     {
-        foreach (var renderer in renderers)
+        if(inheritChildrens)
         {
+            foreach (var renderer in renderers)
+            {
 
-            // Append outline shaders
-            var materials = renderer.sharedMaterials.ToList();
+                // Append outline shaders
+                var materials = renderer.sharedMaterials.ToList();
 
-            materials.Add(outlineMaskMaterial);
-            materials.Add(outlineFillMaterial);
+                materials.Add(outlineMaskMaterial);
+                materials.Add(outlineFillMaterial);
 
-            renderer.materials = materials.ToArray();
-        }
+                renderer.materials = materials.ToArray();
+            }
+        }        
     }
 
     void OnValidate()
@@ -156,17 +160,20 @@ public class Outlines : MonoBehaviour
 
     void OnDisable()
     {
-        foreach (var renderer in renderers)
+        if (inheritChildrens)
         {
+            foreach (var renderer in renderers)
+            {
 
-            // Remove outline shaders
-            var materials = renderer.sharedMaterials.ToList();
+                // Remove outline shaders
+                var materials = renderer.sharedMaterials.ToList();
 
-            materials.Remove(outlineMaskMaterial);
-            materials.Remove(outlineFillMaterial);
+                materials.Remove(outlineMaskMaterial);
+                materials.Remove(outlineFillMaterial);
 
-            renderer.materials = materials.ToArray();
-        }
+                renderer.materials = materials.ToArray();
+            }
+        }        
     }
 
     void OnDestroy()

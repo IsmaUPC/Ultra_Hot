@@ -46,5 +46,10 @@ namespace Autohand.Demo
         {
             up = false;
         }
+        public void DestroyLevitation()
+        {
+            Destroy(GetComponent<Levitation>());
+        }
+        
     }
 }

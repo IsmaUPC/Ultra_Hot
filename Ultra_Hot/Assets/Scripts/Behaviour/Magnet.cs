@@ -25,7 +25,7 @@ public class Magnet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Level")
+        if(other.gameObject.tag == "Level" && prism == null)
         {
             prism = other.gameObject;
         }

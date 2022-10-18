@@ -1264,7 +1264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &74400151
 Transform:
   m_ObjectHideFlags: 0
@@ -2745,8 +2745,8 @@ MonoBehaviour:
   ignoreWeight: 0
   maintainGrabOffset: 0
   parentOnGrab: 1
-  throwPower: 1
-  jointBreakForce: 1000
+  throwPower: 2
+  jointBreakForce: 20000
   showAdvancedSettings: 0
   handType: 0
   grabType: 0
@@ -2767,12 +2767,24 @@ MonoBehaviour:
   onRelease:
     m_PersistentCalls:
       m_Calls: []
-  showAdvancedEvents: 0
+  showAdvancedEvents: 1
   onSqueeze:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 219821451}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 219821453}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -2795,8 +2807,20 @@ MonoBehaviour:
   OnJointBreak:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 219821451}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 219821453}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -2918,6 +2942,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+  inheritChildrens: 1
 --- !u!1 &240517476
 GameObject:
   m_ObjectHideFlags: 0
@@ -3016,10 +3041,6 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 821933818690794870, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.30000004
-      objectReference: {fileID: 0}
-    - target: {fileID: 821933818690794870, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.626895
       objectReference: {fileID: 0}
@@ -3059,18 +3080,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 4176809251554381189, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
-      propertyPath: handL
-      value: 
-      objectReference: {fileID: 1391160894}
-    - target: {fileID: 4176809251554381189, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
-      propertyPath: handR
-      value: 
-      objectReference: {fileID: 66953194}
-    - target: {fileID: 4176809251554381189, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
-      propertyPath: bulletTime
-      value: 
-      objectReference: {fileID: 1061226067}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
 --- !u!1 &266862247
@@ -5658,8 +5667,8 @@ MonoBehaviour:
   ignoreWeight: 0
   maintainGrabOffset: 0
   parentOnGrab: 1
-  throwPower: 1
-  jointBreakForce: 1000
+  throwPower: 2
+  jointBreakForce: 20000
   showAdvancedSettings: 0
   handType: 0
   grabType: 0
@@ -5680,12 +5689,24 @@ MonoBehaviour:
   onRelease:
     m_PersistentCalls:
       m_Calls: []
-  showAdvancedEvents: 0
+  showAdvancedEvents: 1
   onSqueeze:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 633128217}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 633128219}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -5708,8 +5729,20 @@ MonoBehaviour:
   OnJointBreak:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 633128217}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 633128219}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -5831,6 +5864,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+  inheritChildrens: 1
 --- !u!4 &635071612 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8384000237400189566, guid: 01f347e14532a8b4a982e281961f7092, type: 3}
@@ -6391,8 +6425,8 @@ MonoBehaviour:
   ignoreWeight: 0
   maintainGrabOffset: 0
   parentOnGrab: 1
-  throwPower: 1
-  jointBreakForce: 1000
+  throwPower: 2
+  jointBreakForce: 20000
   showAdvancedSettings: 0
   handType: 0
   grabType: 0
@@ -6413,12 +6447,24 @@ MonoBehaviour:
   onRelease:
     m_PersistentCalls:
       m_Calls: []
-  showAdvancedEvents: 0
+  showAdvancedEvents: 1
   onSqueeze:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 669728762}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 669728764}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -6441,8 +6487,20 @@ MonoBehaviour:
   OnJointBreak:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 669728762}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 669728764}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -6564,6 +6622,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+  inheritChildrens: 1
 --- !u!4 &686695929 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7214476173957040757, guid: d09cf996469b118479e15c2f579be11f, type: 3}
@@ -8494,8 +8553,8 @@ MonoBehaviour:
   ignoreWeight: 0
   maintainGrabOffset: 0
   parentOnGrab: 1
-  throwPower: 1
-  jointBreakForce: 1000
+  throwPower: 2
+  jointBreakForce: 20000
   showAdvancedSettings: 0
   handType: 0
   grabType: 0
@@ -8516,12 +8575,24 @@ MonoBehaviour:
   onRelease:
     m_PersistentCalls:
       m_Calls: []
-  showAdvancedEvents: 0
+  showAdvancedEvents: 1
   onSqueeze:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 885310457}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 885310459}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -8544,8 +8615,20 @@ MonoBehaviour:
   OnJointBreak:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 885310457}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 885310459}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -8667,6 +8750,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+  inheritChildrens: 1
 --- !u!4 &901321827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 821933818690794870, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
@@ -13279,6 +13363,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+  inheritChildrens: 1
 --- !u!1 &1378515069
 GameObject:
   m_ObjectHideFlags: 0
@@ -13578,8 +13663,8 @@ MonoBehaviour:
   ignoreWeight: 0
   maintainGrabOffset: 0
   parentOnGrab: 1
-  throwPower: 1
-  jointBreakForce: 1000
+  throwPower: 2
+  jointBreakForce: 20000
   showAdvancedSettings: 0
   handType: 0
   grabType: 0
@@ -13600,12 +13685,24 @@ MonoBehaviour:
   onRelease:
     m_PersistentCalls:
       m_Calls: []
-  showAdvancedEvents: 0
+  showAdvancedEvents: 1
   onSqueeze:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1378515072}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1378515074}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -13628,8 +13725,20 @@ MonoBehaviour:
   OnJointBreak:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1378515072}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1378515074}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -13751,6 +13860,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+  inheritChildrens: 1
 --- !u!4 &1381692902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 821933818690794870, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
@@ -19039,8 +19149,8 @@ MonoBehaviour:
   ignoreWeight: 0
   maintainGrabOffset: 0
   parentOnGrab: 1
-  throwPower: 1
-  jointBreakForce: 1000
+  throwPower: 2
+  jointBreakForce: 20000
   showAdvancedSettings: 0
   handType: 0
   grabType: 0
@@ -19061,12 +19171,24 @@ MonoBehaviour:
   onRelease:
     m_PersistentCalls:
       m_Calls: []
-  showAdvancedEvents: 0
+  showAdvancedEvents: 1
   onSqueeze:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1744819758}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1744819760}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -19089,8 +19211,20 @@ MonoBehaviour:
   OnJointBreak:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1744819758}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1744819760}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -19212,6 +19346,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+  inheritChildrens: 1
 --- !u!4 &1756800832 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8384000237400189566, guid: 01f347e14532a8b4a982e281961f7092, type: 3}
@@ -19529,8 +19664,8 @@ MonoBehaviour:
   ignoreWeight: 0
   maintainGrabOffset: 0
   parentOnGrab: 1
-  throwPower: 1
-  jointBreakForce: 1000
+  throwPower: 2
+  jointBreakForce: 20000
   showAdvancedSettings: 0
   handType: 0
   grabType: 0
@@ -19551,12 +19686,24 @@ MonoBehaviour:
   onRelease:
     m_PersistentCalls:
       m_Calls: []
-  showAdvancedEvents: 0
+  showAdvancedEvents: 1
   onSqueeze:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1762709070}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1762709072}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -19579,8 +19726,20 @@ MonoBehaviour:
   OnJointBreak:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1762709070}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1762709072}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -19689,6 +19848,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+  inheritChildrens: 1
 --- !u!4 &1763405645 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8384000237400189566, guid: 01f347e14532a8b4a982e281961f7092, type: 3}
@@ -19993,8 +20153,8 @@ MonoBehaviour:
   ignoreWeight: 0
   maintainGrabOffset: 0
   parentOnGrab: 1
-  throwPower: 1
-  jointBreakForce: 1000
+  throwPower: 2
+  jointBreakForce: 20000
   showAdvancedSettings: 0
   handType: 0
   grabType: 0
@@ -20015,12 +20175,24 @@ MonoBehaviour:
   onRelease:
     m_PersistentCalls:
       m_Calls: []
-  showAdvancedEvents: 0
+  showAdvancedEvents: 1
   onSqueeze:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1773266402}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1773266404}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -20043,8 +20215,20 @@ MonoBehaviour:
   OnJointBreak:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1773266402}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1773266404}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -20166,6 +20350,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+  inheritChildrens: 1
 --- !u!1 &1778166160
 GameObject:
   m_ObjectHideFlags: 0
@@ -21122,8 +21307,8 @@ MonoBehaviour:
   ignoreWeight: 0
   maintainGrabOffset: 0
   parentOnGrab: 1
-  throwPower: 1
-  jointBreakForce: 1000
+  throwPower: 2
+  jointBreakForce: 20000
   showAdvancedSettings: 0
   handType: 0
   grabType: 0
@@ -21144,12 +21329,24 @@ MonoBehaviour:
   onRelease:
     m_PersistentCalls:
       m_Calls: []
-  showAdvancedEvents: 0
+  showAdvancedEvents: 1
   onSqueeze:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1845081894}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1845081896}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -21172,8 +21369,20 @@ MonoBehaviour:
   OnJointBreak:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1845081894}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1845081896}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -21282,6 +21491,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+  inheritChildrens: 1
 --- !u!1 &1845576621
 GameObject:
   m_ObjectHideFlags: 0
@@ -22190,8 +22400,8 @@ MonoBehaviour:
   ignoreWeight: 0
   maintainGrabOffset: 0
   parentOnGrab: 1
-  throwPower: 1
-  jointBreakForce: 1000
+  throwPower: 2
+  jointBreakForce: 20000
   showAdvancedSettings: 0
   handType: 0
   grabType: 0
@@ -22212,12 +22422,24 @@ MonoBehaviour:
   onRelease:
     m_PersistentCalls:
       m_Calls: []
-  showAdvancedEvents: 0
+  showAdvancedEvents: 1
   onSqueeze:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1886086820}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1886086822}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -22240,8 +22462,20 @@ MonoBehaviour:
   OnJointBreak:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1886086820}
+        m_TargetAssemblyTypeName: Autohand.Demo.Levitation, Assembly-CSharp
+        m_MethodName: DestroyLevitation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1886086822}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Autohand.Demo.CubeBreak, Assembly-CSharp-firstpass
         m_MethodName: Break
         m_Mode: 1
         m_Arguments:
@@ -22363,6 +22597,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+  inheritChildrens: 1
 --- !u!1 &1890220683
 GameObject:
   m_ObjectHideFlags: 0
@@ -25853,6 +26088,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+  inheritChildrens: 1
 --- !u!114 &2114611639
 MonoBehaviour:
   m_ObjectHideFlags: 0
