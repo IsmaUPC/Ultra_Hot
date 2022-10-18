@@ -50,6 +50,10 @@ namespace Autohand.Demo
         {
             Destroy(GetComponent<Levitation>());
         }
-        
+        public void ActiveGravity()
+        {
+            GetComponent<Rigidbody>().useGravity = true;
+        }
+
     }
 }
