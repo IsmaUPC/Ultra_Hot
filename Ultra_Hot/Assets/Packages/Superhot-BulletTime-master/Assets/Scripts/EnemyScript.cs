@@ -24,8 +24,8 @@ public class EnemyScript : MonoBehaviour
     public Movement movement;
     public Transform weaponHolder;
 
-    public List<Transform> waypoints;
     public int startShooting = 1;
+    public List<Transform> waypoints;
     private bool moving = false;
     private int wayPointer = 0;
 
@@ -67,6 +67,9 @@ public class EnemyScript : MonoBehaviour
                     }
                 }
             }
+            //TODO: Delete
+            if (waypoints.Count <= 0)
+                movement = Movement.None;
 
             agent.SetDestination(waypoints[wayPointer].position);
             moving = true;
@@ -134,10 +137,6 @@ public class EnemyScript : MonoBehaviour
             bp.interpolation = RigidbodyInterpolation.Interpolate;
         }
 
-        CharacterJoint[] joints = GetComponentsInChildren<CharacterJoint>();
-        foreach (CharacterJoint bp in joints)
-            bp.connectedBody = null;
-
         dead = true;
         agent.enabled = false;
 
@@ -145,7 +144,7 @@ public class EnemyScript : MonoBehaviour
 
     public void Shoot()
     {
-        if (dead || moving == true)
+        if (dead)
             return;
 
         if (weaponHolder.GetComponentInChildren<GunScript>() != null)
@@ -188,7 +187,10 @@ public class EnemyScript : MonoBehaviour
             {
                 agent.SetDestination(waypoints[wayPointer].position);
                 if (wayPointer == startShooting)
+                {
                     anim.SetBool("shoot", true);
+                    weaponHolder.GetComponentInChildren<GunScript>().canLook = true;
+                }
             }
             else
             {

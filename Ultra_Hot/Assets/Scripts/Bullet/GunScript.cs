@@ -15,7 +15,8 @@ public class GunScript : MonoBehaviour
     public int bulletAmount = 6;
     public Transform barrelTip;
     public GameObject bulletPrefab;
-    public bool butNo = false;
+
+    [HideInInspector] public bool canLook = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -34,6 +35,12 @@ public class GunScript : MonoBehaviour
             rb.isKinematic = true;
     }
 
+    void Update()
+    {
+        if(canLook)
+            transform.LookAt(new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y - 0.4f, Camera.main.transform.position.z));
+    }
+
     public void Shoot(bool isEnemy)
     {
         if (bulletAmount <= 0)
@@ -41,9 +48,7 @@ public class GunScript : MonoBehaviour
 
         if (!isEnemy)
             bulletAmount--;
-        else if (!butNo)
-            transform.LookAt(new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y - 0.4f, Camera.main.transform.position.z));
-
+       
         GameObject bullet = Instantiate(bulletPrefab, barrelTip.position, transform.rotation);
         bullet.GetComponent<BulletScript>().GodMode = bulletTime.GodMode;
 
@@ -59,11 +64,11 @@ public class GunScript : MonoBehaviour
 
     public void Release()
     {
+        canLook = false;
         transform.parent = null;
         rb.isKinematic = false;
 
-        rb.AddForce((Camera.main.transform.position - transform.position).normalized * 10, ForceMode.Impulse);
-        rb.AddForce(Vector3.up * 10, ForceMode.Impulse);
+        rb.AddForce(transform.forward * 10, ForceMode.Impulse);
     }
 
     public void ParentNull()
