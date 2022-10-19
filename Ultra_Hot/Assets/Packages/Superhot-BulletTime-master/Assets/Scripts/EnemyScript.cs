@@ -137,6 +137,8 @@ public class EnemyScript : MonoBehaviour
             bp.interpolation = RigidbodyInterpolation.Interpolate;
         }
 
+        //transform.DetachChildren();
+
         dead = true;
         agent.enabled = false;
 

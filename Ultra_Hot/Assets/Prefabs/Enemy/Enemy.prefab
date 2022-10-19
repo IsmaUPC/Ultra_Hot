@@ -2192,6 +2192,7 @@ MonoBehaviour:
   dead: 0
   movement: 1
   weaponHolder: {fileID: 3682904111979646319}
+  startShooting: 1
   waypoints: []
   dissolveWeight: 0
 --- !u!54 &3211271478751740088
@@ -4329,16 +4330,28 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 821933818690794870, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 821933818690794870, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 821933818690794870, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 821933818690794870, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0445
+      value: 0.045
       objectReference: {fileID: 0}
     - target: {fileID: 821933818690794870, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0283
+      value: 0.021
       objectReference: {fileID: 0}
     - target: {fileID: 821933818690794870, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1081
+      value: 0.108
       objectReference: {fileID: 0}
     - target: {fileID: 821933818690794870, guid: e96076d58358de94faabccf6bbb97a67, type: 3}
       propertyPath: m_LocalRotation.w

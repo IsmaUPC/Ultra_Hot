@@ -68,7 +68,7 @@ public class GunScript : MonoBehaviour
         transform.parent = null;
         rb.isKinematic = false;
 
-        rb.AddForce(transform.forward * 10, ForceMode.Impulse);
+        rb.AddForce(transform.forward * 50, ForceMode.Impulse);
     }
 
     public void ParentNull()
