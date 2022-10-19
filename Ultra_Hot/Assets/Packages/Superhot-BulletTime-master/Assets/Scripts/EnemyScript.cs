@@ -25,6 +25,7 @@ public class EnemyScript : MonoBehaviour
     public Transform weaponHolder;
 
     public List<Transform> waypoints;
+    public int startShooting = 1;
     private bool moving = false;
     private int wayPointer = 0;
 
@@ -70,6 +71,8 @@ public class EnemyScript : MonoBehaviour
             agent.SetDestination(waypoints[wayPointer].position);
             moving = true;
         }
+        else
+            anim.SetFloat("velocity", 0);
 
         distance = Random.Range(0.5f, 5f);
         stoppedTime = 0;
@@ -142,7 +145,7 @@ public class EnemyScript : MonoBehaviour
 
     public void Shoot()
     {
-        if (dead || moving == false)
+        if (dead || moving == true)
             return;
 
         if (weaponHolder.GetComponentInChildren<GunScript>() != null)
@@ -182,9 +185,16 @@ public class EnemyScript : MonoBehaviour
         {
             wayPointer++;
             if (wayPointer < waypoints.Count)
+            {
                 agent.SetDestination(waypoints[wayPointer].position);
+                if (wayPointer == startShooting)
+                    anim.SetBool("shoot", true);
+            }
             else
+            {
                 moving = false;
+                anim.SetFloat("velocity", 0);
+            }
         }
     }
 
