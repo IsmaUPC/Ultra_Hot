@@ -24,7 +24,7 @@ namespace Autohand
             currentLevel = levelData.GetLevel();
 
             dices[currentLevel].SetActive(true);
-            enemies = levels[currentLevel].GetComponentsInChildren<EnemyScript>();
+            enemies = levels[currentLevel].GetComponentsInChildren<EnemyScript>(true);
         }
 
         // Update is called once per frame
