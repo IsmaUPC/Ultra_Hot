@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Portal : MonoBehaviour
+public class PortalScript : MonoBehaviour
 {
     bool scaling = false;
     bool endedScaling = false;
@@ -50,5 +50,9 @@ public class Portal : MonoBehaviour
         }
     }
 
+    public void OnDestroy()
+    {
+        Destroy(this);
+    }
 
 }

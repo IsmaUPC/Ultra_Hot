@@ -14,6 +14,7 @@ namespace Autohand
         private LevelDataTransfer levelData;
 
         private EnemyScript[] enemies;
+        private PortalScript[] portals;
         private int count = 0;
 
         void Start()
@@ -25,6 +26,7 @@ namespace Autohand
 
             dices[currentLevel].SetActive(true);
             enemies = levels[currentLevel].GetComponentsInChildren<EnemyScript>(true);
+            portals = levels[currentLevel].GetComponentsInChildren<PortalScript>(true);
         }
 
         // Update is called once per frame
@@ -34,6 +36,11 @@ namespace Autohand
             {
                 if (item.dead)
                     count++;
+            }
+            foreach (var item in portals)
+            {
+                if (!item.GetComponent<Animation>().isPlaying)
+                    item.OnDestroy();
             }
             if (Input.GetKeyDown(KeyCode.Space))
             {
