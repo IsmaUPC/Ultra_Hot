@@ -35,7 +35,8 @@ public class Portal : MonoBehaviour
     {
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Static"))
         {
-            enemy.SetActive(true);
+            if(enemy)
+                enemy.SetActive(true);
 
             if (count <= lifetime)
             {

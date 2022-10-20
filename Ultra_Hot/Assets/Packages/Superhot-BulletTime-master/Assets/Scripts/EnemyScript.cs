@@ -67,12 +67,17 @@ public class EnemyScript : MonoBehaviour
                     }
                 }
             }
-            //TODO: Delete
+            //TODO: Delete only if
             if (waypoints.Count <= 0)
+            {
+                moving = false;
                 movement = Movement.None;
-
-            agent.SetDestination(waypoints[wayPointer].position);
-            moving = true;
+            }
+            else
+            {
+                moving = true;
+                agent.SetDestination(waypoints[wayPointer].position);
+            }
         }
         else
             anim.SetFloat("velocity", 0);
@@ -108,7 +113,7 @@ public class EnemyScript : MonoBehaviour
                 }
                 else
                 */
-                    WayPoints();
+                WayPoints();
             }
             else
             {

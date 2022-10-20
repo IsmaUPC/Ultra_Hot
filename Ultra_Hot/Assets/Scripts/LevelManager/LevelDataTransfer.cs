@@ -46,5 +46,8 @@ public class LevelDataTransfer : MonoBehaviour
     {
         level++;
     }
-
+    public void ResetLevel()
+    {
+        level = 0;
+    }
 }

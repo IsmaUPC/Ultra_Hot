@@ -4366,6 +4366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tp: {fileID: 1444780352}
+  fade: {fileID: 1161457815}
   levels:
   - {fileID: 74400150}
   - {fileID: 1709110635}
