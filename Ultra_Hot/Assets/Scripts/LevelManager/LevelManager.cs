@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.ProBuilder;
 
 namespace Autohand
 {
@@ -16,6 +17,7 @@ namespace Autohand
         private LevelDataTransfer levelData;
 
         private EnemyScript[] enemies;
+        private PortalScript[] portals;
         private int count = 0;
         private bool transition = false;
 
@@ -27,7 +29,9 @@ namespace Autohand
             currentLevel = levelData.GetLevel();
 
             dices[currentLevel].SetActive(true);
-            enemies = levels[currentLevel].GetComponentsInChildren<EnemyScript>();
+            enemies = levels[currentLevel].GetComponentsInChildren<EnemyScript>(true);
+            portals = levels[currentLevel].GetComponentsInChildren<PortalScript>(true);
+
         }
 
         // Update is called once per frame
@@ -44,6 +48,14 @@ namespace Autohand
                 {
                     count = enemies.Length;
                 }
+                foreach (var item in portals)
+                {
+                    // Animation has finished
+                    if (item.endedAnim)
+                        item.OnDestroy();
+
+                }
+
                 // Last cube
                 if (count == enemies.Length && currentLevel == levels.Count - 1)
                 {

@@ -70,8 +70,9 @@ public class EnemyScript : MonoBehaviour
             //TODO: Delete only if
             if (waypoints.Count <= 0)
             {
-                moving = false;
-                movement = Movement.None;
+                Debug.Log("Waypoints length of enemy "+ this.name + " is 0");
+                //moving = false;
+                //movement = Movement.None;
             }
             else
             {
@@ -193,16 +194,16 @@ public class EnemyScript : MonoBehaviour
             if (wayPointer < waypoints.Count)
             {
                 agent.SetDestination(waypoints[wayPointer].position);
-                if (wayPointer == startShooting)
-                {
-                    anim.SetBool("shoot", true);
-                    weaponHolder.GetComponentInChildren<GunScript>().canLook = true;
-                }
             }
             else
             {
                 moving = false;
                 anim.SetFloat("velocity", 0);
+            }
+            if (wayPointer >= startShooting)
+            {
+                anim.SetBool("shoot", true);
+                weaponHolder.GetComponentInChildren<GunScript>().canLook = true;
             }
         }
     }

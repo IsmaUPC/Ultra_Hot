@@ -5,10 +5,11 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Portal : MonoBehaviour
+public class PortalScript : MonoBehaviour
 {
     bool scaling = false;
     bool endedScaling = false;
+    [HideInInspector] public bool endedAnim = false;
     float x, y, z;
     public GameObject enemy;
 
@@ -35,8 +36,8 @@ public class Portal : MonoBehaviour
     {
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Static"))
         {
-            if(enemy)
-                enemy.SetActive(true);
+            if (enemy) enemy.SetActive(true);
+            else Debug.Log("Enemy object in portal is null");
 
             if (count <= lifetime)
             {
@@ -47,9 +48,14 @@ public class Portal : MonoBehaviour
             {
                 //anim.SetBool("exiting", true);
                 anim.Play("Exiting");
+                endedAnim = true;
             }
         }
     }
 
-
+    public void OnDestroy()
+    {
+        Destroy(this);
+        
+    }
 }
