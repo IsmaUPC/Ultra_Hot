@@ -48,7 +48,7 @@ public class PortalScript : MonoBehaviour
             {
                 //anim.SetBool("exiting", true);
                 anim.Play("Exiting");
-                endedAnim = true;
+                OnDestroy();
             }
         }
     }

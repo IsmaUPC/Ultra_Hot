@@ -8,6 +8,11 @@ public class TransitionManager : MonoBehaviour
     public FadeScreen fadeScreen;
     private bool onTransition = false;
     // Start is called before the first frame update
+    private void Start()
+    {
+        Time.timeScale = 1;
+        Time.fixedDeltaTime = 0.02f;
+    }
     public void GoToScene(int sceneIndex)
     {
         if (!onTransition)

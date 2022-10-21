@@ -17,7 +17,6 @@ namespace Autohand
         private LevelDataTransfer levelData;
 
         private EnemyScript[] enemies;
-        private PortalScript[] portals;
         private int count = 0;
         private bool transition = false;
 
@@ -30,8 +29,6 @@ namespace Autohand
 
             dices[currentLevel].SetActive(true);
             enemies = levels[currentLevel].GetComponentsInChildren<EnemyScript>(true);
-            portals = levels[currentLevel].GetComponentsInChildren<PortalScript>(true);
-
         }
 
         // Update is called once per frame
@@ -47,13 +44,6 @@ namespace Autohand
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     count = enemies.Length;
-                }
-                foreach (var item in portals)
-                {
-                    // Animation has finished
-                    if (item.endedAnim)
-                        item.OnDestroy();
-
                 }
 
                 // Last cube
@@ -91,7 +81,7 @@ namespace Autohand
             {
                 item.gameObject.SetActive(false);
             }
-            enemies = levels[currentLevel].GetComponentsInChildren<EnemyScript>();
+            enemies = levels[currentLevel].GetComponentsInChildren<EnemyScript>(true);
 
             dices[currentLevel].SetActive(true);
             tp.ActiveTelepor();
