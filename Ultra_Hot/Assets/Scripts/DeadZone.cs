@@ -17,7 +17,7 @@ public class DeadZone : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            manager.GoToScene(1);
+            manager.GoToScene(2);
         }
     }
 }

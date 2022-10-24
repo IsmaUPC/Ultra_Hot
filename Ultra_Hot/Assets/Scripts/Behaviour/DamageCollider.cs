@@ -10,7 +10,7 @@ namespace Autohand
         {
             if (collision.gameObject.CompareTag("Bullet"))
             {
-                transitionManager.GoToScene(1);
+                transitionManager.GoToScene(2);
             }
         }
     }
