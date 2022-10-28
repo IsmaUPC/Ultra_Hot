@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,8 +24,14 @@ namespace Autohand {
             if(firstTp)
             {
                 firstTp = false;
-                playerBody.SetPosition(teleports[index].position, teleports[index].rotation);
+                StartCoroutine(SetStartPosition());
             }
+        }
+        private IEnumerator SetStartPosition()
+        {
+            yield return null;
+            playerBody.SetPosition(teleports[index].position, teleports[index].rotation);
+            Debug.Log("Level Index: " + index.ToString());
         }
         void SelectedTeleport(int newIndex)
         {

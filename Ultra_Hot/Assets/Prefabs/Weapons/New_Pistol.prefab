@@ -96,10 +96,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitParticlePrefab: {fileID: 2462045763441574653, guid: bc20e11fe125f0c4985a160e93e1a272, type: 3}
-  bulletAmount: 6
+  bulletAmount: 9
   barrelTip: {fileID: 7122921692628775120}
   bulletPrefab: {fileID: 8914353279888130421, guid: 03e840776a4003145b758c40dbafd97d, type: 3}
-  butNo: 0
+  canLook: 0
 --- !u!114 &10072456660365259
 MonoBehaviour:
   m_ObjectHideFlags: 0

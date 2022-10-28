@@ -25,11 +25,11 @@ public class BulletScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Bullet"))
         {
             Instantiate(hitParticlePrefab, transform.position, transform.rotation);
-
-            collision.gameObject.GetComponentInParent<EnemyScript>().Ragdoll();
+            if(collision.gameObject.GetComponentInParent<EnemyScript>())
+                collision.gameObject.GetComponentInParent<EnemyScript>().Ragdoll();
         }
 
         Destroy(gameObject);
