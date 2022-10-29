@@ -991,7 +991,8 @@ namespace Autohand {
 
                     if(holdingObj != null)
                         holdingObj.body.useGravity = useGravity;
-                    else
+                    // Check if obj hasn't been destroy
+                    else if (startHoldingObj.body != null)
                         startHoldingObj.body.useGravity = useGravity;
                 }
 

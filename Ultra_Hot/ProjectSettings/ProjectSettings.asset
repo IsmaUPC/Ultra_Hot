@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: SpaceHot
+  companyName: LoadVR
+  productName: SuperSpace
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -127,11 +127,13 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.1
+  bundleVersion: 0.5
   preloadedAssets:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 1945775172430367552, guid: 575328a7cb6e4b545984a48d840fb8d1, type: 2}
+  - {fileID: 0}
+  - {fileID: -67432756841452240, guid: 6c699f89ade55f541875d804470441c8, type: 2}
+  - {fileID: -6791079302754202298, guid: 575328a7cb6e4b545984a48d840fb8d1, type: 2}
   - {fileID: 11400000, guid: b2203a806e47ce94f96e47412fdd9f8d, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -151,7 +153,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.DefaultCompany.SpaceHot
-    Standalone: com.DefaultCompany.UltraHot
+    Standalone: com.LoadVR.SuperSpace
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -693,7 +695,8 @@ PlayerSettings:
     33: UNITY_POST_PROCESSING_STACK_V2
   additionalCompilerArguments: {}
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Standalone: 1
   il2cppCompilerConfiguration: {}
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}

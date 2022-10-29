@@ -15,6 +15,7 @@ namespace Autohand {
         private bool firstTp = true;
         private void Start()
         {
+            playerBody.useInterpolation = false;
             GameObject[] objs = GameObject.FindGameObjectsWithTag("DataInfo");
             index = objs[0].GetComponent<LevelDataTransfer>().GetLevel();
         }
@@ -30,8 +31,8 @@ namespace Autohand {
         private IEnumerator SetStartPosition()
         {
             yield return null;
+            playerBody.useInterpolation = true;
             playerBody.SetPosition(teleports[index].position, teleports[index].rotation);
-            Debug.Log("Level Index: " + index.ToString());
         }
         void SelectedTeleport(int newIndex)
         {

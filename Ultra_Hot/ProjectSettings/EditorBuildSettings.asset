@@ -6,14 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Levels/LogoScreen.unity
+    guid: 8ab8404af3f3e1a438babd1d03883078
+  - enabled: 1
     path: Assets/Scenes/Levels/StartScene.unity
     guid: 5c5e40a3c18e9724f8c2f2b94e8657f3
   - enabled: 1
     path: Assets/Scenes/Levels/level4.unity
     guid: 632f15c9fcf62c541bc0b70b5b8fff0e
-  - enabled: 1
-    path: Assets/Scenes/Levels/LogoScreen.unity
-    guid: 8ab8404af3f3e1a438babd1d03883078
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b2203a806e47ce94f96e47412fdd9f8d, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 575328a7cb6e4b545984a48d840fb8d1, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 6c699f89ade55f541875d804470441c8, type: 2}

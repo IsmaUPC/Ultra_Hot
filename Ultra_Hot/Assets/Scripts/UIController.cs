@@ -32,12 +32,12 @@ public class UIController : MonoBehaviour
 
     public void LoadLobby()
     {
-        transition.GoToScene(0);
+        transition.GoToScene(1);
     }
 
     public void ReloadLevel()
     {
-        transition.GoToScene(1);
+        transition.GoToScene(2);
     }
 
 }

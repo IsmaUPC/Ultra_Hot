@@ -38,6 +38,8 @@ namespace Autohand {
         public Hand handRight;
         public Hand handLeft;
 
+        [AutoToggleHeader("Interpolation")]
+        public bool useInterpolation = true;
         [AutoToggleHeader("Movement")]
         public bool useMovement = true;
         [EnableIf("useMovement"), FormerlySerializedAs("moveSpeed")]
@@ -466,7 +468,7 @@ namespace Autohand {
                 targetPosOffset = Vector3.MoveTowards(targetPosOffset, targetPos, body.velocity.magnitude * deltaTime * 2);
                 trackingContainer.position += targetPosOffset;
 
-                if(headPhysicsFollower != null) {
+                if(headPhysicsFollower != null && useInterpolation) {
                     //Keeps the head down when colliding something above it and manages bouncing back up when not
                     if(Vector3.Distance(headCamera.transform.position, headPhysicsFollower.transform.position) > headPhysicsFollower.headCollider.radius / 1.5f) {
                         var idealPos = headPhysicsFollower.transform.position + (headCamera.transform.position - headPhysicsFollower.transform.position).normalized * headPhysicsFollower.headCollider.radius / 1.5f;
