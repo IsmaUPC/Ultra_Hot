@@ -99,6 +99,9 @@ MonoBehaviour:
   bulletAmount: 9
   barrelTip: {fileID: 7122921692628775120}
   bulletPrefab: {fileID: 8914353279888130421, guid: 03e840776a4003145b758c40dbafd97d, type: 3}
+  emptyShotSFX: {fileID: 8300000, guid: 3737644e3c37565478814365bb29acb0, type: 3}
+  gunShotSFX: {fileID: 8300000, guid: 8d10d3b7a3850df4c9cdf1616e36fa9f, type: 3}
+  takeGunSFX: {fileID: 8300000, guid: 91c42e6ae07368b4e908599e352aed28, type: 3}
   canLook: 0
 --- !u!114 &10072456660365259
 MonoBehaviour:
@@ -141,7 +144,19 @@ MonoBehaviour:
   showEvents: 1
   onGrab:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4176809251554381189}
+        m_TargetAssemblyTypeName: GunScript, Assembly-CSharp
+        m_MethodName: OnGrab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onRelease:
     m_PersistentCalls:
       m_Calls: []
@@ -361,7 +376,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300001, guid: 1dd706bb85d8aef4e83a6229dbd62c36, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 484f560c9b935dc47838a7acaa62791d, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.485
   m_Pitch: 1

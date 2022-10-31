@@ -16,6 +16,13 @@ public class GunScript : MonoBehaviour
     public Transform barrelTip;
     public GameObject bulletPrefab;
 
+    [Space]
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip emptyShotSFX;
+    [SerializeField] private AudioClip gunShotSFX;
+    [SerializeField] private AudioClip takeGunSFX;
+    private AudioSource audioSource;
+
     [HideInInspector] public bool canLook = false;
 
     // Start is called before the first frame update
@@ -23,6 +30,7 @@ public class GunScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
+        audioSource = GetComponent<AudioSource>();
         GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject gameObject in gameObjects)
             if(gameObject.GetComponent<BulletTime>() != null)
@@ -44,7 +52,10 @@ public class GunScript : MonoBehaviour
     public void Shoot(bool isEnemy)
     {
         if (bulletAmount <= 0)
+        {
+            audioSource.PlayOneShot(emptyShotSFX);
             return;
+        }
 
         if (!isEnemy)
             bulletAmount--;
@@ -56,7 +67,7 @@ public class GunScript : MonoBehaviour
             GetComponentInChildren<ParticleSystem>().Play();
 
         gameObject.GetComponent<Animator>().SetTrigger("Shoot");
-        gameObject.GetComponent<AudioSource>().Play();
+        audioSource.PlayOneShot(gunShotSFX);
 
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.2f, .01f, 10, 90, false, true).SetUpdate(true);
@@ -69,6 +80,11 @@ public class GunScript : MonoBehaviour
         rb.isKinematic = false;
 
         rb.AddForce(transform.forward * 50, ForceMode.Impulse);
+    }
+
+    public void OnGrab()
+    {
+        audioSource.PlayOneShot(takeGunSFX);
     }
 
     public void ParentNull()

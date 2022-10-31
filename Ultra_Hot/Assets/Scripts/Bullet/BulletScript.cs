@@ -12,9 +12,14 @@ public class BulletScript : MonoBehaviour
 
     public bool GodMode = false;
 
+    [SerializeField] private AudioClip enemyHit;
+    [SerializeField] private AudioClip playerHit;
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,8 +33,15 @@ public class BulletScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Bullet"))
         {
             Instantiate(hitParticlePrefab, transform.position, transform.rotation);
-            if(collision.gameObject.GetComponentInParent<EnemyScript>())
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                audioSource.PlayOneShot(playerHit);
+            }
+            if (collision.gameObject.GetComponentInParent<EnemyScript>())
+            {
+                audioSource.PlayOneShot(enemyHit);
                 collision.gameObject.GetComponentInParent<EnemyScript>().Ragdoll();
+            }
         }
 
         Destroy(gameObject);
