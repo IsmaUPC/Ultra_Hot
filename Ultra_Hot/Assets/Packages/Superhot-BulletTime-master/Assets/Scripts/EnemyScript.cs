@@ -32,13 +32,25 @@ public class EnemyScript : MonoBehaviour
     private float distance;
     private float stoppedTime;
 
+    List<SkinnedMeshRenderer> meshRenderers; // Mesh renderers containing the dissolve shader
     [HideInInspector] float dissolveWeight = 0.0f;
-    [SerializeField] SkinnedMeshRenderer meshRenderer;
 
     void Start()
     {
+        meshRenderers = new List<SkinnedMeshRenderer>();
+        Transform meshes = transform.Find("Meshes");
+        int count = meshes.transform.childCount;
+        for (int i = 0; i < count; ++i)
+        {
+            SkinnedMeshRenderer child = meshes.GetChild(i).gameObject.GetComponent<SkinnedMeshRenderer>();
+            child.material.SetFloat("_DissolveAmount", 0);
+            meshRenderers.Add(child);
+        }
+
         anim = GetComponent<Animator>();
         StartCoroutine(RandomAnimation());
+
+        rb = gameObject.GetComponent<Rigidbody>();
 
         agent = GetComponent<NavMeshAgent>();
         if (movement == Movement.IA)
@@ -85,8 +97,6 @@ public class EnemyScript : MonoBehaviour
 
         distance = Random.Range(0.5f, 5f);
         stoppedTime = 0;
-        rb = gameObject.GetComponent<Rigidbody>();
-        
     }
 
     void Update()
@@ -127,7 +137,10 @@ public class EnemyScript : MonoBehaviour
         }
         else
         {
-            meshRenderer.sharedMaterial.SetFloat("_DissolveAmount", dissolveWeight);
+            foreach (var meshRenderer in meshRenderers)
+            {
+                meshRenderer.material.SetFloat("_DissolveAmount", dissolveWeight);
+            }
             dissolveWeight += Time.deltaTime;
             // TODO:
             //if (dissolveWeight >= 1.01)
