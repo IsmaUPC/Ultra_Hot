@@ -52,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DissolveTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 98e1e23bb1b79484bb51350b98c1d572, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -187,7 +187,7 @@ Material:
     - _DarkCloudsRotationSpeed: -0.06
     - _DarkCloudsThicker: 1
     - _DetailNormalMapScale: 1
-    - _DissolveAmount: 0.5
+    - _DissolveAmount: 0
     - _DissolveLine: 0.1
     - _DissolveScale: 1
     - _DistortionAmount: 0.5
@@ -313,7 +313,7 @@ Material:
     - _CloudsRampColorTint: {r: 0.3301887, g: 0.17321374, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 1, g: 0, b: 0, a: 1}
-    - _DissolveLineColor: {r: 0.5566038, g: 0.012602334, b: 0.012602334, a: 1}
+    - _DissolveLineColor: {r: 0, g: 1.2844559, b: 1.598989, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FresnelGlowColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 0.18535659, g: 0.2264151, b: 0.1525098, a: 1}

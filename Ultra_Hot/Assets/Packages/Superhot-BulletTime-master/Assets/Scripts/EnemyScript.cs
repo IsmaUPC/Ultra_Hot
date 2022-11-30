@@ -32,8 +32,8 @@ public class EnemyScript : MonoBehaviour
     private float distance;
     private float stoppedTime;
 
-    [HideInInspector] public float dissolveWeight = 0.0f;
-
+    [HideInInspector] float dissolveWeight = 0.0f;
+    [SerializeField] SkinnedMeshRenderer meshRenderer;
 
     void Start()
     {
@@ -86,6 +86,7 @@ public class EnemyScript : MonoBehaviour
         distance = Random.Range(0.5f, 5f);
         stoppedTime = 0;
         rb = gameObject.GetComponent<Rigidbody>();
+        
     }
 
     void Update()
@@ -123,6 +124,16 @@ public class EnemyScript : MonoBehaviour
                 newForward = Quaternion.AngleAxis(-8.7f, Vector3.up) * newForward;
                 rb.rotation = Quaternion.LookRotation(newForward, Vector3.up);
             }
+        }
+        else
+        {
+            meshRenderer.sharedMaterial.SetFloat("_DissolveAmount", dissolveWeight);
+            dissolveWeight += Time.deltaTime;
+            // TODO:
+            //if (dissolveWeight >= 1.01)
+            //{
+            //    Destroy(gameObject);
+            //}
         }
     }
 

@@ -416,9 +416,9 @@ Shader "SineVFX/GalaxyMaterials/GalaxyMaterial"
 				UNITY_INITIALIZE_OUTPUT( SurfaceOutput, o )
 				surf( surfIN, o );
 
-				//half4 noise = tex2D(_DissolveTex, surfIN.uv_texcoord * _DissolveScale);
-				//clip(noise.r - _DissolveAmount);
-				//o.Emission = step(noise.r, _DissolveAmount + _DissolveLine) * _DissolveLineColor;
+				half4 noise = tex2D(_DissolveTex, surfIN.uv_texcoord * _DissolveScale);
+				clip(noise.r - _DissolveAmount);
+				o.Emission = step(noise.r, _DissolveAmount + _DissolveLine) * _DissolveLineColor;
 
 				#if defined( CAN_SKIP_VPOS )
 				float2 vpos = IN.pos;
